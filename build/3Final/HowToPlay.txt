@@ -1,0 +1,13 @@
+Release Notes version 3 Final
+
+How To Play:
+
+-Avoid Skull Enemies
+
+-Press input only on the beat to accumulate a score multiplier
+
+-Collect power cells to add the current score multiplier to your score
+
+-Press the arrow that is on the tile you widh to move to
+
+-Try to last the entire song!

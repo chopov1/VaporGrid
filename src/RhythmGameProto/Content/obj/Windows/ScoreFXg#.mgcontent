@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXg#.wav</SourceFile>
+  <SourceTime>2022-12-15T23:51:34.175996-06:00</SourceTime>
+  <DestFile>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/bin/Windows/ScoreFXg#.xnb</DestFile>
+  <DestTime>2022-12-15T23:53:19.2758937-06:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T06:44:56-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

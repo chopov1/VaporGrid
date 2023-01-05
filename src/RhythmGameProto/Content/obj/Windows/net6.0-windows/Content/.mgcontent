@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ArrowDown.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ArrowDownClear.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ArrowLeft.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ArrowLeftClear.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ArrowRight.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ArrowRightClear.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ArrowUp.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ArrowUpClear.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/EnemySkull.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/Font1.spritefont</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/MushroomGuy.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/MushroomGuyGold.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/MushroomGuyJumping.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/MusicNoteGrey.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/MusicNotePurple.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/MusicNoteYellow.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/PixelText.spritefont</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/PixelTextSub.spritefont</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/PowerUp.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXa.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXa#.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXb.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXc.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXc#.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXd.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXd#.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXe.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXf.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXf#.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXg.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/ScoreFXg#.wav</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/TileBlackBlue.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/TileBlackPurple.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/TileGray.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/TileGrayLight.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/TileTest1.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/TileTest2.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/weirdFace3.png</File>
+    <File>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/weirdFaceAttack3.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

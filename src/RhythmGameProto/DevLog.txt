@@ -1,0 +1,93 @@
+﻿Started this on 11-18-22
+
+currently am working on the input randomization.
+it is not working correctly. My hunch is that it switches what key is at what input before the next update call
+so maybe it is calling move on the same one multiple times because it thinks you just pressed two keys very fast.
+
+I made the update check to make sure all keys were released before checking for input again.
+that didnt seem to do anything so that must not be the issue.
+
+I fixed the issue of multiple calls, but it seems the arrows are still off.
+I made a bool that if true shuffles at the end of update instead of calling the shuffle function as the key
+is pressed. I could have done states but I felt this was pretty simple.
+
+Im very happy I fixed it. such a simple fix. Deffinitly saw a great example of why its 
+important to do a state pattern instead of calling things directly though.
+
+Now the arrow indicators are off sometimes
+
+I have a list of arrows
+I need to see which input index corresponds with which arrow
+
+loop through the inputkets array. The right key will always be at index 0. 
+The order of indicies array determines which side the arrow should be on.
+if the first number in the indicies array is 2, the up arrow should be on the right side.
+
+whatever indicies is at 0 will always be right
+
+
+I have an array of randomized numbers 1-3.
+I use these numbers as indicies to access an array of key inputs, in order to randomize which keys goes which direction
+I want to use the array of randomized numbers similarily to access an array of arrow sprites
+The arrow sprites should be located on the corresponding side of the player sprite that
+the keys in the key array move the player to when accessed from the randomized numbers array.
+
+loop through arrows
+arrow at 0 index should be equal to the direction key accessed by the 0 element of randomized number array
+
+IDEAS
+give multiplier for consecutive 1/4 beats and addition for 1/2 beats
+
+TODO
+I need to write a good pathfinding system for enemies. go around unwalkable tiles
+
+
+F cost = distance from starting node
+H cost = distace from end node
+G cost = f cost + h cost
+
+
+for timer problem?
+https://stackoverflow.com/questions/10460471/metronome-precision-algorithm-maths
+
+
+ideas:
+
+difficulty
+-song tempo
+-enemy move buffer
+
+add menu screen
+add ability to read in tempo from wav files
+add portal tile
+add score that increases if you stay on beat
+add powerups that will kill one enemy. spawn them when you get score high enough
+
+TODO:
+make it so enemies cant share a tile as this could confuse player
+
+Add condition in case of song finishing!!!
+
+        //add reading of bpm from acid chunk of wav file if ableton includes that information
+        double bpm = 82;
+
+
+
+Next Steps:
+
+-Add in double time multiplier for advanced players, need to make it so timer can check eigth notes
+but also wont move if its not a quarter note DONE
+
+maybe have the sixteenth note only available when comboscore is perfectly divisible by 10
+or something so players have to pay attention to score
+
+also the character should only start blinking on sixteenths if the player has a comboscore 
+greater then 10 so newer players dont feel bad and skilled players are rewarded
+
+make it so player can only hit the sixteenth note if they previously hit the quarter note
+
+-add in portal tiles
+
+-add in tiles that close for a bit after you or enemy passes through
+
+-add enemies that move in predictable direction
