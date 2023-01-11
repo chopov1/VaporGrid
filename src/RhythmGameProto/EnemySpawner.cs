@@ -12,7 +12,7 @@ namespace RhythmGameProto
     public class EnemySpawner : Spawner
     {
         
-        public EnemySpawner(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera) : base(game, gm, rm, p, camera)
+        public EnemySpawner(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera,int numberOfObjects) : base(game, gm, rm, p, camera, numberOfObjects)
         {
             
             

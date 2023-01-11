@@ -21,14 +21,14 @@ namespace RhythmGameProto
         protected Camera camera;
 
         public SpawnState spawnState;
-        public Spawner(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera) : base(game)
+        public Spawner(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera,int numberOfObjects) : base(game)
         {
-
+            objects = new Queue<GridSprite>();
             this.camera = camera;
             gridManager = gm;
             rhythmManager = rm;
             player = p;
-            numOfObjects = 8;
+            numOfObjects = numberOfObjects;
             spawnBuffer = 16;
             rnd = new Random();
             spawnState = SpawnState.reset;
@@ -64,8 +64,8 @@ namespace RhythmGameProto
             switch (spawnState)
             {
                 case SpawnState.reset:
-                    resetObjects();
-                    bufferCount = 0;
+                    ResetObjects();
+                    BufferCount = 0;
                     spawnState = SpawnState.active;
                     //SpawnObject();
                     break;
@@ -128,27 +128,24 @@ namespace RhythmGameProto
             {
                 return false;
             }
-            if (posToSpawn.X < player.gridPos.X - 2 || posToSpawn.X > player.gridPos.X + 2)
+            if (posToSpawn.X < player.gridPos.X - 2 || posToSpawn.X > player.gridPos.X + 2 || posToSpawn.Y < player.gridPos.Y - 2 || posToSpawn.Y > player.gridPos.Y + 2)
             {
-                if (posToSpawn.Y < player.gridPos.Y - 2 || posToSpawn.Y > player.gridPos.Y + 2)
-                {
-                    return true;
-                }
+                return true;
             }
             return false;
         }
 
-        int bufferCount;
+        public int BufferCount;
         private bool checkSpawnBuffer()
         {
-            if (bufferCount >= spawnBuffer)
+            if (BufferCount >= spawnBuffer)
             {
-                bufferCount = 0;
+                BufferCount = 0;
                 return true;
             }
             else
             {
-                bufferCount++;
+                BufferCount++;
             }
             return false;
         }
@@ -159,7 +156,7 @@ namespace RhythmGameProto
             return posToSpawn;
         }
 
-        public void resetObjects()
+        public void ResetObjects()
         {
             foreach (GridSprite s in objects)
             {
@@ -184,6 +181,7 @@ namespace RhythmGameProto
 
         public void UnLoad()
         {
+            ResetObjects();
             Enabled = false;
         }
     }

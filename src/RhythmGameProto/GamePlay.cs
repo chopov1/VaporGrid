@@ -35,14 +35,14 @@ namespace RhythmGameProto
             camera = new Camera(Game);
             Game.Components.Add(camera);
             
-            gridManager = new GridManager(Game, camera, rm);
+            gridManager = new GridManager(Game, camera, rm, 15,10);
             Game.Components.Add(gridManager);
             
             player = new Player(Game, gridManager, rm, 1, camera, scoreManager);
             Game.Components.Add(player);
-            enemySpawner = new EnemySpawner(Game, gridManager, rm, player, camera);
+            enemySpawner = new EnemySpawner(Game, gridManager, rm, player, camera, 8);
             Game.Components.Add(enemySpawner);
-            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, player, camera);
+            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, player, camera, 8);
             Game.Components.Add(powerUpSpawner);
             arrowIndicators = new ArrowIndicators(Game, gridManager, player, camera);
             Game.Components.Add(arrowIndicators);
@@ -72,6 +72,9 @@ namespace RhythmGameProto
         {
             base.loadScene();
             rm.state = SongState.reset;
+            scoreManager.ShowScore = true;
+            scoreManager.WriteEnabled = true;
+            ResetGamePlay();
         }
 
         private void ResetGamePlay()
@@ -88,8 +91,8 @@ namespace RhythmGameProto
             {
                 case PlayerState.Dead:
                     ResetGamePlay();
-                    State = SceneState.readyToClose;
-                    sceneManager.gameOver.State = SceneState.loading;
+                    arrowIndicators.UnLoad();
+                    sceneManager.ChangeScene(this, sceneManager.gameOver);
                     break;
                 case PlayerState.Alive:
                     break;

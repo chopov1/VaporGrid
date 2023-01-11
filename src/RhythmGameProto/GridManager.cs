@@ -23,17 +23,31 @@ namespace RhythmGameProto
         Random random = new Random();
         public Node[,] nodeGrid;
 
+        bool useUnwalkable;
 
         Camera camera;
         RhythmManager rm;
-        public GridManager(Game game, Camera camera, RhythmManager rm) : base(game)
+        public GridManager(Game game, Camera camera, RhythmManager rm, int gridx, int gridy, bool useunwalkable) : base(game)
         {
+            useUnwalkable= useunwalkable;
             this.rm = rm;
             this.camera = camera;
             TileSize = new Rectangle(0, 0, 32, 32);
-            gridHeight = 10;
-            gridWidth = 15;
+            gridHeight = gridy;
+            gridWidth = gridx;
             //make it centered by using Game.GraphicsDevice.Viewport
+            buffer = 100;
+            setupGrids();
+        }
+
+        public GridManager(Game game, Camera camera, RhythmManager rm, int gridx, int gridy) : base(game)
+        {
+            useUnwalkable = true;
+            this.rm = rm;
+            this.camera = camera;
+            TileSize = new Rectangle(0, 0, 32, 32);
+            gridHeight = gridy;
+            gridWidth = gridx;
             buffer = 100;
             setupGrids();
         }
@@ -103,7 +117,14 @@ namespace RhythmGameProto
                             break;
                         case 6:
                         case 7:
-                            t = new MonogameTile(Game, false, new Tile(pos, new Vector2(x, y)), camera, rm);
+                            if (useUnwalkable)
+                            {
+                                t = new MonogameTile(Game, false, new Tile(pos, new Vector2(x, y)), camera, rm);
+                            }
+                            else
+                            {
+                                t = new MonogameTile(Game, true, new Tile(pos, new Vector2(x, y)), camera, rm);
+                            }
                             break;
                     }
                     t.Position = pos;

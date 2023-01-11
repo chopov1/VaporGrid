@@ -91,3 +91,10 @@ make it so player can only hit the sixteenth note if they previously hit the qua
 -add in tiles that close for a bit after you or enemy passes through
 
 -add enemies that move in predictable direction
+
+TODO:
+
+write in tutorial info
+
+create game console - follow jeffs example probobly
+

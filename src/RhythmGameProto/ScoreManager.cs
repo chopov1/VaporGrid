@@ -18,6 +18,10 @@ namespace RhythmGameProto
         public int HighScore;
         public int ComboScore;
 
+        public bool ShowScore;
+        public bool ShowHighScore;
+        public bool WriteEnabled;
+
         SpriteBatch spriteBatch;
         SpriteFont font;
 
@@ -36,6 +40,8 @@ namespace RhythmGameProto
             game.Components.Add(this);
             fr = new FileReader();
             rnd = new Random();
+            ShowScore = true;
+            ShowHighScore= true;
         }
 
         SoundEffect getSoundToPlay()
@@ -135,18 +141,26 @@ namespace RhythmGameProto
         {
             scoreData[0] = HighScore.ToString();
             scoreData[1] = prevScore.ToString();
-            fr.writeFile(fr.scorePath, scoreData);
+            if (WriteEnabled)
+            {
+                fr.writeFile(fr.scorePath, scoreData);
+            }
         }
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
             spriteBatch.Begin();
+            if(ShowScore)
+            {
+                if (ShowHighScore)
+                {
+                    spriteBatch.DrawString(font, "HighScore: " + HighScore, new Vector2(200, 25), Color.White);
+                    spriteBatch.DrawString(font, "Last Score: " + prevScore, new Vector2(200, 425), Color.White);
+                }
+                spriteBatch.DrawString(font, "Score: " + Score, new Vector2(600, 100), Color.White);
+                spriteBatch.DrawString(font, "+" + ComboScore, new Vector2(600, 200), Color.White);
+            }
             //draw score
-            spriteBatch.DrawString(font, "HighScore: " + HighScore, new Vector2(200, 25), Color.White);
-            spriteBatch.DrawString(font, "Last Score: " + prevScore, new Vector2(200, 425), Color.White);
-            spriteBatch.DrawString(font, "Score: " + Score, new Vector2(600, 100), Color.White);
-            spriteBatch.DrawString(font, "+" + ComboScore, new Vector2(600, 200), Color.White);
-
             spriteBatch.End();
         }
 

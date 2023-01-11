@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/MushroomGuyGold.png</SourceFile>
+  <SourceFile>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/MushroomGuyGold.png</SourceFile>
   <SourceTime>2023-01-05T10:46:20.4450361-06:00</SourceTime>
-  <DestFile>D:/SCHOOL/Fall 2022/GameProgramming/FINALRHYTHMGAME/NewRepoFolder/gp1finalgame-chopov1/src/RhythmGameProto/Content/bin/Windows/MushroomGuyGold.xnb</DestFile>
-  <DestTime>2023-01-05T10:47:03.2145956-06:00</DestTime>
+  <DestFile>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/bin/Windows/MushroomGuyGold.xnb</DestFile>
+  <DestTime>2023-01-09T21:39:14.4589718-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

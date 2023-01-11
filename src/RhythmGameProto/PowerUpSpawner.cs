@@ -9,7 +9,7 @@ namespace RhythmGameProto
 {
     public class PowerUpSpawner : Spawner
     {
-        public PowerUpSpawner(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera) : base(game, gm, rm, p, camera)
+        public PowerUpSpawner(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera, int numberOfObjects) : base(game, gm, rm, p, camera, numberOfObjects)
         {
 
         }

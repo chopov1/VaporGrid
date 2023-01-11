@@ -14,7 +14,7 @@ namespace RhythmGameProto
     public class Player : GridSprite
     {
         public int PlayerNumber;
-        int sixteenthBuffer;
+        public int SixteenthBuffer;
 
         public PlayerController Controller;
 
@@ -39,11 +39,11 @@ namespace RhythmGameProto
             this.rhythmManager = rhythmManager;
             dirToMove = new Vector2(0, 0);
             PlayerNumber = playernumber-1;
-            gridPos = new Vector2(2, 2);
+            gridPos = new Vector2(gridManager.gridWidth/2, gridManager.gridHeight/2);
             Controller = new PlayerController(this);
             SpriteState = SpriteState.Active;
             State = PlayerState.Alive;
-            sixteenthBuffer = 16;
+            SixteenthBuffer = 16;
             
         }
 
@@ -104,6 +104,7 @@ namespace RhythmGameProto
         int comboLives;
         public void increaseComboScoreSixteenth()
         {
+            //tutorial relies on this being +2. If you change this, change double time tutorial
             scoreManager.ComboScore +=2;
         }
         private void increaseComboScore()
@@ -189,7 +190,7 @@ namespace RhythmGameProto
 
         private bool canInputOnSixteenth()
         {
-            if(rhythmManager.songPlayer.InputOnSixteenth() && scoreManager.ComboScore > sixteenthBuffer && rhythmManager.songPlayer.hasHitQuarterBeat && !rhythmManager.songPlayer.hasHitSixteenthBeat)
+            if(rhythmManager.songPlayer.InputOnSixteenth() && scoreManager.ComboScore > SixteenthBuffer && rhythmManager.songPlayer.hasHitQuarterBeat && !rhythmManager.songPlayer.hasHitSixteenthBeat)
             {
                 return true;
             }

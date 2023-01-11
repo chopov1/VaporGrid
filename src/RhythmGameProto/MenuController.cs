@@ -12,5 +12,7 @@ namespace RhythmGameProto
     {
         public bool PressedEnter { get { return PressedKey(Keys.Enter); } }
         public bool PressedSpace { get { return PressedKey(Keys.Space); } }
+
+        public bool PressedT { get { return PressedKey(Keys.T); } }
     }
 }

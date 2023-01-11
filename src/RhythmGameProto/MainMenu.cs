@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using RhythmGameProto.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,11 @@ namespace RhythmGameProto
             base.SceneUpdate();
             if (input.PressedEnter)
             {
-                State = SceneState.readyToClose;
-                sceneManager.gamePlay.State = SceneState.loading;
+                sceneManager.ChangeScene(this, sceneManager.gamePlay);
+            }
+            if (input.PressedT)
+            {
+                sceneManager.ChangeScene(this, sceneManager.tutorial);
             }
         }
 

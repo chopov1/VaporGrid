@@ -151,6 +151,8 @@ namespace RhythmGameProto
             {
                 arrow.Load();
             }
+            Enabled = true;
+            Visible = true;
         }
 
         public void UnLoad()
@@ -159,6 +161,9 @@ namespace RhythmGameProto
             {
                 arrow.UnLoad();
             }
+            Enabled= false;
+            Visible= false;
         }
+
     }
 }

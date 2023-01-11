@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/a8h8t6FTftMhYDTtyFQpd3L52UknvjuVHv34xvBqUaRJY5nxRwgIHGv60B6iHt7D+lIdTjyXkceLfpout2GzA==",
+  "dgSpecHash": "aDdnJpctSou6tSr23MKIafFob2HujBf1RqGCQUeQbUb3PkETzDTO/yyK4TiXjvXhD/yq20K0qk4m2AZDotBMBg==",
   "success": true,
-  "projectFilePath": "D:\\SCHOOL\\Fall 2022\\GameProgramming\\FINALRHYTHMGAME\\NewRepoFolder\\gp1finalgame-chopov1\\src\\RhythmGameProto\\RhythmGameProto.csproj",
+  "projectFilePath": "D:\\All Projects D Drive\\MonoGame\\VaporGrid\\src\\RhythmGameProto\\RhythmGameProto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mpear\\.nuget\\packages\\cscore\\1.2.1.2\\cscore.1.2.1.2.nupkg.sha512",
     "C:\\Users\\mpear\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
