@@ -201,3 +201,5 @@ D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Debug\net6.0-
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Debug\net6.0-windows\RhythmGameProto.genruntimeconfig.cache
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Debug\net6.0-windows\ref\RhythmGameProto.dll
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ExitTutorial.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\TileTrapActive.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\TileTrapInactive.xnb

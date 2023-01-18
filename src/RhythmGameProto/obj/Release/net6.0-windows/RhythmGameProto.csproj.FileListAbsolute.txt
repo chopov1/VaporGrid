@@ -97,3 +97,105 @@ D:\SCHOOL\Fall 2022\GameProgramming\FINALRHYTHMGAME\NewRepoFolder\gp1finalgame-c
 D:\SCHOOL\Fall 2022\GameProgramming\FINALRHYTHMGAME\NewRepoFolder\gp1finalgame-chopov1\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.pdb
 D:\SCHOOL\Fall 2022\GameProgramming\FINALRHYTHMGAME\NewRepoFolder\gp1finalgame-chopov1\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.genruntimeconfig.cache
 D:\SCHOOL\Fall 2022\GameProgramming\FINALRHYTHMGAME\NewRepoFolder\gp1finalgame-chopov1\src\RhythmGameProto\obj\Release\net6.0-windows\ref\RhythmGameProto.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\60bpmclicktrack.wma
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\60bpmclicktrack.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\90bpmclicktrack.wma
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\90bpmclicktrack.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\clickTrack60bpm.wma
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\clickTrack60bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\clickTrack82bpm.wma
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\clickTrack82bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Synthwave13 90bpm.wma
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Synthwave13 90bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Synthwave14 78bpm.wma
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Synthwave14 78bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Synthwave15 87bpm.wma
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Synthwave15 87bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Synthwave2.wma
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Synthwave2.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\SynthwaveEighteen 73bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\SynthwaveEleven 92bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\SynthwaveFifteen 87bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\SynthwaveFourteen 78bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\SynthwaveNineteen 82bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\SynthwaveTwo 82bpm 8.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\SynthwaveTwo 82bpm.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\PixelText.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ArrowDown.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ArrowDownClear.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ArrowLeft.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ArrowLeftClear.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ArrowRight.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ArrowRightClear.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ArrowUp.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ArrowUpClear.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\EnemySkull.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ExitTutorial.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Font1.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\MushroomGuy.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\MushroomGuyGold.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\MushroomGuyJumping.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\MusicNoteGrey.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\MusicNotePurple.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\MusicNoteYellow.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\PixelTextSub.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\PowerUp.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXa#.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXa.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXb.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXc#.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXc.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXd#.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXd.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXe.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXf#.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXf.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXg#.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\ScoreFXg.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\TileBlackBlue.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\TileBlackPurple.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\TileGray.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\TileGrayLight.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\TileTest1.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\TileTest2.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\weirdFace3.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\weirdFaceAttack3.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\RhythmGameProto.exe
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\RhythmGameProto.deps.json
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\RhythmGameProto.runtimeconfig.json
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\RhythmGameProto.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\RhythmGameProto.pdb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\CSCore.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Microsoft.CodeAnalysis.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Microsoft.CodeAnalysis.CSharp.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\MonoGame.Framework.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Newtonsoft.Json.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.Direct2D1.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.Direct3D11.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.Direct3D9.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.DXGI.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.Mathematics.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.MediaFoundation.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.XAudio2.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\SharpDX.XInput.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\runtimes\debian-x64\native\libuv.so
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\runtimes\fedora-x64\native\libuv.so
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\runtimes\opensuse-x64\native\libuv.so
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\runtimes\osx\native\libuv.dylib
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\runtimes\rhel-x64\native\libuv.so
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\runtimes\win7-arm\native\libuv.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\runtimes\win7-x64\native\libuv.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\runtimes\win7-x86\native\libuv.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.csproj.AssemblyReference.cache
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.GeneratedMSBuildEditorConfig.editorconfig
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.AssemblyInfoInputs.cache
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.AssemblyInfo.cs
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.csproj.CoreCompileInputs.cache
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.csproj.CopyComplete
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\refint\RhythmGameProto.dll
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.pdb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\RhythmGameProto.genruntimeconfig.cache
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\obj\Release\net6.0-windows\ref\RhythmGameProto.dll

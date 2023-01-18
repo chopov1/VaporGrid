@@ -94,7 +94,29 @@ make it so player can only hit the sixteenth note if they previously hit the qua
 
 TODO:
 
-write in tutorial info
+If player hits 5 consecutive sixteenth notes add a bonus or something
+
+Add tiles that can kill enemies
+
+-have a list of active trap tiles, and inactive trap tiles in grid manager
+-if player is on an inactive tile, set it to active on the next beat (use states)
+activate active deactivate inactive
+-have enemies check if they are on active tiles, if they are die
+-have player check if they are on active tile, if they are set player state to dead
+
+maybe these tiles are simply on a timer and the player does not have control over when they are active?
+I think with control the game becomes much to easy.
+
+Add file reader system to start creating levels
 
 create game console - follow jeffs example probobly
+
+longterm:
+
+Create a level editor
+
+For levels, instead of score collect all the keys and make it to the exit
+
+maybe score is still a thing in regular levels, but once all the keys are collected
+the beat doesnt matter anymore and you can just book it to the exit?
 

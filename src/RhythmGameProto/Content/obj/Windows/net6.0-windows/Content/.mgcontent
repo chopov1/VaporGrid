@@ -42,10 +42,14 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/TileGrayLight.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/TileTest1.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/TileTest2.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/TileTrapActive.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/TileTrapInactive.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/weirdFace3.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/weirdFaceAttack3.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
