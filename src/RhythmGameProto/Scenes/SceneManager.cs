@@ -43,11 +43,14 @@ namespace RhythmGameProto
 
         private void setupLevels()
         {
-            for(int levelNumber =0; levelNumber < NumberOfLevels; levelNumber++)
+            GamePlay endlessGameMode = new GamePlay(Game, this, rm, sm, 0);
+            levels.Add(endlessGameMode);
+            Game.Components.Add(endlessGameMode);
+            for (int levelNumber = 1; levelNumber < NumberOfLevels; levelNumber++)
             {
-                GamePlay g = new GamePlay(Game, this, rm, sm, levelNumber);
-                levels.Add(g);
-                Game.Components.Add(g);
+                Level l = new Level(Game, this, rm, sm, levelNumber);
+                levels.Add(l);
+                Game.Components.Add(l);
             }
         }
 

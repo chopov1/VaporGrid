@@ -16,7 +16,7 @@ namespace RhythmGameProto
         {
             this.player = player;
             Collected = false;
-
+            game.Components.Add(this);
         }
 
         protected void checkPlayerPos()

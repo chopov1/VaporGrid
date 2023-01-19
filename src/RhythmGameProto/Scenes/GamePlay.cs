@@ -15,7 +15,7 @@ namespace RhythmGameProto.Scenes
         protected FileReader fileReader;
         protected DynamicTileManager dynamicTileManager;
 
-        int level;
+        protected int level;
         public GamePlay(Game game, SceneManager manager, RhythmManager rm, ScoreManager sm, int level) : base(game, manager, rm, sm)
         {
             this.level= level;
@@ -27,17 +27,14 @@ namespace RhythmGameProto.Scenes
             base.SetupScene();
         }
 
-        private void setupGame()
+        protected virtual void setupGame()
         {
             fileReader = new FileReader();
             camera = new Camera(Game);
             Game.Components.Add(camera);
 
             gridManager = new GridManager(Game, camera, rm);
-            if(level != 0)
-            {
-                gridManager.loadLevel(level);
-            }
+            
             Game.Components.Add(gridManager);
 
             player = new Player(Game, gridManager, rm, 1, camera, scoreManager);
@@ -55,7 +52,7 @@ namespace RhythmGameProto.Scenes
             addCompsToList();
         }
 
-        private void addCompsToList()
+        protected virtual void addCompsToList()
         {
             addComponentToScene(camera);
             addComponentToScene(gridManager);
@@ -85,12 +82,9 @@ namespace RhythmGameProto.Scenes
             scoreManager.WriteEnabled = true;
         }
 
-        protected void ResetGamePlay()
+        protected virtual void ResetGamePlay()
         {
-            if(level == 0)
-            {
-                gridManager.RandomGrid(player.gridPos);
-            }
+            gridManager.RandomGrid(player.gridPos);
             dynamicTileManager.AddTiles();
             player.ResetPlayer(new Vector2(0, 1));
             enemySpawner.spawnState = SpawnState.reset;

@@ -52,7 +52,7 @@ namespace RhythmGameProto.Scenes
             Game.Components.Add(player);
 
             continueTile = new Collectable(Game, gridManager, "ExitTutorial", camera, player);
-            Game.Components.Add(continueTile);
+
             scoreSpawner = new PowerUpSpawner(Game, gridManager, rm, player, camera, 1);
             Game.Components.Add(scoreSpawner);
             enemySpawner = new EnemySpawner(Game, gridManager, rm, player, camera, 1);

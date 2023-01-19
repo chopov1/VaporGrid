@@ -1,4 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/Apple.png","D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/bin/Windows/Apple.xnb","TextureProcessor","Texture2DContent",508,4181,0.1556225
 "D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ArrowDown.png","D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/bin/Windows/ArrowDown.xnb","TextureProcessor","Texture2DContent",219,4181,0.1464479
 "D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ArrowDownClear.png","D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/bin/Windows/ArrowDownClear.xnb","TextureProcessor","Texture2DContent",258,4181,0.0029354
 "D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ArrowLeft.png","D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/bin/Windows/ArrowLeft.xnb","TextureProcessor","Texture2DContent",231,4181,0.0025422

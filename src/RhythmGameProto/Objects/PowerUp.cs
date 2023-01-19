@@ -19,7 +19,6 @@ namespace RhythmGameProto
         public PowerUp(Game game, GridManager gm, string texturename, Camera camera, Player player, Spawner spawner) : base(game, gm, texturename, camera, player)
         {
             this.spawner = spawner;
-            game.Components.Add(this);
         }
 
         public override void Activate()

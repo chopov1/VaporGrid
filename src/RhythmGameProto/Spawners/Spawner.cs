@@ -42,7 +42,7 @@ namespace RhythmGameProto
         {
             base.Initialize();
             objects = createObjects(numOfObjects);
-            SpawnObject();
+            spawnObjectInRandomPos();
         }
 
         public virtual GridSprite createSpawnableObject()
@@ -86,13 +86,15 @@ namespace RhythmGameProto
                     break;
                 case SpawnState.readyToSpawn:
                     spawnState = SpawnState.active;
-                    SpawnObject();
+                    spawnObjectInRandomPos();
+                    break;
+                case SpawnState.inactive:
                     break;
             }
         }
 
         Vector2 temp;
-        private void SpawnObject()
+        private void spawnObjectInRandomPos()
         {
             if (checkSpawnBuffer() && objects.Count > 0)
             {
@@ -106,6 +108,22 @@ namespace RhythmGameProto
                         temp = getRandomPos();
                     }
                     objToSpawn.gridPos = temp;
+                    objToSpawn.SpriteState = SpriteState.Active;
+                    objToSpawn.Enabled = true;
+                    objToSpawn.Visible = true;
+                }
+            }
+        }
+
+        public void SpawnObject(Vector2 pos)
+        {
+            if (objects.Count > 0)
+            {
+                if (objects.Peek().Enabled == false)
+                {
+                    GridSprite objToSpawn = objects.Dequeue();
+                    objects.Enqueue(objToSpawn);
+                    objToSpawn.gridPos = pos;
                     objToSpawn.SpriteState = SpriteState.Active;
                     objToSpawn.Enabled = true;
                     objToSpawn.Visible = true;
@@ -164,18 +182,19 @@ namespace RhythmGameProto
         {
             foreach (GridSprite s in objects)
             {
-                s.SpriteState = SpriteState.Inactive;
-                s.ResetTiles();
-                s.Enabled = false;
-                s.Visible = false;
+                DeSpawn(s);
             }
         }
 
-        public void DeSpawn(GridSprite s)
+        public virtual void DeSpawn(GridSprite s)
         {
             s.SpriteState = SpriteState.Inactive;
             s.Enabled = false;
             s.Visible = false;
+            if(s is Collectable)
+            {
+                ((Collectable)s).Collected = false;
+            }
         }
 
         

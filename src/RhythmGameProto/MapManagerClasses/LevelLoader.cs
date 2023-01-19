@@ -48,7 +48,11 @@ namespace RhythmGameProto.MapManagerClasses
             level[4, 4] = 3;
 
             int[,] objs = new int[15, 10];
-            objs[6, 6] = 1;
+            objs[6, 6] = 3;
+            objs[6, 8] = 1;
+            objs[0, 6] = 2;
+            objs[0, 5] = 2;
+            objs[0, 4] = 2;
 
             LevelData data = new LevelData(level, objs);
             return data;
@@ -64,6 +68,10 @@ namespace RhythmGameProto.MapManagerClasses
             level[5, 4] = 3;
 
             int[,] objs = new int[15, 10];
+            objs[7, 7] = 3;
+            objs[3, 0] = 1;
+            objs[4, 4] = 2;
+            objs[1, 9] = 2;
 
             LevelData data = new LevelData(level, objs);
 
