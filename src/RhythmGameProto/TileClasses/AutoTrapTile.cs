@@ -9,6 +9,7 @@ namespace RhythmGameProto.GridClasses
 {
     public class AutoTrapTile : TrapTile
     {
+        int beatsInactive;
         public AutoTrapTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt, RhythmManager rm) : base(pos, tileGridPos, tt, rm)
         {
 
@@ -18,7 +19,8 @@ namespace RhythmGameProto.GridClasses
         {
             State = TrapState.inactive;
             IsWalkable = true;
-            beatsActive = 4;
+            beatsActive = 3;
+            beatsInactive= 4;
             beat = 0;
         }
 
@@ -48,7 +50,7 @@ namespace RhythmGameProto.GridClasses
                     }
                     break;
                 case TrapState.inactive:
-                    if (tickTile(beatsActive))
+                    if (tickTile(beatsInactive))
                     {
                         State = TrapState.activate;
                     }

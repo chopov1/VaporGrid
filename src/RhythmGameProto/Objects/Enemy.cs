@@ -1,84 +1,111 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SharpDX.Direct3D9;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RhythmGameProto
 {
-
+    //change name of class later
     public class Enemy : GridSprite
     {
-        RhythmManager rhythmManager;
-        Player player;
-        Random rnd;
+        protected RhythmManager rhythmManager;
+        protected Player player;
 
-        int moveBuffer;
+        protected int moveBuffer;
+        protected int bufferCount;
 
-        public Node nodeToMoveTo;
-        Pathfinder pathfinder;
+        protected bool hasRecievedBeat;
 
-        Texture2D texture;
-        Texture2D beatTexture;
-        Texture2D attacktexture;
-
-
-        public Enemy(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera) : base(game, gm, "EnemySkull", camera)
+        protected Texture2D offBeatTexture;
+        protected Texture2D onBeatTexture;
+        protected Texture2D attackTexture;
+        public Enemy(Game game, GridManager gm, string textureName ,RhythmManager rm, Camera camera, Player p) : base(game, gm, textureName, camera)
         {
-            pathfinder = new Pathfinder(gridManager, this);
             rhythmManager = rm;
-            moveBuffer = 2;
             player = p;
-            rnd = new Random();
             Game.Components.Add(this);
         }
 
         protected override void LoadContent()
         {
             base.LoadContent();
-            beatTexture = Game.Content.Load<Texture2D>("weirdFace3");
-            attacktexture = Game.Content.Load<Texture2D>("weirdFaceAttack3");
-            texture = spriteTexture;
+            /*onBeatTexture = Game.Content.Load<Texture2D>("");
+            attackTexture = Game.Content.Load<Texture2D>("");*/
+            offBeatTexture = spriteTexture;
         }
 
-        bool hasRecievedBeat;
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            checkBeatForMove();
+            changeTexture();
+        }
+
+        protected virtual void checkBeatForMove()
+        {
             if (rhythmManager.songPlayer.IsOnQuarter() && !hasRecievedBeat)
             {
                 hasRecievedBeat = true;
-                moveEnemy();
+                checkIfMove();
             }
             if (!rhythmManager.songPlayer.IsOnQuarter() && hasRecievedBeat)
             {
                 hasRecievedBeat = false;
             }
-            changeTexture();
         }
 
-        private void changeTexture()
+        protected virtual void changeTexture()
         {
             if (bufferCount == moveBuffer)
             {
-                spriteTexture = attacktexture;
+                spriteTexture = attackTexture;
             }
             else if (rhythmManager.songPlayer.IsOnQuarter())
             {
-                spriteTexture = beatTexture;
+                spriteTexture = onBeatTexture;
             }
             else
             {
-                spriteTexture = texture;
+                spriteTexture = offBeatTexture;
             }
         }
 
-        int bufferCount;
-        private bool checkIfMove()
+        private void setPlayerState()
+        {
+            if (isTouchingPlayer())
+            {
+                player.State = PlayerState.Dead;
+            }
+        }
+        private bool isTouchingPlayer()
+        {
+            if (this.gridPos == player.gridPos && this.Visible == true)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        protected void checkIfMove()
+        {
+            setPlayerState();
+            if (moveBufferFilled())
+            {
+                moveEnemy();
+            }
+        }
+
+        protected virtual void moveEnemy()
+        {
+
+        }
+
+        
+        private bool moveBufferFilled()
         {
             if (bufferCount >= moveBuffer)
             {
@@ -91,96 +118,6 @@ namespace RhythmGameProto
             }
 
             return false;
-        }
-
-        private bool isTouchingPlayer()
-        {
-            if (this.gridPos == player.gridPos && this.Visible == true)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private void checkPlayerPos()
-        {
-            if (isTouchingPlayer())
-            {
-                player.State = PlayerState.Dead;
-            }
-        }
-
-        private void moveEnemy()
-        {
-            checkPlayerPos();
-            if (checkIfMove())
-            {
-                pathFindingMove();
-                //moveState = MoveState.Move;
-            }
-        }
-
-        private void pathFindingMove()
-        {
-            List<Node> path = pathfinder.findPath(this.gridManager.NodeGrid[(int)this.gridPos.X, (int)this.gridPos.Y], this.gridManager.NodeGrid[(int)player.gridPos.X, (int)player.gridPos.Y]);
-            if (path.Count > 0)
-            {
-                gridPos = path[0].pos;
-            }
-            else
-            {
-                Debug.WriteLine("ERROR: COULDNTFIND PATH!");
-            }
-        }
-        private void simpleMove()
-        {
-            int dirToMove = rnd.Next(0, 2);
-            switch (dirToMove)
-            {
-                case 0:
-                    moveX();
-                    break;
-                case 1:
-                    moveY();
-                    break;
-            }
-        }
-        private void moveY()
-        {
-            if (this.gridPos.Y > player.gridPos.Y)
-            {
-                gridPos.Y--;
-            }
-            else if (this.gridPos.Y == player.gridPos.Y)
-            {
-                moveX();
-            }
-            else
-            {
-                gridPos.Y++;
-            }
-        }
-        private void moveX()
-        {
-            if (this.gridPos.X > player.gridPos.X)
-            {
-                gridPos.X--;
-            }
-            else if (this.gridPos.X == player.gridPos.X)
-            {
-                if (this.gridPos == player.gridPos)
-                {
-                    return;
-                }
-                else
-                {
-                    moveY();
-                }
-            }
-            else
-            {
-                gridPos.X++;
-            }
         }
 
     }

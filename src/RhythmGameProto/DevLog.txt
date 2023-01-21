@@ -120,3 +120,12 @@ For levels, instead of score collect all the keys and make it to the exit
 maybe score is still a thing in regular levels, but once all the keys are collected
 the beat doesnt matter anymore and you can just book it to the exit?
 
+maybe if you perform a tile swap on a projectile it turns around and
+can now kill the enemy. Acts as one of your own projectiles
+
+increase difficulty after each completed song on endless
+
+add a really fast enemy that moves every sixteenth note and quarter note that spawns
+after so many songs on endless
+
+

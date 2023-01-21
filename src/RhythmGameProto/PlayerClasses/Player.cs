@@ -168,6 +168,7 @@ namespace RhythmGameProto
 
         public void ResetPlayer(Vector2 startPos)
         {
+            rhythmManager.SongsComplete = 0;
             gridPos = startPos;
             loseScore();
             State = PlayerState.Alive;

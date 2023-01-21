@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using RhythmGameProto;
 using RhythmGameProto.GridClasses;
+using System.Collections.Generic;
 
 namespace RhythmGameProto.Scenes
 {
@@ -9,7 +10,10 @@ namespace RhythmGameProto.Scenes
         protected GridManager gridManager;
         protected Player player;
         protected ArrowIndicators arrowIndicators;
+
+        protected List<EnemySpawner> enemySpawners;
         protected EnemySpawner enemySpawner;
+        protected SpittingEnemySpawner spittingEnemySpawner;
         protected PowerUpSpawner powerUpSpawner;
         protected Camera camera;
         protected FileReader fileReader;
@@ -19,6 +23,7 @@ namespace RhythmGameProto.Scenes
         public GamePlay(Game game, SceneManager manager, RhythmManager rm, ScoreManager sm, int level) : base(game, manager, rm, sm)
         {
             this.level= level;
+            enemySpawners = new List<EnemySpawner>();
         }
 
         public override void SetupScene()
@@ -39,14 +44,18 @@ namespace RhythmGameProto.Scenes
 
             player = new Player(Game, gridManager, rm, 1, camera, scoreManager);
             Game.Components.Add(player);
-            enemySpawner = new EnemySpawner(Game, gridManager, rm, player, camera, 8);
+            /*enemySpawner = new EnemySpawner(Game, gridManager, rm,  camera, player, 8);
             Game.Components.Add(enemySpawner);
-            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, player, camera, 8);
+            enemySpawners.Add(enemySpawner);*/
+            spittingEnemySpawner = new SpittingEnemySpawner(Game, gridManager, rm, camera, player, 12);
+            Game.Components.Add(spittingEnemySpawner);
+            enemySpawners.Add(spittingEnemySpawner);
+            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, camera, player, 8);
             Game.Components.Add(powerUpSpawner);
             arrowIndicators = new ArrowIndicators(Game, gridManager, player, camera);
             Game.Components.Add(arrowIndicators);
 
-            dynamicTileManager = new DynamicTileManager(Game, gridManager, player, enemySpawner);
+            dynamicTileManager = new DynamicTileManager(Game, gridManager, player, enemySpawners);
             Game.Components.Add(dynamicTileManager);
 
             addCompsToList();
@@ -56,7 +65,8 @@ namespace RhythmGameProto.Scenes
         {
             addComponentToScene(camera);
             addComponentToScene(gridManager);
-            addComponentToScene(enemySpawner);
+            //addComponentToScene(enemySpawner);
+            addComponentToScene(spittingEnemySpawner);
             addComponentToScene(powerUpSpawner);
             addComponentToScene(player);
             addComponentToScene(scoreManager);
@@ -87,7 +97,10 @@ namespace RhythmGameProto.Scenes
             gridManager.RandomGrid(player.gridPos);
             dynamicTileManager.AddTiles();
             player.ResetPlayer(new Vector2(0, 1));
-            enemySpawner.spawnState = SpawnState.reset;
+            foreach(Spawner s in enemySpawners)
+            {
+                s.spawnState = SpawnState.reset;
+            }
             powerUpSpawner.spawnState = SpawnState.reset;
             //rm.state = SongState.reset;
         }

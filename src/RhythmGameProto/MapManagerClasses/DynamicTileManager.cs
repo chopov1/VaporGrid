@@ -13,15 +13,15 @@ namespace RhythmGameProto.GridClasses
         List<TrapTile> traps;
         List<BreakableTile> breakables;
         Player player;
-        EnemySpawner enemySpawner;
+        List<EnemySpawner> enemySpawners;
         GridManager gm;
-        public DynamicTileManager(Game game, GridManager gm ,Player p, EnemySpawner enemies) : base(game)
+        public DynamicTileManager(Game game, GridManager gm ,Player p, List<EnemySpawner> enemies) : base(game)
         {
             this.gm = gm;
             traps = new List<TrapTile>();
             breakables= new List<BreakableTile>();
             player= p;
-            enemySpawner = enemies;
+            enemySpawners = enemies;
         }
 
         public void AddTiles()
@@ -63,19 +63,24 @@ namespace RhythmGameProto.GridClasses
                         {
                             player.State = PlayerState.Dead;
                         }
-                        foreach(Enemy e in enemySpawner.getActiveObjs())
+                        foreach(EnemySpawner es in enemySpawners)
                         {
-                            if (tile.IsUnderObject(e.gridPos))
+                            foreach (PathfindingEnemy e in es.getActiveObjs())
                             {
-                                enemySpawner.DeSpawn(e);
+                                if (tile.IsUnderObject(e.gridPos))
+                                {
+                                    es.DeSpawn(e);
+                                }
                             }
                         }
+                        gm.NodeGrid[(int)tile.tileGridPos.X, (int)tile.tileGridPos.Y].iswalkable = false;
                         break;
                     case TrapState.inactive:
                         if (tile.IsUnderObject(player.gridPos) && !(tile is AutoTrapTile))
                         {
                             tile.State = TrapState.activate;
                         }
+                        gm.NodeGrid[(int)tile.tileGridPos.X, (int)tile.tileGridPos.Y].iswalkable = true;
                         break;
                 }
             }

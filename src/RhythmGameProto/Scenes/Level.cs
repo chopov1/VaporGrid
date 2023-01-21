@@ -41,20 +41,32 @@ namespace RhythmGameProto.Scenes
 
             player = new Player(Game, gridManager, rm, 1, camera, scoreManager);
             Game.Components.Add(player);
-            enemySpawner = new EnemySpawner(Game, gridManager, rm, player, camera, 8);
+
+            enemySpawner = new EnemySpawner(Game, gridManager, rm,  camera, player, 8);
             Game.Components.Add(enemySpawner);
-            enemySpawner.spawnState = SpawnState.inactive;
-            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, player, camera, 8);
+            enemySpawner.spawnState = SpawnState.manualSpawner;
+            enemySpawners.Add(enemySpawner);
+
+            spittingEnemySpawner = new SpittingEnemySpawner(Game, gridManager, rm, camera, player, 8);
+            Game.Components.Add(spittingEnemySpawner);
+            spittingEnemySpawner.spawnState = SpawnState.manualSpawner;
+            enemySpawners.Add(spittingEnemySpawner);
+
+            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, camera, player, 8);
             Game.Components.Add(powerUpSpawner);
-            keySpawner = new KeySpawner(Game, gridManager, rm, player, camera, 3);
-            keySpawner.spawnState = SpawnState.inactive;
+            powerUpSpawner.spawnState = SpawnState.manualSpawner;
+
+            keySpawner = new KeySpawner(Game, gridManager, rm,  camera, player, 8);
             Game.Components.Add(keySpawner);
-            powerUpSpawner.spawnState = SpawnState.inactive;
+            keySpawner.spawnState = SpawnState.manualSpawner;
+
             arrowIndicators = new ArrowIndicators(Game, gridManager, player, camera);
             Game.Components.Add(arrowIndicators);
 
-            dynamicTileManager = new DynamicTileManager(Game, gridManager, player, enemySpawner);
+            dynamicTileManager = new DynamicTileManager(Game, gridManager, player, enemySpawners);
             Game.Components.Add(dynamicTileManager);
+
+            exit = new Collectable(Game, gridManager, "ExitTutorial", camera, player);
 
             addCompsToList();
 
@@ -65,6 +77,7 @@ namespace RhythmGameProto.Scenes
             addComponentToScene(camera);
             addComponentToScene(gridManager);
             addComponentToScene(enemySpawner);
+            addComponentToScene(spittingEnemySpawner);
             addComponentToScene(powerUpSpawner);
             addComponentToScene(keySpawner);
             addComponentToScene(player);
@@ -72,6 +85,7 @@ namespace RhythmGameProto.Scenes
             addComponentToScene(arrowIndicators);
             addComponentToScene(rm);
             addComponentToScene(dynamicTileManager);
+            addComponentToScene(exit);
         }
 
         protected void spawnObjects()
@@ -93,9 +107,12 @@ namespace RhythmGameProto.Scenes
                             numOfKeys++;
                             break;
                         case 3:
-                            exit = new Collectable(Game, gridManager, "ExitTutorial", camera, player);
                             exit.gridPos= new Vector2(x,y);
-                            addComponentToScene(exit);
+                            exit.Enabled = false;
+                            exit.Visible= false;
+                            break;
+                        case 4:
+                            spittingEnemySpawner.SpawnObject(new Vector2(x, y));
                             break;
 
                     }
@@ -106,8 +123,8 @@ namespace RhythmGameProto.Scenes
 
         protected override void ResetGamePlay()
         {
+            numOfKeys = 0;
             curKeys = 0;
-            numOfKeys= 0;
             resetSpawners();
             dynamicTileManager.AddTiles();
             player.ResetPlayer(new Vector2(0, 1));
@@ -118,6 +135,7 @@ namespace RhythmGameProto.Scenes
         private void resetSpawners()
         {
             enemySpawner.ResetObjects();
+            spittingEnemySpawner.ResetObjects();
             keySpawner.ResetObjects();
             powerUpSpawner.ResetObjects();
         }
@@ -146,6 +164,7 @@ namespace RhythmGameProto.Scenes
                     if (key.Enabled == true)
                     {
                         curKeys++;
+                        scoreManager.PlayScoreSFX();
                         key.Enabled = false;
                         key.Visible = false;
                     }
@@ -153,10 +172,13 @@ namespace RhythmGameProto.Scenes
             }
             if (curKeys >= numOfKeys)
             {
-                exit.Enabled = true;
-                exit.Visible = true;
+                if (!exit.Enabled)
+                {
+                    exit.Enabled = true;
+                    exit.Visible = true;
+                }
             }
-            else
+            else if(exit.Enabled)
             {
                 exit.Enabled = false;
                 exit.Visible = false;
@@ -171,6 +193,7 @@ namespace RhythmGameProto.Scenes
         {
             //load the win screen instead
             ResetGamePlay();
+            exit.Collected = false;
             arrowIndicators.UnLoad();
             sceneManager.ChangeScene(this, sceneManager.gameOver);
         }

@@ -9,14 +9,14 @@ namespace RhythmGameProto
 {
     public class PowerUpSpawner : Spawner
     {
-        public PowerUpSpawner(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera, int numberOfObjects) : base(game, gm, rm, p, camera, numberOfObjects)
+        public PowerUpSpawner(Game game, GridManager gm, RhythmManager rm,  Camera camera, Player p, int numberOfObjects) : base(game, gm, rm,  camera, p, numberOfObjects)
         {
 
         }
 
         public override GridSprite createSpawnableObject()
         {
-            PowerUp p = new PowerUp(Game, gridManager, "PowerUp", camera, player, this);
+            PowerUp p = new PowerUp(Game, gridManager, "Apple", camera, player, this);
             p.Enabled = false;
             p.Visible = false;
             return p;

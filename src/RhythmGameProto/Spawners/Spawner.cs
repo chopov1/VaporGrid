@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RhythmGameProto
 {
-    public enum SpawnState { reset, active, readyToSpawn, inactive }
+    public enum SpawnState { reset, active, readyToSpawn, manualSpawner }
     public class Spawner : GameComponent, ISceneComponenet
     {
         protected RhythmManager rhythmManager;
@@ -18,13 +18,15 @@ namespace RhythmGameProto
         protected Queue<GridSprite> objects;
         protected Random rnd;
         protected int numOfObjects;
+        public int NumberOfObjects { get { return objects.Count; } }
+
         protected int spawnBuffer;
         protected Camera camera;
 
         public SpawnState spawnState;
 
         List<GridSprite> activeObjs;
-        public Spawner(Game game, GridManager gm, RhythmManager rm, Player p, Camera camera, int numberOfObjects) : base(game)
+        public Spawner(Game game, GridManager gm, RhythmManager rm,  Camera camera, Player p, int numberOfObjects) : base(game)
         {
             activeObjs= new List<GridSprite>();
             objects = new Queue<GridSprite>();
@@ -86,15 +88,23 @@ namespace RhythmGameProto
                     break;
                 case SpawnState.readyToSpawn:
                     spawnState = SpawnState.active;
-                    spawnObjectInRandomPos();
+                    readyToSpawn();
                     break;
-                case SpawnState.inactive:
+                case SpawnState.manualSpawner:
                     break;
             }
         }
 
+        protected virtual void readyToSpawn()
+        {
+            for(int i = 0; i < rhythmManager.SongsComplete + 1; i++)
+            {
+                spawnObjectInRandomPos();
+            }
+        }
+
         Vector2 temp;
-        private void spawnObjectInRandomPos()
+        protected void spawnObjectInRandomPos()
         {
             if (checkSpawnBuffer() && objects.Count > 0)
             {
@@ -115,7 +125,7 @@ namespace RhythmGameProto
             }
         }
 
-        public void SpawnObject(Vector2 pos)
+        public GridSprite SpawnObject(Vector2 pos)
         {
             if (objects.Count > 0)
             {
@@ -127,8 +137,10 @@ namespace RhythmGameProto
                     objToSpawn.SpriteState = SpriteState.Active;
                     objToSpawn.Enabled = true;
                     objToSpawn.Visible = true;
+                    return objToSpawn;
                 }
             }
+            return null;
         }
 
         private bool canSpawn(Vector2 posToSpawn)
@@ -178,7 +190,7 @@ namespace RhythmGameProto
             return posToSpawn;
         }
 
-        public void ResetObjects()
+        public virtual void ResetObjects()
         {
             foreach (GridSprite s in objects)
             {

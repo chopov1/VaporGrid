@@ -322,6 +322,18 @@
 /processorParam:Quality=Best
 /build:ScoreFXg#.wav
 
+#begin ShitFire.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:ShitFire.png
+
 #begin TileBlackBlue.png
 /importer:TextureImporter
 /processor:TextureProcessor

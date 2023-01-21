@@ -37,6 +37,7 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ScoreFXf#.wav</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ScoreFXg.wav</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ScoreFXg#.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ShitFire.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/TileBlackBlue.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/TileBlackPurple.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/TileGray.png</File>
@@ -49,6 +50,7 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/weirdFaceAttack3.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

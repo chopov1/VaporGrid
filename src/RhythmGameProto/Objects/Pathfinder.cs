@@ -28,9 +28,9 @@ namespace RhythmGameProto
     public class Pathfinder
     {
         GridManager gridManager;
-        Enemy enemy;
+        PathfindingEnemy enemy;
 
-        public Pathfinder(GridManager gm, Enemy enemy)
+        public Pathfinder(GridManager gm, PathfindingEnemy enemy)
         {
             gridManager = gm;
             this.enemy = enemy;

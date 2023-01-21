@@ -204,3 +204,4 @@ D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\TileTrapActive.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\TileTrapInactive.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Apple.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ShitFire.xnb

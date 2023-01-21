@@ -18,14 +18,16 @@ namespace RhythmGameProto
 
         protected Texture2D spriteTexture;
         public string TextureName;
-        float Scale;
+        float scale;
+        protected float rotation;
 
         protected Camera camera;
         public Sprite(Game game, string texturename, Camera camera) : base(game)
         {
             this.camera = camera;
             TextureName = texturename;
-            Scale = 1;
+            scale = 1;
+            rotation = 0;
             Position = new Vector2(100, 100);
         }
 
@@ -46,8 +48,8 @@ namespace RhythmGameProto
         {
             Rect.X = (int)Position.X;
             Rect.Y = (int)Position.Y;
-            Rect.Width = (int)(spriteTexture.Width * this.Scale);
-            Rect.Height = (int)(spriteTexture.Height * this.Scale);
+            Rect.Width = (int)(spriteTexture.Width * this.scale);
+            Rect.Height = (int)(spriteTexture.Height * this.scale);
         }
 
         public override void Draw(GameTime gameTime)
@@ -58,7 +60,7 @@ namespace RhythmGameProto
                 Rect,
                 null,
                 Color.White,
-                0,
+                rotation,
                 this.Origin,
                 effect,
                 0);

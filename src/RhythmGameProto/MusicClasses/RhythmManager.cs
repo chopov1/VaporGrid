@@ -31,6 +31,8 @@ namespace RhythmGameProto
         Texture2D halfNote;
         SpriteBatch spriteBatch;
 
+        public int SongsComplete;
+
         public SongPlayer songPlayer;
 
         public RhythmManager(Game game) : base(game)
@@ -79,6 +81,7 @@ namespace RhythmGameProto
                     //songPlayer.SongPlayerUpdate();
                     if (songPlayer.HasFinishedSong())
                     {
+                        SongsComplete++;
                         state = SongState.reset;
                     }
                     break;

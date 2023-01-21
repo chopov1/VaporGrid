@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ArrowRightClear.png</SourceFile>
-  <SourceTime>2022-12-15T23:02:24.6716745-06:00</SourceTime>
+  <SourceTime>2023-01-19T00:51:28.9254496-06:00</SourceTime>
   <DestFile>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/bin/Windows/Content/ArrowRightClear.xnb</DestFile>
-  <DestTime>2023-01-05T13:22:58.3861613-06:00</DestTime>
+  <DestTime>2023-01-19T00:52:17.2088401-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
