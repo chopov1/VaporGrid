@@ -101,7 +101,7 @@ namespace RhythmGameProto
             }
         }
 
-        private int getRandStick(int index)
+        /*private int getRandStick(int index)
         {
             switch (index)
             {
@@ -114,7 +114,7 @@ namespace RhythmGameProto
                 case 4:
                     break;
             }
-        }
+        }*/
 
         private void getNormalGamePadInput()
         {
