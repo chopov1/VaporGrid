@@ -62,16 +62,26 @@ namespace RhythmGameProto
             changeTexture();
         }
 
+        bool inputToggle;
         private void updateMovement()
         {
             switch (Controller.State)
             {
                 case InputState.HasInput:
-                    //moveState = MoveState.Move; 
-                    checkInputAccuracy();
-                    Controller.State = InputState.NoInput;
+                    //moveState = MoveState.Move;
+                    if(inputToggle)
+                    {
+                        checkInputAccuracy();
+                        inputToggle= false;
+                    }
+                    else
+                    {
+                        camera.AdjustZoom(-.02f);
+                    }
+                    //Controller.State = InputState.NoInput;
                     break;
                 case InputState.NoInput:
+                    inputToggle = true;
                     camera.AdjustZoom(-.02f);
                     break;
             }

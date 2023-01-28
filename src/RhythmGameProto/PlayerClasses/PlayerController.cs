@@ -22,7 +22,15 @@ namespace RhythmGameProto
         public override void Update()
         {
             base.Update();
-            getRandomInput();
+
+            if (isUsingGamepad())
+            {
+                getNormalGamePadInput();
+            }
+            else
+            {
+                getRandomInput();
+            }
         }
 
         private void getRandomInput()
@@ -75,6 +83,93 @@ namespace RhythmGameProto
                         return;
                     }
                 }
+            }
+            else
+            {
+                State= InputState.NoInput;
+            }
+            
+        }
+
+        private void getRandomInputGamePad()
+        {
+            Vector2 stickValue = Thumbstick(1);
+            
+            if ( stickValue.X >= .2)
+            {
+
+            }
+        }
+
+        private int getRandStick(int index)
+        {
+            switch (index)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+            }
+        }
+
+        private void getNormalGamePadInput()
+        {
+            Vector2 stickValue = Thumbstick(1);
+            if (stickValue.X >= .2 && stickValue.X > Math.Abs(stickValue.Y))
+            {
+                if (Player.gridPos.X + 1! < Player.GridManager.GridWidth)
+                {
+                    if (Player.GridManager.Grid[(int)Player.gridPos.X + 1, (int)Player.gridPos.Y].IsWalkable)
+                    {
+                        Player.dirToMove = new Vector2(1, 0);
+                        State = InputState.HasInput;
+                        return;
+                    }
+                }
+            }
+            if(stickValue.X <= -.2 && stickValue.X < -1 * Math.Abs(stickValue.Y))
+            {
+                if (Player.gridPos.X - 1! > -1)
+                {
+                    if (Player.GridManager.Grid[(int)Player.gridPos.X - 1, (int)Player.gridPos.Y].IsWalkable)
+                    {
+                        Player.dirToMove = new Vector2(-1, 0);
+                        State = InputState.HasInput;
+                        return;
+                    }
+                }
+            }
+            if(stickValue.Y >= .2 && stickValue.Y > Math.Abs(stickValue.X))
+            {
+                if (Player.gridPos.Y - 1! > -1)
+                {
+                    if (Player.GridManager.Grid[(int)Player.gridPos.X, (int)Player.gridPos.Y - 1].IsWalkable)
+                    {
+                        Player.dirToMove = new Vector2(0, -1);
+                        State = InputState.HasInput;
+                        return;
+                    }
+                }
+            }
+            if(stickValue.Y <= -.2 && stickValue.Y < -1 * Math.Abs(stickValue.X))
+            {
+                if (Player.gridPos.Y + 1! < Player.GridManager.GridHeight)
+                {
+                    if (Player.GridManager.Grid[(int)Player.gridPos.X, (int)Player.gridPos.Y + 1].IsWalkable)
+                    {
+                        Player.dirToMove = new Vector2(0, 1);
+                        State = InputState.HasInput;
+                        return;
+                    }
+                }
+            }
+            else if (stickValue.X > -.2 && stickValue.X < .2 && stickValue.Y > -.2 & stickValue.Y < .2)
+            {
+                State = InputState.NoInput;
             }
         }
 

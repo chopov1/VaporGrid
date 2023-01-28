@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using SharpDX.Direct3D11;
 
 namespace RhythmGameProto
 {
@@ -21,11 +23,13 @@ namespace RhythmGameProto
         //right can mean rightarrow if its p1 or d if its p2 etc..
         public Dictionary<string, Keys[]> inputKeys;
         public Dictionary<string, Buttons[]> inputButtons;
+        public Dictionary<string, Vector2[]> stickValues;
 
         public InputHandler()
         {
             setupKeyDic();
             setupButtonDic();
+            setupStickDic();
         }
         private void setupButtonDic()
         {
@@ -40,6 +44,11 @@ namespace RhythmGameProto
             inputKeys.Add("Up", new Keys[] { Keys.Up, Keys.W });
             inputKeys.Add("Down", new Keys[] { Keys.Down, Keys.S });
         }
+        private void setupStickDic()
+        {
+            stickValues = new Dictionary<string, Vector2[]>();
+            //stickValues.Add("Right", new Vector2[] { new Vector2()})
+        }
         public virtual void Update()
         {
             prevKeyboardState = KeyboardState;
@@ -53,9 +62,10 @@ namespace RhythmGameProto
             return GamePad.GetState(PlayerIndex.One).IsConnected;
         }
 
-        public Vector2 thumbstick(int player)
+        public Vector2 Thumbstick(int player)
         {
             GamePadThumbSticks sticks = GamePadState.ThumbSticks;
+            
             if (player == 1)
             {
                 return sticks.Left;
