@@ -100,7 +100,7 @@ namespace RhythmGameProto
         {
             base.LoadContent();
             soundEffects = setupSFX();
-            font = Game.Content.Load<SpriteFont>("PixelText");
+            font = Game.Content.Load<SpriteFont>("Fonts/PixelText");
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
             scoreData = fr.ReadFile(fr.scorePath);
             HighScore = int.Parse(scoreData[0]);
@@ -150,7 +150,7 @@ namespace RhythmGameProto
         {
             base.Draw(gameTime);
             spriteBatch.Begin();
-            if(ShowScore)
+            /*if(ShowScore)
             {
                 if (ShowHighScore)
                 {
@@ -159,7 +159,7 @@ namespace RhythmGameProto
                 }
                 spriteBatch.DrawString(font, "Score: " + Score, new Vector2(600, 100), Color.White);
                 spriteBatch.DrawString(font, "+" + ComboScore, new Vector2(600, 200), Color.White);
-            }
+            }*/
             //draw score
             spriteBatch.End();
         }

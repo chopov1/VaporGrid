@@ -23,6 +23,7 @@ namespace RhythmGameProto.Scenes
         EnemySpawner enemySpawner;
 
         TutorialUI display;
+        ScoreUI scoreDisplay;
 
         public Tutorial(Game game, SceneManager manager, RhythmManager rm, ScoreManager sm) : base(game, manager, rm, sm)
         {
@@ -40,6 +41,9 @@ namespace RhythmGameProto.Scenes
 
             display = new TutorialUI(Game);
             Game.Components.Add(display);
+
+            scoreDisplay = new ScoreUI(Game, scoreManager);
+            Game.Components.Add(scoreDisplay);
 
             camera = new Camera(Game);
             Game.Components.Add(camera);
@@ -69,6 +73,7 @@ namespace RhythmGameProto.Scenes
         private void addCompsToList()
         {
             addComponentToScene(display);
+            addComponentToScene(scoreDisplay);
             addComponentToScene(camera);
             addComponentToScene(gridManager);
             addComponentToScene(player);

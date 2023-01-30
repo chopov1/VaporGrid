@@ -128,4 +128,10 @@ increase difficulty after each completed song on endless
 add a really fast enemy that moves every sixteenth note and quarter note that spawns
 after so many songs on endless
 
+Font Options
+
+Rocket Rider
+Hyper Viper
+Cyberspace Raceway Back Font
+
 

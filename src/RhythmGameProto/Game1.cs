@@ -19,12 +19,12 @@ namespace RhythmGameProto
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
-            conditionManager = new GameStateManager(this);
-            Components.Add(conditionManager);
-
             _graphics.PreferredBackBufferWidth = 1024; 
             _graphics.PreferredBackBufferHeight = 720;
             _graphics.ApplyChanges();
+
+            conditionManager = new GameStateManager(this);
+            Components.Add(conditionManager);
         }
 
         protected override void Initialize()

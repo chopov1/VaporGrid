@@ -145,12 +145,47 @@
 /processorParam:TextureFormat=Color
 /build:ExitTutorial.png
 
-#begin Font1.spritefont
+#begin Fonts/Font1.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:Font1.spritefont
+/build:Fonts/Font1.spritefont
+
+#begin Fonts/PixelText.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/PixelText.spritefont
+
+#begin Fonts/PixelTextSub.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/PixelTextSub.spritefont
+
+#begin Fonts/PixelTextSubBack.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/PixelTextSubBack.spritefont
+
+#begin Fonts/TitleText.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/TitleText.spritefont
+
+#begin Fonts/TitleTextBack.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/TitleTextBack.spritefont
 
 #begin MushroomGuy.png
 /importer:TextureImporter
@@ -223,20 +258,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:MusicNoteYellow.png
-
-#begin PixelText.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:PixelText.spritefont
-
-#begin PixelTextSub.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:PixelTextSub.spritefont
 
 #begin PowerUp.png
 /importer:TextureImporter

@@ -19,12 +19,28 @@ namespace RhythmGameProto.UI
 
         protected override void drawUI()
         {
-            spriteBatch.DrawString(HeaderText, "Welcome To VaporGrid!", new Vector2(100, 100), Color.PeachPuff);
-            spriteBatch.DrawString(SubText, "Level Selection <" + LevelSelection + "> ", new Vector2(200, 150), Color.PeachPuff);
-            spriteBatch.DrawString(SubText, "Press enter to play selected level", new Vector2(200, 200), Color.PeachPuff);
-            spriteBatch.DrawString(SubText, "Press T to play tutorial", new Vector2(300, 300), Color.PeachPuff);
-            spriteBatch.DrawString(HeaderText, "Previous Score: " + sm.prevScore, new Vector2(300, 400), Color.PeachPuff);
-            spriteBatch.DrawString(HeaderText, "HighScore: " + sm.HighScore, new Vector2(300, 450), Color.PeachPuff);
+            spriteBatch.DrawString(TitleTextBack, "Welcome To VaporGrid!", new Vector2(centerText("Welcome To VaporGrid!", TitleTextBack).X, 100), pink);
+            spriteBatch.DrawString(TitleText, "Welcome To VaporGrid!", new Vector2(centerText("Welcome To VaporGrid!", TitleText).X, 100), purple);
+            DrawCustomStringBacked(SubText,SubTextBack ,"Game Mode:", 180, yellow, orange);
+            drawGameModeOptions();
+            DrawCustomStringBacked(SubText,SubTextBack, "Press enter to play selected level", 250, yellow, orange);
+            DrawCustomStringBacked(SubText, SubTextBack, "Press T to play tutorial", 300, yellow, orange);
+            DrawCustomString(HeaderText, "Previous Score: " + sm.prevScore, 400, red);
+            DrawCustomString(HeaderText, "HighScore: " + sm.HighScore, 450, red);
         }
+
+        void drawGameModeOptions()
+        {
+            switch(LevelSelection)
+            {
+                case 0:
+                    DrawCustomStringBacked(SubText, SubTextBack, "Endless", 200, yellow, orange);
+                    break;
+                default:
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + LevelSelection + ">", 200, yellow, orange);
+                    break;
+            }
+        }
+
     }
 }

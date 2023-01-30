@@ -24,7 +24,7 @@ namespace RhythmGameProto
         public int LevelSelection;
         public SceneManager(Game game) : base(game)
         {
-            LevelSelection = 1;
+            LevelSelection = 0;
             lvls = new LevelLoader();
             levels = new List<Scene>();
             rm = new RhythmManager(Game);

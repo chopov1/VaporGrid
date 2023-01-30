@@ -39,12 +39,18 @@ namespace RhythmGameProto
             this.rhythmManager = rhythmManager;
             dirToMove = new Vector2(0, 0);
             PlayerNumber = playernumber - 1;
-            gridPos = new Vector2(gridManager.GridWidth / 2, gridManager.GridHeight / 2);
+            
             Controller = new PlayerController(this);
             SpriteState = SpriteState.Active;
             State = PlayerState.Alive;
             SixteenthBuffer = 16;
 
+        }
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            gridPos = new Vector2(gridManager.GridWidth / 2, gridManager.GridHeight / 2);
         }
 
         protected override void LoadContent()

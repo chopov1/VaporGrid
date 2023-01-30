@@ -47,7 +47,7 @@ namespace RhythmGameProto
         protected override void LoadContent()
         {
             base.LoadContent();
-            font = Game.Content.Load<SpriteFont>("Font1");
+            font = Game.Content.Load<SpriteFont>("Fonts/Font1");
             offbeatNote = Game.Content.Load<Texture2D>("MusicNoteGrey");
             downbeatNote = Game.Content.Load<Texture2D>("MusicNoteYellow");
             halfNote= Game.Content.Load<Texture2D>("MusicNotePurple");

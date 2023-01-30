@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using RhythmGameProto;
 using RhythmGameProto.GridClasses;
+using RhythmGameProto.UI;
 using System.Collections.Generic;
 
 namespace RhythmGameProto.Scenes
@@ -18,6 +19,8 @@ namespace RhythmGameProto.Scenes
         protected Camera camera;
         protected FileReader fileReader;
         protected DynamicTileManager dynamicTileManager;
+
+        ScoreUI display;
 
         protected int level;
         public GamePlay(Game game, SceneManager manager, RhythmManager rm, ScoreManager sm, int level) : base(game, manager, rm, sm)
@@ -58,6 +61,9 @@ namespace RhythmGameProto.Scenes
             dynamicTileManager = new DynamicTileManager(Game, gridManager, player, enemySpawners);
             Game.Components.Add(dynamicTileManager);
 
+            display = new ScoreUI(Game, scoreManager);
+            Game.Components.Add(display);
+
             addCompsToList();
         }
 
@@ -73,6 +79,7 @@ namespace RhythmGameProto.Scenes
             addComponentToScene(arrowIndicators);
             addComponentToScene(rm);
             addComponentToScene(dynamicTileManager);
+            addComponentToScene(display);
         }
 
 

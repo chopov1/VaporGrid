@@ -2,6 +2,7 @@
 using RhythmGameProto.GridClasses;
 using RhythmGameProto.MapManagerClasses;
 using RhythmGameProto.Spawners;
+using RhythmGameProto.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -86,6 +87,7 @@ namespace RhythmGameProto.Scenes
             addComponentToScene(rm);
             addComponentToScene(dynamicTileManager);
             addComponentToScene(exit);
+
         }
 
         protected void spawnObjects()

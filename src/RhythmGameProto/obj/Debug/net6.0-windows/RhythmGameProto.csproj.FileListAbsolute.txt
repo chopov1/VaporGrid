@@ -122,7 +122,6 @@ D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\SynthwaveNineteen 82bpm.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\SynthwaveTwo 82bpm 8.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\SynthwaveTwo 82bpm.xnb
-D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\PixelText.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ArrowDown.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ArrowDownClear.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ArrowLeft.xnb
@@ -132,14 +131,12 @@ D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ArrowUp.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ArrowUpClear.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\EnemySkull.xnb
-D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Font1.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\MushroomGuy.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\MushroomGuyGold.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\MushroomGuyJumping.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\MusicNoteGrey.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\MusicNotePurple.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\MusicNoteYellow.xnb
-D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\PixelTextSub.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\PowerUp.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ScoreFXa#.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ScoreFXa.xnb
@@ -205,3 +202,9 @@ D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\TileTrapInactive.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Apple.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\ShitFire.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Fonts\Font1.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Fonts\PixelText.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Fonts\PixelTextSub.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Fonts\PixelTextSubBack.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Fonts\TitleText.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Fonts\TitleTextBack.xnb

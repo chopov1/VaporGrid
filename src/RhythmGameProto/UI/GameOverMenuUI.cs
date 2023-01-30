@@ -18,11 +18,11 @@ namespace RhythmGameProto.UI
         protected override void drawUI()
         {
             base.drawUI();
-            spriteBatch.DrawString(HeaderText, "Game Over", new Vector2(100, 100), Color.PeachPuff);
-            spriteBatch.DrawString(HeaderText, "Score: " + sm.prevScore, new Vector2(200, 200), Color.PeachPuff);
-            spriteBatch.DrawString(HeaderText, "HighScore: " + sm.HighScore, new Vector2(200, 300), Color.PeachPuff);
-            spriteBatch.DrawString(SubText, "press enter to return to main menu", new Vector2(100, 420), Color.PeachPuff);
-            spriteBatch.DrawString(SubText, "press space to try again", new Vector2(100, 400), Color.PeachPuff);
+            DrawCustomStringBacked(TitleText, TitleTextBack, "Game Over", 100, pink, purple);
+            DrawCustomString(HeaderText, "Score: " + sm.prevScore, 200, red);
+            DrawCustomString(HeaderText, "HighScore: " + sm.HighScore, 300, red);
+            DrawCustomString(HeaderText, "press space to try again", 400, orange);
+            DrawCustomString(HeaderText, "press enter to return to main menu", 420, orange);
         }
 
     }

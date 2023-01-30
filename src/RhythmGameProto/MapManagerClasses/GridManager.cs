@@ -21,7 +21,6 @@ namespace RhythmGameProto
         //public Dictionary<Vector2, MonogameTile> Grid;
         public MonogameTile[,] Grid;
         public Rectangle TileSize;
-        int buffer;
         Random random = new Random();
         public Node[,] NodeGrid;
 
@@ -33,6 +32,12 @@ namespace RhythmGameProto
         public int GridWidth { get { return Grid.GetLength(0); } }
         public int GridHeight { get { return Grid.GetLength(1); } }
 
+        protected int offsetX;
+        protected int offsetY;
+
+        int defaultGridWidth;
+        int defaultGridHeight;
+
         public GridManager(Game game, Camera camera, RhythmManager rm) : base(game)
         {
             lvlLoader = new LevelLoader();
@@ -40,17 +45,27 @@ namespace RhythmGameProto
             this.rm = rm;
             this.camera = camera;
             TileSize = new Rectangle(0, 0, 32, 32);
-            //make it centered by using Game.GraphicsDevice.Viewport
-            buffer = 100;
+
+            defaultGridWidth = 15;
+            defaultGridHeight = 10;
             setupDefaultGrid();
+
+        }
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            
         }
 
         private void setupDefaultGrid()
         {
+            offsetX = (int)((Game.GraphicsDevice.Viewport.Width / 2) - ((defaultGridWidth * TileSize.Width) / 2));
+            offsetY = (int)((Game.GraphicsDevice.Viewport.Height / 2) - ((defaultGridHeight * TileSize.Height) / 2));
             //the default grid is what is used for randomized level.
             //change this size to change size of randomized level.
-            Grid = createGrid(15, 10);
-            NodeGrid = createNodeGrid(15, 10);
+            Grid = createGrid(defaultGridWidth, defaultGridHeight);
+            NodeGrid = createNodeGrid(defaultGridWidth, defaultGridHeight);
         }
 
         private Node[,] createNodeGrid(int gridWidth, int gridHeight)
@@ -107,7 +122,10 @@ namespace RhythmGameProto
         public void loadLevel(int lvlNum)
         {
             UnloadGrid();
-            Array.Clear(Grid);
+            if(Grid != null)
+            {
+                Array.Clear(Grid);
+            }
             int[,] level = lvlLoader.levelList[lvlNum].tileInfo;
             int gridWidth = level.GetLength(0);
             int gridHeight = level.GetLength(1);
@@ -149,7 +167,7 @@ namespace RhythmGameProto
             {
                 for (int y = 0; y < gridHeight; y++)
                 {
-                    pos = new Vector2(x * TileSize.Width + buffer, y * TileSize.Height + buffer);
+                    pos = new Vector2(x * TileSize.Width + offsetX, y * TileSize.Height + offsetY);
                     t = new MonogameTile(Game, new WalkableTile(pos, new Vector2(x, y), tileTextures, rm), camera, rm);
                     t.Position = pos;
                     grid[x, y] = t;
@@ -232,6 +250,10 @@ namespace RhythmGameProto
 
         private void UnloadGrid()
         {
+            if (Grid == null)
+            {
+                return;
+            }
             foreach (MonogameTile t in Grid)
             {
                 t.UnLoad();
@@ -240,6 +262,7 @@ namespace RhythmGameProto
 
         public void UnLoad()
         {
+            
             UnloadGrid();
         }
     }

@@ -18,7 +18,7 @@ namespace RhythmGameProto.Scenes
         {
             input = new MenuController();
             display = new MainMenuUI(game, sm);
-            levelSelection = 1;
+            levelSelection = 0;
             Game.Components.Add(display);
             addComponentToScene(display);
         }

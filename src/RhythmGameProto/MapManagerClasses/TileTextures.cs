@@ -22,6 +22,8 @@ namespace RhythmGameProto.GridClasses
         public Texture2D testOnB;
         public Texture2D testOffB;
 
+        public Vector2 tileSpriteSize { get { return new Vector2(unWalkableOffB.Width, unWalkableOffB.Height); } }
+
         public TileTextures(Game game) : base(game)
         {
             Game.Components.Add(this);
