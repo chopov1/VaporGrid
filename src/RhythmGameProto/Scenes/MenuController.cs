@@ -10,12 +10,27 @@ namespace RhythmGameProto
 {
     public class MenuController : InputHandler
     {
-        public bool PressedEnter { get { return PressedKey(Keys.Enter); } }
-        public bool PressedSpace { get { return PressedKey(Keys.Space); } }
+        public bool PressedContinue { get {
+                if (isUsingGamepad())
+                {
+                    return IsButtonPressed(Buttons.A);
+                }
+                return PressedKey(Keys.Space); } }
+        public bool PressedBack { get {
+                if (isUsingGamepad())
+                {
+                    return IsButtonPressed(Buttons.B);
+                }
+                return PressedKey(Keys.Enter); } }
 
         public bool PressedRight { get { return PressedKey(Keys.Right); } }
         public bool PressedLeft { get { return PressedKey(Keys.Left); } }
 
-        public bool PressedT { get { return PressedKey(Keys.T); } }
+        public bool PressedT { get {
+                if (isUsingGamepad())
+                {
+                    return IsButtonPressed(Buttons.Y);
+                }
+                return PressedKey(Keys.T); } }
     }
 }

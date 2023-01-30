@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using SharpDX.Direct3D11;
 
+
 namespace RhythmGameProto
 {
 
@@ -23,13 +24,13 @@ namespace RhythmGameProto
         //right can mean rightarrow if its p1 or d if its p2 etc..
         public Dictionary<string, Keys[]> inputKeys;
         public Dictionary<string, Buttons[]> inputButtons;
-        public Dictionary<string, Vector2[]> stickValues;
+        public string[] stickDirs;
 
         public InputHandler()
         {
             setupKeyDic();
             setupButtonDic();
-            setupStickDic();
+            setupStickDirs();
         }
         private void setupButtonDic()
         {
@@ -44,10 +45,13 @@ namespace RhythmGameProto
             inputKeys.Add("Up", new Keys[] { Keys.Up, Keys.W });
             inputKeys.Add("Down", new Keys[] { Keys.Down, Keys.S });
         }
-        private void setupStickDic()
+        private void setupStickDirs()
         {
-            stickValues = new Dictionary<string, Vector2[]>();
-            //stickValues.Add("Right", new Vector2[] { new Vector2()})
+            stickDirs = new string[4];
+            stickDirs[0] = "Right";
+            stickDirs[1] = "Left";
+            stickDirs[2] = "Down";
+            stickDirs[3] = "Up";
         }
         public virtual void Update()
         {
@@ -77,6 +81,38 @@ namespace RhythmGameProto
 
         }
 
+        public bool IsDirectionPressed(string dir, int playerNum)
+        {
+            Vector2 stickValue = Thumbstick(playerNum);
+            switch (dir)
+            {
+                case "Right":
+                    if (stickValue.X >= .6 && stickValue.X > Math.Abs(stickValue.Y))
+                    {
+                        return true;
+                    }
+                    break;
+                case "Left":
+                    if(stickValue.X <= -.6 && stickValue.X < -1 * Math.Abs(stickValue.Y))
+                    {
+                        return true;
+                    }
+                    break;
+                case "Down":
+                    if(stickValue.Y >= .6 && stickValue.Y > Math.Abs(stickValue.X))
+                    {
+                        return true;
+                    }
+                    break;
+                case "Up":
+                    if(stickValue.Y <= -.6 && stickValue.Y < -1 * Math.Abs(stickValue.X))
+                    {
+                        return true;
+                    }
+                    break;
+            }
+            return false;
+        }
 
         public bool IsButtonPressed(Buttons button)
         {

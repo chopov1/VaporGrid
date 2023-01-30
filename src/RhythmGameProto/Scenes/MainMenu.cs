@@ -27,7 +27,7 @@ namespace RhythmGameProto.Scenes
         {
             input.Update();
             base.SceneUpdate();
-            if (input.PressedEnter)
+            if (input.PressedContinue)
             {
                 sceneManager.ChangeScene(this, sceneManager.levels[levelSelection]);
             }
