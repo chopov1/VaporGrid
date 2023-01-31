@@ -16,6 +16,7 @@ namespace RhythmGameProto.UI
         protected SpriteFont SubTextBack;
         protected SpriteFont TitleText;
         protected SpriteFont TitleTextBack;
+        protected SpriteFont SmallSolid;
         protected SpriteBatch spriteBatch;
 
         protected int Xcenter;
@@ -49,6 +50,7 @@ namespace RhythmGameProto.UI
             HeaderText = Game.Content.Load<SpriteFont>("Fonts/PixelText");
             SubText = Game.Content.Load<SpriteFont>("Fonts/PixelTextSub");
             SubTextBack = Game.Content.Load<SpriteFont>("Fonts/PixelTextSubBack");
+            SmallSolid = Game.Content.Load<SpriteFont>("Fonts/SmallSolidText");
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
         }
 
@@ -62,6 +64,8 @@ namespace RhythmGameProto.UI
             spriteBatch.DrawString(backFont, s, new Vector2(centerText(s, font).X, Y), backColor);
             spriteBatch.DrawString(font, s, new Vector2(centerText(s, font).X, Y), color);
         }
+
+        
 
 
         protected Vector2 centerText(string s, SpriteFont font)

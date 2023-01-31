@@ -207,3 +207,4 @@ D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\TileTrapActive.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\TileTrapInactive.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\BackgroundStar.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Release\net6.0-windows\Content\Fonts\SmallSolidText.xnb

@@ -20,6 +20,7 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/Fonts/PixelText.spritefont</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/Fonts/PixelTextSub.spritefont</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/Fonts/PixelTextSubBack.spritefont</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/Fonts/SmallSolidText.spritefont</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/Fonts/TitleText.spritefont</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/Fonts/TitleTextBack.spritefont</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/MushroomGuy.png</File>
@@ -54,6 +55,7 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/weirdFaceAttack3.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

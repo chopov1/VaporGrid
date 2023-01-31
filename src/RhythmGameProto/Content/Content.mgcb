@@ -185,6 +185,13 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/PixelTextSubBack.spritefont
 
+#begin Fonts/SmallSolidText.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/SmallSolidText.spritefont
+
 #begin Fonts/TitleText.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

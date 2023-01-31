@@ -25,8 +25,8 @@ namespace RhythmGameProto.UI
                     //DrawCustomString(HeaderText, "Last Score: " + sm.prevScore, 425, Color.White);
                     
                 }
-                DrawCustomString(HeaderText, "Total Score: " + sm.Score, 60, Color.White);
-                DrawCustomString(HeaderText, "+" + sm.ComboScore, 100, Color.White);
+                DrawCustomString(HeaderText, "Total Score: " + sm.Score, 40, Color.White);
+                DrawCustomString(HeaderText, "+" + sm.ComboScore, 80, red);
             }
         }
 

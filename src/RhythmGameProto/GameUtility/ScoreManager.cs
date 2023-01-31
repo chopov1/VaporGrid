@@ -22,8 +22,6 @@ namespace RhythmGameProto
         public bool ShowHighScore;
         public bool WriteEnabled;
 
-        SpriteBatch spriteBatch;
-        SpriteFont font;
 
         FileReader fr;
         string[] scoreFxNames = { "ScoreFXc", "ScoreFXc#", "ScoreFXd", "ScoreFXd#", "ScoreFXe", "ScoreFXf", "ScoreFXf#", "ScoreFXg", "ScoreFXg#", "ScoreFXa", "ScoreFXa#", "ScoreFXb" };
@@ -100,8 +98,6 @@ namespace RhythmGameProto
         {
             base.LoadContent();
             soundEffects = setupSFX();
-            font = Game.Content.Load<SpriteFont>("Fonts/PixelText");
-            spriteBatch = new SpriteBatch(Game.GraphicsDevice);
             scoreData = fr.ReadFile(fr.scorePath);
             HighScore = int.Parse(scoreData[0]);
             prevScore= int.Parse(scoreData[1]);
@@ -149,7 +145,7 @@ namespace RhythmGameProto
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             /*if(ShowScore)
             {
                 if (ShowHighScore)
@@ -161,7 +157,7 @@ namespace RhythmGameProto
                 spriteBatch.DrawString(font, "+" + ComboScore, new Vector2(600, 200), Color.White);
             }*/
             //draw score
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public void Load()
