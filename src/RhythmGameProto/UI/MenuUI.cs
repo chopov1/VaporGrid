@@ -26,7 +26,7 @@ namespace RhythmGameProto.UI
         protected Color red;
         protected Color pink;
         protected Color purple;
-
+        protected Color blue;
 
         public MenuUI(Game game) : base(game)
         {
@@ -35,7 +35,7 @@ namespace RhythmGameProto.UI
             red = new Color(255, 41, 117);
             pink = new Color(242, 34, 255);
             purple = new Color(140, 30, 255);
-
+            blue = new Color(89, 203, 232);
         }
 
         protected override void LoadContent()

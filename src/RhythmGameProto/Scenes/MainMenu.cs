@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using RhythmGameProto.GameUtility;
 using RhythmGameProto.UI;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace RhythmGameProto.Scenes
             levelSelection = 0;
             Game.Components.Add(display);
             addComponentToScene(display);
+            
         }
 
         protected override void SceneUpdate()

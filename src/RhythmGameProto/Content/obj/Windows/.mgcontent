@@ -13,6 +13,7 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ArrowRightClear.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ArrowUp.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ArrowUpClear.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/BackgroundStar.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/EnemySkull.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/ExitTutorial.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/Fonts/Font1.spritefont</File>
@@ -53,6 +54,7 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/src/RhythmGameProto/Content/weirdFaceAttack3.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

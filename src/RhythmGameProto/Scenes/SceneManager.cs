@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RhythmGameProto.Scenes;
 using RhythmGameProto.MapManagerClasses;
+using RhythmGameProto.GameUtility;
 
 namespace RhythmGameProto
 {
@@ -22,6 +23,8 @@ namespace RhythmGameProto
         LevelLoader lvls;
         public int NumberOfLevels { get { return lvls.levelList.Count; } }
         public int LevelSelection;
+
+        BackgroundStars bgs;
         public SceneManager(Game game) : base(game)
         {
             LevelSelection = 0;
@@ -29,6 +32,10 @@ namespace RhythmGameProto
             levels = new List<Scene>();
             rm = new RhythmManager(Game);
             sm = new ScoreManager(Game, rm);
+
+            Camera c = new Camera(Game);
+            bgs = new BackgroundStars(Game, c);
+            Game.Components.Add(bgs);
 
 
             mainMenu = new MainMenu(game,this , rm, sm);
