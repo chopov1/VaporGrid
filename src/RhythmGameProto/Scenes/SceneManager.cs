@@ -39,9 +39,9 @@ namespace RhythmGameProto
 
 
             mainMenu = new MainMenu(game,this , rm, sm);
-            setupLevels();
             gameOver = new GameOver(game, this, rm, sm);
             tutorial = new Tutorial(game,this , rm, sm);
+            setupLevels();
             mainMenu.State = SceneState.loading;
             Game.Components.Add(mainMenu);
             Game.Components.Add(gameOver);
@@ -52,6 +52,7 @@ namespace RhythmGameProto
         {
             GamePlay endlessGameMode = new GamePlay(Game, this, rm, sm, 0);
             levels.Add(endlessGameMode);
+            levels.Add(tutorial);
             Game.Components.Add(endlessGameMode);
             for (int levelNumber = 1; levelNumber < NumberOfLevels; levelNumber++)
             {

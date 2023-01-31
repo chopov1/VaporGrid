@@ -33,10 +33,6 @@ namespace RhythmGameProto.Scenes
             {
                 sceneManager.ChangeScene(this, sceneManager.levels[levelSelection]);
             }
-            if (input.PressedT)
-            {
-                sceneManager.ChangeScene(this, sceneManager.tutorial);
-            }
             updateLevelSelection();
         }
 
@@ -44,7 +40,7 @@ namespace RhythmGameProto.Scenes
         {
             if (input.PressedRight)
             {
-                if(levelSelection + 1 >= sceneManager.NumberOfLevels)
+                if(levelSelection + 1 > sceneManager.NumberOfLevels)
                 {
                     levelSelection = 0;
                 }
@@ -57,7 +53,7 @@ namespace RhythmGameProto.Scenes
             {
                 if(levelSelection - 1 < 0)
                 {
-                    levelSelection = sceneManager.NumberOfLevels - 1;
+                    levelSelection = sceneManager.NumberOfLevels;
                 }
                 else
                 {

@@ -81,6 +81,51 @@ namespace RhythmGameProto
 
         }
 
+        bool pressedDir;
+        Vector2 stickValue;
+        public bool IsDirectionDown(string dir, int playerNum)
+        {
+            stickValue = Thumbstick(playerNum);
+            if (!pressedDir) {
+                switch (dir)
+                {
+                    case "Right":
+                        if (stickValue.X >= .6 && stickValue.X > Math.Abs(stickValue.Y))
+                        {
+                            pressedDir = true;
+                            return true;
+                        }
+                        break;
+                    case "Left":
+                        if (stickValue.X <= -.6 && stickValue.X < -1 * Math.Abs(stickValue.Y))
+                        {
+                            pressedDir = true;
+                            return true;
+                        }
+                        break;
+                    case "Down":
+                        if (stickValue.Y >= .6 && stickValue.Y > Math.Abs(stickValue.X))
+                        {
+                            pressedDir = true;
+                            return true;
+                        }
+                        break;
+                    case "Up":
+                        if (stickValue.Y <= -.6 && stickValue.Y < -1 * Math.Abs(stickValue.X))
+                        {
+                            pressedDir = true;
+                            return true;
+                        }
+                        break;
+                }
+            }
+            else if (stickValue == Vector2.Zero)
+            {
+                pressedDir = false;
+            }
+            return false;
+        }
+
         public bool IsDirectionPressed(string dir, int playerNum)
         {
             Vector2 stickValue = Thumbstick(playerNum);

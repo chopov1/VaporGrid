@@ -23,8 +23,18 @@ namespace RhythmGameProto
                 }
                 return PressedKey(Keys.Enter); } }
 
-        public bool PressedRight { get { return PressedKey(Keys.Right); } }
-        public bool PressedLeft { get { return PressedKey(Keys.Left); } }
+        public bool PressedRight { get {
+                if (isUsingGamepad())
+                {
+                    return IsDirectionDown("Right", 1);
+                }
+                return PressedKey(Keys.Right); } }
+        public bool PressedLeft { get {
+                if (isUsingGamepad())
+                {
+                    return IsDirectionDown("Left", 1);
+                }
+                return PressedKey(Keys.Left); } }
 
         public bool PressedT { get {
                 if (isUsingGamepad())

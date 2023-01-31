@@ -23,8 +23,8 @@ namespace RhythmGameProto.UI
             spriteBatch.DrawString(TitleText, "Welcome To VaporGrid!", new Vector2(centerText("Welcome To VaporGrid!", TitleText).X, 100), purple);
             DrawCustomStringBacked(SubText,SubTextBack ,"Game Mode:", 180, yellow, orange);
             drawGameModeOptions();
-            DrawCustomStringBacked(SubText,SubTextBack, "Press enter to play selected level", 250, yellow, orange);
-            DrawCustomStringBacked(SubText, SubTextBack, "Press T to play tutorial", 300, yellow, orange);
+            DrawCustomStringBacked(SubText,SubTextBack, "Press enter or A to play", 250, yellow, orange);
+            //DrawCustomStringBacked(SubText, SubTextBack, "Press T to play tutorial", 300, yellow, orange);
             DrawCustomString(HeaderText, "Previous Score: " + sm.prevScore, 400, red);
             DrawCustomString(HeaderText, "HighScore: " + sm.HighScore, 450, red);
         }
@@ -34,10 +34,13 @@ namespace RhythmGameProto.UI
             switch(LevelSelection)
             {
                 case 0:
-                    DrawCustomStringBacked(SubText, SubTextBack, "Endless", 200, yellow, orange);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Endless", 200, red, orange);
+                    break;
+                case 1:
+                    DrawCustomStringBacked(SubText, SubTextBack, "Tutorial", 200, blue, orange);
                     break;
                 default:
-                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + LevelSelection + ">", 200, yellow, orange);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + (LevelSelection - 1) + ">", 200, yellow, orange);
                     break;
             }
         }
