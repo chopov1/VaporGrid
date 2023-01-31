@@ -21,7 +21,7 @@ namespace RhythmGameProto
                 {
                     return IsButtonPressed(Buttons.B);
                 }
-                return PressedKey(Keys.Enter); } }
+                return PressedKey(Keys.Back); } }
 
         public bool PressedRight { get {
                 if (isUsingGamepad())

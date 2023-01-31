@@ -21,8 +21,8 @@ namespace RhythmGameProto.UI
             DrawCustomStringBacked(TitleText, TitleTextBack, "Game Over", 100, pink, purple);
             DrawCustomString(HeaderText, "Score: " + sm.prevScore, 200, red);
             DrawCustomString(HeaderText, "HighScore: " + sm.HighScore, 300, red);
-            DrawCustomString(HeaderText, "press space to try again", 400, orange);
-            DrawCustomString(HeaderText, "press enter to return to main menu", 420, orange);
+            DrawCustomString(HeaderText, "press space or A to try again", 400, orange);
+            DrawCustomString(HeaderText, "press backspace or B to return to main menu", 420, orange);
         }
 
     }
