@@ -210,3 +210,10 @@ D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Fonts\TitleTextBack.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\BackgroundStar.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\Fonts\SmallSolidText.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\bluePlanet\BluePlanet1.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\bluePlanet\BluePlanet2.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\bluePlanet\BluePlanet3.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\bluePlanet\BluePlanet4.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\bluePlanet\BluePlanet5.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\bluePlanet\BluePlanet6.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\src\RhythmGameProto\bin\Debug\net6.0-windows\Content\bluePlanet\BluePlanetSheet.xnb
