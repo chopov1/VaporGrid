@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/ScoreFXf.wav</SourceFile>
+  <SourceTime>2022-12-15T23:51:02.3256775-06:00</SourceTime>
+  <DestFile>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/bin/DesktopGL/ScoreFXf.xnb</DestFile>
+  <DestTime>2023-02-01T14:53:15.586654-06:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T06:44:56-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

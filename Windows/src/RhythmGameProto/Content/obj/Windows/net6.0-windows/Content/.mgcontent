@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/Apple.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ArrowDown.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ArrowDownClear.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ArrowLeft.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ArrowLeftClear.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ArrowRight.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ArrowRightClear.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ArrowUp.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ArrowUpClear.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/BackgroundStar.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/bluePlanet/BluePlanet1.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/bluePlanet/BluePlanet2.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/bluePlanet/BluePlanet3.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/bluePlanet/BluePlanet4.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/bluePlanet/BluePlanet5.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/bluePlanet/BluePlanet6.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/bluePlanet/BluePlanetSheet.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/EnemySkull.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ExitTutorial.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/Fonts/Font1.spritefont</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/Fonts/PixelText.spritefont</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/Fonts/PixelTextSub.spritefont</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/Fonts/PixelTextSubBack.spritefont</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/Fonts/SmallSolidText.spritefont</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/Fonts/TitleText.spritefont</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/Fonts/TitleTextBack.spritefont</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/MushroomGuy.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/MushroomGuyGold.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/MushroomGuyJumping.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/MusicNoteGrey.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/MusicNotePurple.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/MusicNoteYellow.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/PowerUp.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXa.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXa#.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXb.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXc.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXc#.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXd.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXd#.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXe.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXf.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXf#.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXg.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ScoreFXg#.wav</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/ShitFire.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/TileBlackBlue.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/TileBlackPurple.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/TileGray.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/TileGrayLight.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/TileTest1.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/TileTest2.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/TileTrapActive.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/TileTrapInactive.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/weirdFace3.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/Windows/src/RhythmGameProto/Content/weirdFaceAttack3.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

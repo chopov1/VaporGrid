@@ -1,0 +1,37 @@
+﻿I realized the grid manager needed to be a sprite. This felt good because I noticed myself thinking about what the grid manager needed objectivly as a tool rather then what the name ment as a designer.
+
+Tried to implement the observer pattern on the rhythmmanager. This did not work as I realized it would be notifying everything even if it is not active with the way my scenes are set up. I am not going to use this pattern. Lots of time spent on this but for a good lesson.
+
+ //this did not work. leaving as a reminder that the observer pattern will not work with my scene system, as it loops through all the gamecomponents even if they are not active. not accurate enough for rhythm game. rhythm manager should only be in charge of keeping track rhythm and song.
+    /*public struct RhythmData
+    {
+        public RhythmState State;
+    }
+
+    public interface IRhythmObserver
+    {
+        void ObserverUpdate(RhythmData data);
+    }
+
+    public interface IRhythmSubject
+    {
+        void attach(IRhythmObserver o);
+
+        void detach(IRhythmObserver o);
+
+        public void Notify();
+    }
+    public interface IObserver
+    {
+        void ObserverUpdate(Object message);
+    }
+
+    public interface ISubject
+    {
+
+        void attach(IObserver o);
+
+        void detach(IObserver o);
+        public void Notify();
+
+    }*/
