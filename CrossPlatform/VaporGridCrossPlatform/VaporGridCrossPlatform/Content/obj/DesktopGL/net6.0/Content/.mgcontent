@@ -49,6 +49,7 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/player/AstroNaut4.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/PlaytestQR.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Portal-Sheet.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/portalSFX.wav</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/PowerUp.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Rocket-Sheet.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/ScoreFXa.wav</File>
@@ -86,8 +87,9 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/DoorAnim/DoorSprite7.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/DoorAnim/DoorSprite8.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/DoorAnim/DoorSprite9.png</File>
-    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/DoorTileOffBeat.png</File>
-    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/DoorTileOnBeat.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/DoorTile.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/DoorTileCooldown.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/DoorTileReady.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/TrapTileActivating.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/TrapTileInactive.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/UnwalkableOffBeat.png</File>
@@ -102,6 +104,8 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/weirdFaceAttack3.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -513,6 +513,12 @@
 /processorParam:TextureFormat=Color
 /build:Portal-Sheet.png
 
+#begin portalSFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:portalSFX.wav
+
 #begin PowerUp.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -885,7 +891,7 @@
 /processorParam:TextureFormat=Color
 /build:Tiles/DoorAnim/DoorSprite9.png
 
-#begin Tiles/DoorTileOffBeat.png
+#begin Tiles/DoorTile.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -895,9 +901,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Tiles/DoorTileOffBeat.png
+/build:Tiles/DoorTile.png
 
-#begin Tiles/DoorTileOnBeat.png
+#begin Tiles/DoorTileCooldown.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -907,7 +913,19 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Tiles/DoorTileOnBeat.png
+/build:Tiles/DoorTileCooldown.png
+
+#begin Tiles/DoorTileReady.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Tiles/DoorTileReady.png
 
 #begin Tiles/TrapTileActivating.png
 /importer:TextureImporter

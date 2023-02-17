@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace VaporGridCrossPlatform.GridClasses
 {
+    //make a cooldown for reactivating this tile. Also make the time it as active much shorter maybe for art do green if it can be activated and red if it is on cooldown for the little pad in the middle
     public class AutoTrapTile : TrapTile
     {
         int beatsInactive;

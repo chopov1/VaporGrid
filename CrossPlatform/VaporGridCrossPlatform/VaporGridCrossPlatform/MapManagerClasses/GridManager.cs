@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Security.Policy;
@@ -16,6 +17,7 @@ namespace VaporGridCrossPlatform
     public class GridManager : Sprite, ISceneComponenet
     {
 
+        Pathfinder pathfinder;
         LevelLoader lvlLoader;
         //public Dictionary<Vector2, MonogameTile> Grid;
         public MonogameTile[,] Grid;
@@ -31,6 +33,8 @@ namespace VaporGridCrossPlatform
         public int GridWidth { get { return Grid.GetLength(0); } }
         public int GridHeight { get { return Grid.GetLength(1); } }
 
+        public Vector2 WalkableRange { get { return getLargestWalkableDistance(); } }
+
         protected int offsetX;
         protected int offsetY;
 
@@ -39,13 +43,14 @@ namespace VaporGridCrossPlatform
 
         public GridManager(Game game, Camera camera, RhythmManager rm) : base(game, "blank", camera)
         {
+            pathfinder = new Pathfinder(this);
             tileTextures = new TileTextures(game);
             lvlLoader = new LevelLoader();
             this.rm = rm;
             this.camera = camera;
 
             //TileSize = new Rectangle(0, 0, (int)tileTextures.tileSpriteSize.X, (int)tileTextures.tileSpriteSize.Y);
-            
+
             defaultGridWidth = 15;
             defaultGridHeight = 10;
             loadTiles();
@@ -54,19 +59,19 @@ namespace VaporGridCrossPlatform
         public override void Initialize()
         {
             base.Initialize();
-            
+
         }
 
         protected override void LoadContent()
         {
             base.LoadContent();
-            
+
             setGridPositions(Grid);
         }
 
         private void loadTiles()
         {
-            
+
             //the default grid is what is used for randomized level.
             //change this size to change size of randomized level.
             Grid = createGrid(defaultGridWidth, defaultGridHeight);
@@ -76,11 +81,12 @@ namespace VaporGridCrossPlatform
         private Node[,] createNodeGrid(int gridWidth, int gridHeight)
         {
             Node[,] grid = new Node[gridWidth, gridHeight];
-            foreach (MonogameTile tile in Grid)
+            for(int x = 0; x < gridWidth; x++)
             {
-                int x = (int)tile.tile.tileGridPos.X;
-                int y = (int)tile.tile.tileGridPos.Y;
-                grid[x, y] = new Node(new Vector2(x, y), tile.IsWalkable);
+                for(int y =0; y < gridHeight; y++)
+                {
+                    grid[x, y] = new Node(new Vector2(x, y), Grid[x,y].IsWalkable);
+                }
             }
             return grid;
         }
@@ -94,7 +100,7 @@ namespace VaporGridCrossPlatform
             {
                 for (int y = 0; y < GridHeight; y++)
                 {
-                    mg = Grid[x,y];
+                    mg = Grid[x, y];
                     mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
                 }
             }
@@ -106,8 +112,8 @@ namespace VaporGridCrossPlatform
         Vector2 d;
         private Vector2 getRandomDir()
         {
-            d = new Vector2(random.Next(-1,2), random.Next(-1,2));
-            while(d == Vector2.Zero)
+            d = new Vector2(random.Next(-1, 2), random.Next(-1, 2));
+            while (d == Vector2.Zero)
             {
                 d = new Vector2(random.Next(-1, 2), random.Next(-1, 2));
             }
@@ -119,7 +125,81 @@ namespace VaporGridCrossPlatform
             {
                 return false;
             }
-            return true;   
+            return true;
+        }
+
+        #region OtherGridGenerationAlgorithms
+
+        private void CreateDungeonRoomGrid(Vector2 playerPos)
+        {
+            addRoomToDungeon(createRoom(getRandRoomSize()), playerPos);
+        }
+
+        private Vector2 getRandRoomSize()
+        {
+            return new Vector2(random.Next(3,7), random.Next(3,7));
+        }
+        private void addRoomToDungeon(int[,] room, Vector2 topLeftCornerTile)
+        {
+            for (int x = 0; x < room.GetLength(0); x++)
+            {
+                for (int y = 0; y < room.GetLength(1); y++)
+                {
+                    if (isValidPos((int)topLeftCornerTile.X + x, (int)topLeftCornerTile.Y + y))
+                    {
+                        mg = Grid[(int)topLeftCornerTile.X+ x, (int)topLeftCornerTile.Y + y];
+                        mg.ResetTile(getTileType(new Vector2(x, y), getRandomTileNum()));
+                    }
+                }
+            }
+        }
+
+        private bool isValidPos(int x, int y)
+        {
+            if(x >= GridWidth || x < 0 || y >= GridHeight || y < 0) 
+            {
+                return false; 
+            }
+            return true;
+        }
+
+        private int[,] createRoom(Vector2 roomsize)
+        {
+            int[,] room = new int[(int)roomsize.X, (int)roomsize.Y];
+            for(int x = 0; x < roomsize.X; x++)
+            {
+                for(int y = 0; y < roomsize.Y; y++)
+                {
+                    room[x, y] = getRandomTileNum();
+                }
+            }
+            return room;
+        }
+
+        private int getRandomTileNum()
+        {
+            switch (random.Next(9))
+            {
+                default:
+                    return 0;
+                case 1:
+                    return 2;
+                case 2:
+                    return 3;
+            }
+        }
+
+        private Tile getTileType(Vector2 pos, int typeNum)
+        {
+            switch (typeNum)
+            {
+                default:
+                    return new WalkableTile(pos, pos, tileTextures, rm);
+                case 1:
+                    return new AutoTrapTile(pos, pos, tileTextures, rm);
+                case 2:
+                    return new DoorTile(pos, pos, tileTextures, rm);
+            }
         }
 
         private void CreateMyAlgoGrid(Vector2 playerPos)
@@ -142,7 +222,6 @@ namespace VaporGridCrossPlatform
                 }
             }
         }
-
         private Vector2 getDirToStart(Vector2 startPos, Vector2 curPos)
         {
             Vector2 dir = new Vector2(0, 0);
@@ -193,9 +272,11 @@ namespace VaporGridCrossPlatform
                 case 1:
                     return new AutoTrapTile(pos, pos, tileTextures, rm);
                 case 2:
-                    return new BreakableTile(pos,pos, tileTextures, rm);
+                    return new DoorTile(pos,pos, tileTextures, rm);
             }
         }
+
+        #endregion
         private void RandomGrid(Vector2 playerPos)
         {
             for (int x = GridWidth - 1; x > 0 ; x--)
@@ -215,7 +296,7 @@ namespace VaporGridCrossPlatform
                                 mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
                             break;
                         case 6:
-                                mg.ResetTile(new BreakableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                                mg.ResetTile(new DoorTile(mg.Position, new Vector2(x, y), tileTextures, rm));
                             break;
                         case 7:
                         case 8:
@@ -223,6 +304,8 @@ namespace VaporGridCrossPlatform
                         case 19:
                         case 20:
                         case 17:
+                        case 16:
+                        case 15:
                             mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
                             break;
                         case 9:
@@ -234,12 +317,39 @@ namespace VaporGridCrossPlatform
             }
         }
 
+        List<Node> path;
+        private void cleanGrid(Vector2 playerPos)
+        {
+            for(int x = 0; x < GridWidth; x++)
+            {
+                for(int y = 0; y < GridHeight; y++)
+                {
+                    if(x == playerPos.X && y == playerPos.Y)
+                    {
+                        continue;
+                    }
+                    mg = Grid[x, y];
+                    path = pathfinder.findPath(NodeGrid[x,y], NodeGrid[(int)playerPos.X, (int)playerPos.Y]);
+                    if(path.Count <= 0)
+                    {
+                        mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                    }
+                }
+            }
+        }
         public void GenerateNewGrid(Vector2 playerPos)
         {
-            CreateMyAlgoGrid(playerPos);
-            NodeGrid = createNodeGrid(GridWidth, GridHeight);
+            do
+            {
+                RandomGrid(playerPos);
+                NodeGrid = createNodeGrid(GridWidth, GridHeight);
+                //CreateDungeonRoomGrid(playerPos);
+                //NodeGrid = createNodeGrid(GridWidth, GridHeight);
+                cleanGrid(playerPos);
+                NodeGrid = createNodeGrid(GridWidth, GridHeight);
+            } while (WalkableRange.X < 5 || WalkableRange.Y < 5);
+            
         }
-
         #endregion
         public void loadLevel(int lvlNum)
         {
@@ -269,7 +379,7 @@ namespace VaporGridCrossPlatform
                             mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
                             break;
                         case 2:
-                            mg.ResetTile(new BreakableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new DoorTile(mg.Position, new Vector2(x, y), tileTextures, rm));
                             break;
                         case 3:
                             mg.ResetTile(new AutoTrapTile(mg.Position, new Vector2(x, y), tileTextures, rm));
@@ -408,6 +518,40 @@ namespace VaporGridCrossPlatform
         {
             
             UnloadGrid();
+        }
+
+        private Vector2 getLargestWalkableDistance()
+        {
+            return getLargestTilePos() - getSmallestTilePos();
+        }
+
+        private Vector2 getLargestTilePos()
+        {
+            for(int x = GridWidth-1; x >= 0 ; x--)
+            {
+                for(int y = GridHeight -1; y >= 0 ; y--)
+                {
+                    if (Grid[x, y].IsWalkable)
+                    {
+                        return new Vector2(x, y);
+                    }
+                }
+            }
+            return Vector2.Zero;
+        }
+        private Vector2 getSmallestTilePos()
+        {
+            for (int x = 0; x < GridWidth; x++)
+            {
+                for (int y = 0; y < GridHeight; y++)
+                {
+                    if (Grid[x, y].IsWalkable)
+                    {
+                        return new Vector2(x, y);
+                    }
+                }
+            }
+            return Vector2.Zero;
         }
     }
 }

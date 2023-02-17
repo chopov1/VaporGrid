@@ -10,7 +10,7 @@ namespace VaporGridCrossPlatform.GridClasses
     public class DynamicTileManager : GameComponent, ISceneComponenet
     {
         List<TrapTile> traps;
-        List<BreakableTile> breakables;
+        List<DoorTile> doors;
         Player player;
         List<EnemySpawner> enemySpawners;
         GridManager gm;
@@ -18,7 +18,7 @@ namespace VaporGridCrossPlatform.GridClasses
         {
             this.gm = gm;
             traps = new List<TrapTile>();
-            breakables= new List<BreakableTile>();
+            doors= new List<DoorTile>();
             player= p;
             enemySpawners = enemies;
         }
@@ -26,7 +26,7 @@ namespace VaporGridCrossPlatform.GridClasses
         public void AddTiles()
         {
             addTraps();
-            addBreakables();
+            addDoors();
         }
 
         private void addTraps()
@@ -40,14 +40,14 @@ namespace VaporGridCrossPlatform.GridClasses
                 }
             }
         }
-        private void addBreakables()
+        private void addDoors()
         {
-            breakables.Clear();
+            doors.Clear();
             foreach (MonogameTile t in gm.Grid)
             {
-                if (t.tile is BreakableTile)
+                if (t.tile is DoorTile)
                 {
-                    breakables.Add((BreakableTile)t.tile);
+                    doors.Add((DoorTile)t.tile);
                 }
             }
         }
@@ -85,11 +85,11 @@ namespace VaporGridCrossPlatform.GridClasses
             }
         }
 
-        private void updateBreakables()
+        private void updateDoors()
         {
-            foreach(BreakableTile b in breakables)
+            foreach(DoorTile b in doors)
             {
-                b.checkIfBroken(player.gridPos);
+                b.checkIfActivated(player.gridPos);
                 gm.NodeGrid[(int)b.tileGridPos.X, (int)b.tileGridPos.Y].iswalkable = b.IsWalkable;
             }
         }
@@ -98,7 +98,7 @@ namespace VaporGridCrossPlatform.GridClasses
         {
             base.Update(gameTime);
             updateTraps();
-            updateBreakables();
+            updateDoors();
         }
 
         public void Load()

@@ -20,7 +20,7 @@ namespace VaporGridCrossPlatform
 
         public PathfindingEnemy(Game game, GridManager gm, RhythmManager rm,Camera camera, Player p) : base(game, gm,"EnemySkull", rm, camera, p)
         {
-            pathfinder = new Pathfinder(gridManager, this);
+            pathfinder = new Pathfinder(gridManager);
             moveBuffer = 2;
             player = p;
             rnd = new Random();
@@ -48,7 +48,7 @@ namespace VaporGridCrossPlatform
             }
             else
             {
-                Debug.WriteLine("ERROR: COULDNTFIND PATH!");
+                //Debug.WriteLine("ERROR: COULDNTFIND PATH!");
             }
         }
         private void simpleMove()

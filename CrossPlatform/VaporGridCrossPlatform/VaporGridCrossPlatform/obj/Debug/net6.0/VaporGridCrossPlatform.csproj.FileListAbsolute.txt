@@ -94,8 +94,6 @@ D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileInactive7.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileInactive8.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileInactive9.xnb
-D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\DoorTileOffBeat.xnb
-D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\DoorTileOnBeat.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\DoorAnim\DoorSprite10.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\DoorAnim\DoorSprite3.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\DoorAnim\DoorSprite4.xnb
@@ -121,3 +119,7 @@ D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Arrows\ArrowUpReg2.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Arrows\ArrowUpReg3.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Arrows\ArrowUpReg4.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\DoorTile.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\DoorTileCooldown.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\DoorTileReady.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\portalSFX.xnb

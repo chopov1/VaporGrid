@@ -18,7 +18,8 @@ namespace VaporGridCrossPlatform
 
         protected void setDistance()
         {
-            minPortalDist = new Vector2(gridManager.GridWidth / 2, gridManager.GridHeight / 2);
+            minPortalDist = new Vector2(gridManager.WalkableRange.X / 2, gridManager.WalkableRange.Y / 2);
+            minPortalDist -= Vector2.One;
         }
 
         public override GridSprite createSpawnableObject()
@@ -28,6 +29,7 @@ namespace VaporGridCrossPlatform
             p.Enabled = false;
             return p;
         }
+
         private bool isAwayFromFirstPortal(Vector2 pos1, Vector2 pos2)
         {
             setDistance();

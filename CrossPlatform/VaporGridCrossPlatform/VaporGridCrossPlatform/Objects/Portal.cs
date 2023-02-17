@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,9 @@ namespace VaporGridCrossPlatform.Objects
         Animation portalAnim;
         Vector2 portal1DrawPos;
         Vector2 portal2DrawPos;
+
+        SoundEffect portalsfx;
+        SoundEffectInstance portalsfxI;
         public Portal(Game game, GridManager gm, string texturename, Camera camera, Player player, Spawner spawner) : base(game, gm, texturename, camera, player, spawner)
         {
            
@@ -40,6 +44,7 @@ namespace VaporGridCrossPlatform.Objects
         {
             base.LoadContent();
             portalAnim = new Animation(spriteTexture,3, 0.2f );
+            portalsfx = Game.Content.Load<SoundEffect>("portalsfx");
         }
 
         public override void Draw(GameTime gameTime)
@@ -73,7 +78,15 @@ namespace VaporGridCrossPlatform.Objects
                 player.gridPos = portal1GridPos;
             }
             spawner.BufferCount= 0;
-            base.Activate();
+            spawner.DeSpawn(this);
+            playPortalSfx();
+        }
+
+        private void playPortalSfx()
+        {
+            portalsfxI = portalsfx.CreateInstance();
+            portalsfxI.Volume = 0.5f;
+            portalsfxI.Play();
         }
 
     }

@@ -130,9 +130,11 @@ namespace VaporGridCrossPlatform.Scenes
             scoreManager.WriteEnabled = true;
         }
 
+        int spawnEdgeBuffer;
         protected virtual void ResetGamePlay()
         {
-            player.ResetPlayer(new Vector2(rnd.Next(gridManager.GridWidth),rnd.Next(gridManager.GridHeight)));
+            spawnEdgeBuffer = 3;
+            player.ResetPlayer(new Vector2(rnd.Next(spawnEdgeBuffer,gridManager.GridWidth-spawnEdgeBuffer),rnd.Next(spawnEdgeBuffer, gridManager.GridHeight - spawnEdgeBuffer)));
             gridManager.GenerateNewGrid(player.gridPos);
             dynamicTileManager.AddTiles();
             

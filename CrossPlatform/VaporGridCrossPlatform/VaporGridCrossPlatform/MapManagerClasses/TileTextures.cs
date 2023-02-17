@@ -22,8 +22,9 @@ namespace VaporGridCrossPlatform.GridClasses
         public List<Texture2D> doorOpenAnim;
         public Texture2D trapInactive;
 
-        public Texture2D DoorOnB;
-        public Texture2D DoorOffB;
+        public Texture2D DoorReady;
+        public Texture2D DoorCooldown;
+        public Texture2D DoorBasic;
 
         public Vector2 tileSpriteSize { get { return new Vector2(unWalkableOffB.Width, unWalkableOffB.Height); } }
 
@@ -71,8 +72,9 @@ namespace VaporGridCrossPlatform.GridClasses
             trapActivating = Game.Content.Load<Texture2D>("Tiles/TrapTileActivating");
             trapInactive = Game.Content.Load<Texture2D>("Tiles/TrapTileInactive");
 
-            DoorOnB = Game.Content.Load<Texture2D>("Tiles/DoorTileOnBeat");
-            DoorOffB = Game.Content.Load<Texture2D>("Tiles/DoorTileOffBeat");
+            DoorReady = Game.Content.Load<Texture2D>("Tiles/DoorTileReady");
+            DoorBasic = Game.Content.Load<Texture2D>("Tiles/DoorTile");
+            DoorCooldown = Game.Content.Load<Texture2D>("Tiles/DoorTileCooldown");
         }
     }
 }
