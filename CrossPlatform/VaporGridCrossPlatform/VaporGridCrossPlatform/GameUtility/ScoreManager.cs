@@ -200,6 +200,7 @@ namespace VaporGridCrossPlatform
             //spriteBatch.End();
         }
 
+        
         public void Load()
         {
             Enabled = true;

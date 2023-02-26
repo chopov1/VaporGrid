@@ -25,8 +25,8 @@ namespace VaporGridCrossPlatform.UI
             DrawCustomString(HeaderText, "play again", (int)(500 * scale), yellow);
             DrawCustomString(HeaderText, "main menu", (int)(550 * scale), blue);
 
-            DrawCustomString(HeaderText, sm.PlayerDeathMessage, (int)(250 * scale), orange);
-            DrawCustomString(SmallSolid, sm.PlayerHint, (int)(280 * scale), orange);
+            DrawCustomString(HeaderText, sm.PlayerDeathMessage, (int)(250 * scale), Color.Wheat);
+            DrawCustomString(SmallSolid, "Tip: " + sm.PlayerHint, (int)(650 * scale), orange);
         }
 
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
+using System;
 using System.Collections.Generic;
 using VaporGridCrossPlatform.GameUtility;
 
@@ -25,6 +26,8 @@ namespace VaporGridCrossPlatform
         public PlayerState State;
 
         ScoreManager scoreManager;
+        List<string> hints;
+        Random rnd;
 
         List<Texture2D> playerTextures;
         public GridManager GridManager { get { return gridManager; } }
@@ -34,6 +37,8 @@ namespace VaporGridCrossPlatform
 
 public Player(Game game, GridManager gm, RhythmManager rhythmManager, int playernumber, Camera camera, ScoreManager sm) : base(game, gm, rhythmManager,"player/AstroNaut1", camera)
         {
+            rnd = new Random();
+            createHints();
             scoreManager = sm;
             this.rhythmManager = rhythmManager;
             dirToMove = new Vector2(0, 0);
@@ -288,6 +293,16 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
                     scoreManager.PlayerDeathMessage = "You were exterminated by an alien projectile";
                     break;
             }
+            scoreManager.PlayerHint = hints[rnd.Next(hints.Count)];
+        }
+
+        private void createHints()
+        {
+            hints = new List<string>();
+            hints.Add("If your combo score is above 16, you are able to move in double time.");
+            hints.Add("Try to move onto the square an enemy is on, as its about to move.");
+            hints.Add("Enemies are much more dangerous in groups. Sometimes that apple isn't worth it.");
+            hints.Add("Enemies always try to find the shortest path to you.");
         }
     }
 }
