@@ -46,21 +46,21 @@ namespace VaporGridCrossPlatform.Scenes
             player = new Player(Game, gridManager, rm, 1, camera, scoreManager);
             Game.Components.Add(player);
 
-            enemySpawner = new EnemySpawner(Game, gridManager, rm,  camera, player, 8);
+            enemySpawner = new EnemySpawner(Game, gridManager, rm,  camera, player, 8, 32);
             Game.Components.Add(enemySpawner);
             enemySpawner.spawnState = SpawnState.manualSpawner;
             enemySpawners.Add(enemySpawner);
 
-            spittingEnemySpawner = new SpittingEnemySpawner(Game, gridManager, rm, camera, player, 8);
+            spittingEnemySpawner = new SpittingEnemySpawner(Game, gridManager, rm, camera, player, 8, 32);
             Game.Components.Add(spittingEnemySpawner);
             spittingEnemySpawner.spawnState = SpawnState.manualSpawner;
             enemySpawners.Add(spittingEnemySpawner);
 
-            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, camera, player, 8);
+            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, camera, player, 8, 16);
             Game.Components.Add(powerUpSpawner);
             powerUpSpawner.spawnState = SpawnState.manualSpawner;
 
-            keySpawner = new KeySpawner(Game, gridManager, rm,  camera, player, 8);
+            keySpawner = new KeySpawner(Game, gridManager, rm,  camera, player, 8, 32);
             Game.Components.Add(keySpawner);
             keySpawner.spawnState = SpawnState.manualSpawner;
 

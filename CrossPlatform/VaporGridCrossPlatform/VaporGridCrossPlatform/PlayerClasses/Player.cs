@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
 using VaporGridCrossPlatform.GameUtility;
 
@@ -213,6 +214,11 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
                 Controller.Indicies = Controller.shuffleKeys(Controller.Indicies);
                 shuffle = false;
             }
+        }
+
+        public void ResetPlayerPos(Vector2 startPos)
+        {
+            gridPos = startPos;
         }
 
         public void ResetPlayer(Vector2 startPos)

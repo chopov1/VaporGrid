@@ -27,6 +27,12 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/ArrowUpClear.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/BackgroundStar.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Blank.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/enemies/SaucerEnemy1.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/enemies/SaucerEnemy2.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/enemies/SaucerEnemy3.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/enemies/SaucerEnemy4.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/enemies/SaucerEnemy5.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/enemies/SaucerEnemy6.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/EnemySkull.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/ExitTutorial.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Fonts/BasicFont.spritefont</File>
@@ -104,6 +110,12 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/weirdFaceAttack3.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

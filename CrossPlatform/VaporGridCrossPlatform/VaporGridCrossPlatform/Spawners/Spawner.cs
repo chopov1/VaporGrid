@@ -26,7 +26,7 @@ namespace VaporGridCrossPlatform
         public SpawnState spawnState;
 
         List<GridSprite> activeObjs;
-        public Spawner(Game game, GridManager gm, RhythmManager rm,  Camera camera, Player p, int numberOfObjects) : base(game, rm)
+        public Spawner(Game game, GridManager gm, RhythmManager rm,  Camera camera, Player p, int numberOfObjects, int spawnBuffer) : base(game, rm)
         {
             activeObjs= new List<GridSprite>();
             objects = new Queue<GridSprite>();
@@ -34,7 +34,7 @@ namespace VaporGridCrossPlatform
             gridManager = gm;
             player = p;
             numOfObjects = numberOfObjects;
-            spawnBuffer = 16;
+            this.spawnBuffer = spawnBuffer;
             rnd = new Random();
             spawnState = SpawnState.reset;
         }

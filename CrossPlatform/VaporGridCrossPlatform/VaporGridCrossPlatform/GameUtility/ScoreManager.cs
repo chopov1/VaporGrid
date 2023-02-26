@@ -16,6 +16,7 @@ namespace VaporGridCrossPlatform
         public int prevScore;
         public int HighScore;
         public int ComboScore;
+        public int HighestSongsCompleted;
 
         public bool ShowScore;
         public bool ShowHighScore;
@@ -104,6 +105,7 @@ namespace VaporGridCrossPlatform
             scoreData = fr.ReadFile(fr.scorePath);
             HighScore = int.Parse(scoreData[0]);
             prevScore= int.Parse(scoreData[1]);
+            HighestSongsCompleted= int.Parse(scoreData[2]);
             loadMoveData();
             NumberOfMoves = int.Parse(moveData[1]);
             soundEffects = setupSFX();
@@ -166,11 +168,11 @@ namespace VaporGridCrossPlatform
             }
         }
 
-
         public void SaveScore()
         {
             scoreData[0] = HighScore.ToString();
             scoreData[1] = prevScore.ToString();
+            scoreData[2] = HighestSongsCompleted.ToString();
             if (WriteEnabled)
             {
                 fr.writeFile(fr.scorePath, scoreData);

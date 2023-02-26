@@ -31,7 +31,8 @@ namespace VaporGridCrossPlatform.UI
             //DrawCustomStringBacked(SubText, SubTextBack, "(Use only the right joysticks and buttons)", 280, yellow, orange);
             //DrawCustomStringBacked(SubText, SubTextBack, "Press T to play tutorial", 300, yellow, orange);
             DrawCustomString(HeaderText, "Previous Score: " + sm.prevScore, 600, red);
-            DrawCustomString(HeaderText, "HighScore: " + sm.HighScore, 650, red);
+            DrawCustomString(HeaderText, "High Score: " + sm.HighScore, 650, red);
+            DrawCustomString(HeaderText, "Highest Songs Completed: " + sm.HighestSongsCompleted, 700, red);
             spriteBatch.Draw(qrCode, new Vector2(100,920), Color.AntiqueWhite);
             spriteBatch.DrawString(BasicFont, "Leave Feedback\nGet In Touch", new Vector2(100, 880), Color.AntiqueWhite);
         }

@@ -15,6 +15,7 @@ namespace VaporGridCrossPlatform
         
         public string scorePath = "GameData/scoreData.txt";
         public string movePath = "GameData/moveData.txt";
+        public string songsCompletePath = "GameData/completeData.txt";
         List<string> data = new List<string>();
         public FileReader()
         {

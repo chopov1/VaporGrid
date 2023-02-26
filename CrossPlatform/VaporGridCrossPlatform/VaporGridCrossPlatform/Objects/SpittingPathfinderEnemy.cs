@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,14 @@ namespace VaporGridCrossPlatform
     public class SpittingPathfinderEnemy : PathfindingEnemy
     {
         ProjectileSpawner projSpawner;
+
+        Texture2D offBeatTexture;
+        Texture2D OnBeatTexture;
+        Texture2D attackTexture;
         public SpittingPathfinderEnemy(Game game, GridManager gm, RhythmManager rm, Camera camera, Player p) : base(game, gm, rm, camera, p)
         {
-            projSpawner = new ProjectileSpawner(game, gm, rm, camera, p, 8);
+            projSpawner = new ProjectileSpawner(game, gm, rm, camera, p, 8, 0);
+            moveBuffer = 6;
             Game.Components.Add(projSpawner);
         }
 
@@ -108,6 +114,34 @@ namespace VaporGridCrossPlatform
                     fire.Dir = direction;
                 }
             }
+        }
+
+        protected override void LoadContent()
+        {
+            base.LoadContent();
+            offBeatTexture = Game.Content.Load<Texture2D>("EnemySkull");
+            OnBeatTexture = Game.Content.Load<Texture2D>("weirdFace3");
+            attackTexture = Game.Content.Load<Texture2D>("weirdFaceAttack3");
+        }
+
+        protected override void changeTexture()
+        {
+            if(bufferCount == moveBuffer)
+            {
+                spriteTexture = attackTexture;
+            }
+            else
+            {
+                if (rhythmManager.RhythmState == RhythmState.Quarter)
+                {
+                    spriteTexture = OnBeatTexture;
+                }
+                else
+                {
+                    spriteTexture = offBeatTexture;
+                }
+            }
+            
         }
     }
 }

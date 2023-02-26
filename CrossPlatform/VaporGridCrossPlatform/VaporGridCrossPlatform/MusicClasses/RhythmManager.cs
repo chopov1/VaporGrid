@@ -11,7 +11,7 @@ using VaporGridCrossPlatform.GameUtility;
 
 namespace VaporGridCrossPlatform
 {
-    public enum SongState { reset, turnOn, running}
+    public enum SongState { reset, turnOn, running, paused}
     public class RhythmManager : GameComponent, ISceneComponenet
     {
         public RhythmState RhythmState { get { return songPlayer.CurrentRhythmState; } }
@@ -49,6 +49,17 @@ namespace VaporGridCrossPlatform
             checkSongState();
         }
 
+        public void StartMusic()
+        {
+            songPlayer.StartSong();
+        }
+
+        public void PauseMusic()
+        {
+            songPlayer.StopSong();
+        }
+
+
         private void checkSongState()
         {
             switch (state) 
@@ -66,8 +77,10 @@ namespace VaporGridCrossPlatform
                     if (songPlayer.HasFinishedSong())
                     {
                         SongsComplete++;
-                        state = SongState.reset;
+                        state = SongState.paused;
                     }
+                    break;
+                case SongState.paused:
                     break;
             }
 

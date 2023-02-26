@@ -62,9 +62,9 @@ namespace VaporGridCrossPlatform.Scenes
 
             continueTile = new Collectable(Game, gridManager, "ExitTutorial", camera, player);
 
-            scoreSpawner = new PowerUpSpawner(Game, gridManager, rm,  camera, player, 1);
+            scoreSpawner = new PowerUpSpawner(Game, gridManager, rm,  camera, player, 1, 4);
             Game.Components.Add(scoreSpawner);
-            enemySpawner = new EnemySpawner(Game, gridManager, rm, camera, player, 1);
+            enemySpawner = new EnemySpawner(Game, gridManager, rm, camera, player, 1, 4);
             Game.Components.Add(enemySpawner);
 
             arrowIndicators = new ArrowIndicators(Game, gridManager, rm, player, camera);

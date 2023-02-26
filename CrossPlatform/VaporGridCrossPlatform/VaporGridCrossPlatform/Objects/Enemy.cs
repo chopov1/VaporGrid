@@ -18,20 +18,22 @@ namespace VaporGridCrossPlatform
 
         protected bool hasRecievedBeat;
 
-        protected Texture2D offBeatTexture;
-        protected Texture2D onBeatTexture;
-        protected Texture2D attackTexture;
+        protected List<Texture2D> enemyTextures;
 
         public Enemy(Game game, GridManager gm, string textureName ,RhythmManager rm, Camera camera, Player p) : base(game, gm, rm,textureName, camera)
         {
             player = p;
             Game.Components.Add(this);
+            enemyTextures= new List<Texture2D>();
         }
 
         protected override void LoadContent()
         {
             base.LoadContent();
-            offBeatTexture = spriteTexture;
+            for(int i =1; i <= 6; i++)
+            {
+                enemyTextures.Add(Game.Content.Load<Texture2D>("enemies/SaucerEnemy" + i.ToString())); 
+            }
         }
 
         public override void Update(GameTime gameTime)
@@ -60,17 +62,35 @@ namespace VaporGridCrossPlatform
 
         protected virtual void changeTexture()
         {
-            if (bufferCount == moveBuffer)
+            if (bufferCount >= moveBuffer)
             {
-                spriteTexture = attackTexture;
-            }
-            else if (rhythmManager.RhythmState == RhythmState.Quarter)
-            {
-                spriteTexture = onBeatTexture;
+                if(rhythmManager.RhythmState == RhythmState.Quarter)
+                {
+                    spriteTexture = enemyTextures[4];
+                }
+                else if(rhythmManager.RhythmState == RhythmState.Sixteenth)
+                {
+                    spriteTexture = enemyTextures[4];
+                }
+                else
+                {
+                    spriteTexture = enemyTextures[5];
+                }
             }
             else
             {
-                spriteTexture = offBeatTexture;
+                if (rhythmManager.RhythmState == RhythmState.Quarter)
+                {
+                    spriteTexture = enemyTextures[0];
+                }
+                else if (rhythmManager.RhythmState == RhythmState.Sixteenth)
+                {
+                    spriteTexture = enemyTextures[2];
+                }
+                else
+                {
+                    spriteTexture = enemyTextures[1];
+                }
             }
         }
 

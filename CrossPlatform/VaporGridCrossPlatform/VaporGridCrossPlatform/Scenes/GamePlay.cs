@@ -56,15 +56,15 @@ namespace VaporGridCrossPlatform.Scenes
 
             player = new Player(Game, gridManager, rm, 1, camera, scoreManager);
             Game.Components.Add(player);
-            /*enemySpawner = new EnemySpawner(Game, gridManager, rm,  camera, player, 8);
+            enemySpawner = new EnemySpawner(Game, gridManager, rm, camera, player, 4, 32);
             Game.Components.Add(enemySpawner);
-            enemySpawners.Add(enemySpawner);*/
-            spittingEnemySpawner = new SpittingEnemySpawner(Game, gridManager, rm, camera, player, 12);
+            enemySpawners.Add(enemySpawner);
+            spittingEnemySpawner = new SpittingEnemySpawner(Game, gridManager, rm, camera, player, 12, 32);
             Game.Components.Add(spittingEnemySpawner);
             enemySpawners.Add(spittingEnemySpawner);
-            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, camera, player, 8);
+            powerUpSpawner = new PowerUpSpawner(Game, gridManager, rm, camera, player, 8, 16);
             Game.Components.Add(powerUpSpawner);
-            portalSpawner = new PortalSpawner(Game, gridManager,rm, camera, player, 1);
+            portalSpawner = new PortalSpawner(Game, gridManager,rm, camera, player, 1, 16);
             Game.Components.Add(portalSpawner);
 
 
@@ -77,7 +77,7 @@ namespace VaporGridCrossPlatform.Scenes
             display = new ScoreUI(Game, scoreManager, 810);
             Game.Components.Add(display);
 
-            rhythmDisplay = new GameplayUI(Game, player);
+            rhythmDisplay = new GameplayUI(Game, player, rm);
             Game.Components.Add(rhythmDisplay);
 
             addCompsToList();
@@ -87,7 +87,7 @@ namespace VaporGridCrossPlatform.Scenes
         {
             addComponentToScene(camera);
             addComponentToScene(gridManager);
-            //addComponentToScene(enemySpawner);
+            addComponentToScene(enemySpawner);
             addComponentToScene(spittingEnemySpawner);
             addComponentToScene(powerUpSpawner);
             addComponentToScene(portalSpawner);
@@ -128,6 +128,45 @@ namespace VaporGridCrossPlatform.Scenes
             scoreManager.ShowScore = true;
             scoreManager.ShowHighScore = false;
             scoreManager.WriteEnabled = true;
+        }
+
+        private void toggleSpawner(Spawner s, bool on)
+        {
+            if (s.Enabled && !on)
+            {
+                s.UnLoad();
+            }
+            else if(!s.Enabled && on)
+            {
+                s.Load();
+            }
+        }
+
+        protected void songCompleted()
+        {
+            switch(rm.SongsComplete)
+            {
+                case 0:
+                    if(!enemySpawner.Enabled)
+                    {
+                        enemySpawner.Load();
+                    }
+                    if (spittingEnemySpawner.Enabled)
+                    {
+                        spittingEnemySpawner.UnLoad();
+                    }
+                    break;
+                case 1:
+                    spawnEdgeBuffer = 3;
+                    player.ResetPlayerPos(new Vector2(rnd.Next(spawnEdgeBuffer, gridManager.GridWidth - spawnEdgeBuffer), rnd.Next(spawnEdgeBuffer, gridManager.GridHeight - spawnEdgeBuffer)));
+                    gridManager.GenerateNewGrid(player.gridPos);
+                    dynamicTileManager.AddTiles();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+            }
         }
 
         int spawnEdgeBuffer;

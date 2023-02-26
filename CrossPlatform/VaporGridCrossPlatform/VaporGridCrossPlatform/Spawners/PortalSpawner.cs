@@ -11,7 +11,7 @@ namespace VaporGridCrossPlatform
     public class PortalSpawner : Spawner
     {
         Vector2 minPortalDist;
-        public PortalSpawner(Game game, GridManager gm, RhythmManager rm, Camera camera, Player p, int numberOfObjects) : base(game, gm, rm, camera, p, numberOfObjects)
+        public PortalSpawner(Game game, GridManager gm, RhythmManager rm, Camera camera, Player p, int numberOfObjects, int spawnBuffer) : base(game, gm, rm, camera, p, numberOfObjects, spawnBuffer)
         {
             setDistance();
         }

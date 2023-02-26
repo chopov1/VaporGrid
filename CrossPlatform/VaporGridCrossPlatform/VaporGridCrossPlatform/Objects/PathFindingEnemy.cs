@@ -21,7 +21,7 @@ namespace VaporGridCrossPlatform
         public PathfindingEnemy(Game game, GridManager gm, RhythmManager rm,Camera camera, Player p) : base(game, gm,"EnemySkull", rm, camera, p)
         {
             pathfinder = new Pathfinder(gridManager);
-            moveBuffer = 2;
+            moveBuffer = 3;
             player = p;
             rnd = new Random();
         }
@@ -29,9 +29,6 @@ namespace VaporGridCrossPlatform
         protected override void LoadContent()
         {
             base.LoadContent();
-            onBeatTexture = Game.Content.Load<Texture2D>("weirdFace3");
-            attackTexture = Game.Content.Load<Texture2D>("weirdFaceAttack3");
-            offBeatTexture = spriteTexture;
         }
         
         protected override void moveEnemy()

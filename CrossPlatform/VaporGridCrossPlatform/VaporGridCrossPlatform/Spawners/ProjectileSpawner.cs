@@ -9,7 +9,7 @@ namespace VaporGridCrossPlatform
 {
     public class ProjectileSpawner : Spawner
     {
-        public ProjectileSpawner(Game game, GridManager gm, RhythmManager rm,  Camera camera, Player p, int numberOfObjects) : base(game, gm, rm,camera, p, numberOfObjects)
+        public ProjectileSpawner(Game game, GridManager gm, RhythmManager rm, Camera camera, Player p, int numberOfObjects, int spawnBuffer) : base(game, gm, rm, camera, p, numberOfObjects, spawnBuffer)
         {
             spawnState = SpawnState.manualSpawner;
         }

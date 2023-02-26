@@ -277,7 +277,7 @@ namespace VaporGridCrossPlatform
         }
 
         #endregion
-        private void RandomGrid(Vector2 playerPos)
+        private void RandomGridHard(Vector2 playerPos)
         {
             for (int x = GridWidth - 1; x > 0 ; x--)
             {
@@ -317,6 +317,75 @@ namespace VaporGridCrossPlatform
             }
         }
 
+        private void RandomGridEasy(Vector2 playerPos)
+        {
+            for (int x = GridWidth - 1; x > 0; x--)
+            {
+                for (int y = GridHeight - 1; y > 0; y--)
+                {
+                    mg = Grid[x, y];
+                    if (playerPos.X == x && playerPos.Y == y)
+                    {
+                        mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                        continue;
+                    }
+                    int num = random.Next(0, 20);
+                    switch (num)
+                    {
+                        default:
+                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            break;
+                        case 7:
+                        case 8:
+                        case 18:
+                        case 19:
+                        case 20:
+                        case 17:
+                        case 16:
+                        case 15:
+                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            break;
+                    }
+                }
+            }
+        }
+
+        private void RandomGridMedium(Vector2 playerPos)
+        {
+            for (int x = GridWidth - 1; x > 0; x--)
+            {
+                for (int y = GridHeight - 1; y > 0; y--)
+                {
+                    mg = Grid[x, y];
+                    if (playerPos.X == x && playerPos.Y == y)
+                    {
+                        mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                        continue;
+                    }
+                    int num = random.Next(0, 20);
+                    switch (num)
+                    {
+                        default:
+                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            break;
+                        case 6:
+                            mg.ResetTile(new AutoTrapTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            break;
+                        case 7:
+                        case 8:
+                        case 18:
+                        case 19:
+                        case 20:
+                        case 17:
+                        case 16:
+                        case 15:
+                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            break;
+                    }
+                }
+            }
+        }
+
         List<Node> path;
         private void cleanGrid(Vector2 playerPos)
         {
@@ -341,7 +410,18 @@ namespace VaporGridCrossPlatform
         {
             do
             {
-                RandomGrid(playerPos);
+                switch (rm.SongsComplete)
+                {
+                    case 0:
+                        RandomGridEasy(playerPos);
+                        break;
+                    case 1:
+                        RandomGridMedium(playerPos);
+                        break;
+                    case 2:
+                        RandomGridHard(playerPos);
+                        break;
+                }
                 NodeGrid = createNodeGrid(GridWidth, GridHeight);
                 //CreateDungeonRoomGrid(playerPos);
                 //NodeGrid = createNodeGrid(GridWidth, GridHeight);

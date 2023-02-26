@@ -10,9 +10,11 @@ namespace VaporGridCrossPlatform.UI
     internal class GameplayUI : MenuUI
     {
         Player p;
-        public GameplayUI(Game game, Player p) : base(game)
+        RhythmManager rm;
+        public GameplayUI(Game game, Player p, RhythmManager rm) : base(game)
         {
             this.p = p;
+            this.rm = rm;
         }
 
         protected override void drawUI()
@@ -20,6 +22,7 @@ namespace VaporGridCrossPlatform.UI
             base.drawUI();
             float scale = 1.5f;
             DrawCustomStringBacked(TitleText, TitleTextBack, accuracy(), (int)(100 * (scale * .8)), pink, purple);
+            DrawCustomString(SubText, "Stage " + rm.SongsComplete, (int)(800 * (scale * .8)), Color.White);
         }
 
         //make this go away if no input, and also say something else on sixteenths or if you get a combo going maybe

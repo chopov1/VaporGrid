@@ -54,7 +54,7 @@ namespace VaporGridCrossPlatform
 
         private void setupLevels()
         {
-            GamePlay endlessGameMode = new GamePlay(Game, this, rm, sm, 0);
+            EndlessGamePlay endlessGameMode = new EndlessGamePlay(Game, this, rm, sm);
             levels.Add(endlessGameMode);
             levels.Add(tutorial);
             Game.Components.Add(endlessGameMode);
