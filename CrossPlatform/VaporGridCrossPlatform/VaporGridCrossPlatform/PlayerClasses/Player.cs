@@ -10,7 +10,6 @@ namespace VaporGridCrossPlatform
     public enum InputOutcome { Perfect, Missed}
     public class Player : RhythmSprite
     {
-
         public int PlayerNumber;
         public int SixteenthBuffer;
         public int comboLives { get; private set; }
@@ -273,6 +272,22 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
                 return true;
             }
             return false;
+        }
+
+        public void SetDeathMessage(int deathCode)
+        {
+            switch(deathCode)
+            {
+                case 0:
+                    scoreManager.PlayerDeathMessage = "You were zapped by a flying saucer.";
+                    break;
+                case 1:
+                    scoreManager.PlayerDeathMessage = "You were burned to crisp by a vent fire.";
+                    break;
+                case 2:
+                    scoreManager.PlayerDeathMessage = "You were exterminated by an alien projectile";
+                    break;
+            }
         }
     }
 }

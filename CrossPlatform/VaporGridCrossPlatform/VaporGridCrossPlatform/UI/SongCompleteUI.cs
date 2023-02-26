@@ -20,7 +20,7 @@ namespace VaporGridCrossPlatform.UI
         {
             base.drawUI();
             float scale = 1.5f;
-            DrawCustomStringBacked(TitleText, TitleTextBack, rm.SongsComplete + " SONG COMPLETE", (int)(400 * (scale * .8)), pink, purple);
+            DrawCustomStringBacked(TitleText, TitleTextBack, rm.SongsComplete + " SONGS COMPLETE", (int)(400 * (scale * .8)), pink, purple);
         }
     }
 }

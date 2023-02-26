@@ -99,6 +99,7 @@ namespace VaporGridCrossPlatform
             if (isTouchingPlayer())
             {
                 player.State = PlayerState.Dead;
+                player.SetDeathMessage(0);
             }
         }
         private bool isTouchingPlayer()

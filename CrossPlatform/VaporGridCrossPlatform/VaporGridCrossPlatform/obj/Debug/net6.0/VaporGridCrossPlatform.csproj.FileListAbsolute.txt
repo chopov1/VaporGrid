@@ -129,3 +129,13 @@ D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\enemies\SaucerEnemy4.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\enemies\SaucerEnemy5.xnb
 D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\enemies\SaucerEnemy6.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActivatingAnim\TrapTileActivatingAnim1.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActivatingAnim\TrapTileActivatingAnim2.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActivatingAnim\TrapTileActivatingAnim3.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActivatingAnim\TrapTileActivatingAnim4.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileActiveAnim1.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileActiveAnim2.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileActiveAnim3.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileActiveAnim4.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileActiveAnim5.xnb
+D:\All Projects D Drive\MonoGame\VaporGrid\CrossPlatform\VaporGridCrossPlatform\VaporGridCrossPlatform\bin\Debug\net6.0\Content\Tiles\ActiveAnim\TrapTileActiveAnim6.xnb

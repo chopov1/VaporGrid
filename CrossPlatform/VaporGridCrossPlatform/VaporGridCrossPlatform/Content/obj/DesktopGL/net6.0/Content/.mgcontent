@@ -75,10 +75,20 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/TileBlackPurple.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/TileGray.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/TileGrayLight.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActivatingAnim/TrapTileActivatingAnim1.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActivatingAnim/TrapTileActivatingAnim2.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActivatingAnim/TrapTileActivatingAnim3.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActivatingAnim/TrapTileActivatingAnim4.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActivatingAnim/TrapTileInactive3.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActivatingAnim/TrapTileInactive4.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActivatingAnim/TrapTileInactive5.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActivatingAnim/TrapTileInactive6.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileActiveAnim1.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileActiveAnim2.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileActiveAnim3.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileActiveAnim4.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileActiveAnim5.png</File>
+    <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileActiveAnim6.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileInactive10.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileInactive11.png</File>
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Tiles/ActiveAnim/TrapTileInactive12.png</File>
@@ -110,6 +120,16 @@
     <File>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/weirdFaceAttack3.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

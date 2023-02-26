@@ -61,6 +61,7 @@ namespace VaporGridCrossPlatform.GridClasses
                         if (tile.IsUnderObject(player.gridPos))
                         {
                             player.State = PlayerState.Dead;
+                            player.SetDeathMessage(1);
                         }
                         foreach(EnemySpawner es in enemySpawners)
                         {

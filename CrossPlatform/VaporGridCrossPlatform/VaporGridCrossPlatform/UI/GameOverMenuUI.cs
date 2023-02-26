@@ -20,10 +20,13 @@ namespace VaporGridCrossPlatform.UI
             float scale = 1.4f;
             base.drawUI();
             DrawCustomStringBacked(TitleText, TitleTextBack, "Game Over", (int )(100 * (scale * .8)), pink, purple);
-            DrawCustomString(HeaderText, "Score: " + sm.prevScore, (int)(200 * scale), red);
-            DrawCustomString(HeaderText, "HighScore: " + sm.HighScore, (int)(300 * scale), red);
-            DrawCustomString(HeaderText, "play again", (int)(400 * scale), yellow);
-            DrawCustomString(HeaderText, "main menu", (int)(450 * scale), blue);
+            DrawCustomString(HeaderText, "Score: " + sm.prevScore, (int)(350 * scale), red);
+            DrawCustomString(HeaderText, "HighScore: " + sm.HighScore, (int)(400 * scale), red);
+            DrawCustomString(HeaderText, "play again", (int)(500 * scale), yellow);
+            DrawCustomString(HeaderText, "main menu", (int)(550 * scale), blue);
+
+            DrawCustomString(HeaderText, sm.PlayerDeathMessage, (int)(250 * scale), orange);
+            DrawCustomString(SmallSolid, sm.PlayerHint, (int)(280 * scale), orange);
         }
 
     }

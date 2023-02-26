@@ -12,6 +12,10 @@ namespace VaporGridCrossPlatform
 {
     public class ScoreManager : DrawableGameComponent, ISceneComponenet
     {
+
+        public string PlayerDeathMessage;
+        public string PlayerHint;
+
         public int Score;
         public int prevScore;
         public int HighScore;

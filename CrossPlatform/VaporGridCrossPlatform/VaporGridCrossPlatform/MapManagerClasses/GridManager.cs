@@ -341,8 +341,6 @@ namespace VaporGridCrossPlatform
                         case 19:
                         case 20:
                         case 17:
-                        case 16:
-                        case 15:
                             mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
                             break;
                     }
@@ -378,7 +376,6 @@ namespace VaporGridCrossPlatform
                         case 20:
                         case 17:
                         case 16:
-                        case 15:
                             mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
                             break;
                     }

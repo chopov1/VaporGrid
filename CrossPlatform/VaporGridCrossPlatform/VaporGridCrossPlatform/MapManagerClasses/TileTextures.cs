@@ -43,16 +43,16 @@ namespace VaporGridCrossPlatform.GridClasses
         }
         public void LoadTileTextures()
         {
-            trapActivatingAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActivatingAnim/TrapTileInactive3"));
-            trapActivatingAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActivatingAnim/TrapTileInactive4"));
-            trapActivatingAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActivatingAnim/TrapTileInactive5"));
-            trapActivatingAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActivatingAnim/TrapTileInactive6"));
-            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileInactive7"));
-            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileInactive8"));
-            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileInactive9"));
-            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileInactive10"));
-            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileInactive11"));
-            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileInactive12"));
+            trapActivatingAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActivatingAnim/TrapTileActivatingAnim1"));
+            trapActivatingAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActivatingAnim/TrapTileActivatingAnim2"));
+            trapActivatingAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActivatingAnim/TrapTileActivatingAnim3"));
+            trapActivatingAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActivatingAnim/TrapTileActivatingAnim4"));
+            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileActiveAnim1"));
+            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileActiveAnim2"));
+            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileActiveAnim3"));
+            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileActiveAnim4"));
+            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileActiveAnim5"));
+            trapActiveAnim.Add(Game.Content.Load<Texture2D>("Tiles/ActiveAnim/TrapTileActiveAnim6"));
 
             doorOpenAnim.Add(Game.Content.Load<Texture2D>("Tiles/DoorAnim/DoorSprite3"));
             doorOpenAnim.Add(Game.Content.Load<Texture2D>("Tiles/DoorAnim/DoorSprite4"));

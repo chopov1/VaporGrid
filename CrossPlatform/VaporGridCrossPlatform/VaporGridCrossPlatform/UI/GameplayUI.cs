@@ -22,7 +22,7 @@ namespace VaporGridCrossPlatform.UI
             base.drawUI();
             float scale = 1.5f;
             DrawCustomStringBacked(TitleText, TitleTextBack, accuracy(), (int)(100 * (scale * .8)), pink, purple);
-            DrawCustomString(SubText, "Stage " + rm.SongsComplete, (int)(800 * (scale * .8)), Color.White);
+            DrawCustomString(SubText, "Song " + (rm.SongsComplete+1), (int)(800 * (scale * .8)), Color.White);
         }
 
         //make this go away if no input, and also say something else on sixteenths or if you get a combo going maybe
@@ -35,9 +35,9 @@ namespace VaporGridCrossPlatform.UI
                 case 0:
                     return "Perfect";
                 case 1:
-                    return "To early";
+                    return "Too early";
                 case 2:
-                    return "to late";
+                    return "too late";
                 case 3:
                     return "start!";
                 default:
