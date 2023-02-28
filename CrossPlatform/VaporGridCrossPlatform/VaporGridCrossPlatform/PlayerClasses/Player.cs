@@ -303,6 +303,8 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
             hints.Add("Try to move onto the square an enemy is on, as its about to move.");
             hints.Add("Enemies are much more dangerous in groups. Sometimes that apple isn't worth it.");
             hints.Add("Enemies always try to find the shortest path to you.");
+            hints.Add("Watch out before you enter a portal, you never know what may be on the other side.");
+            hints.Add("If an enemy is above a vent as it catches fire, that enemy will be destroyed.");
         }
     }
 }
