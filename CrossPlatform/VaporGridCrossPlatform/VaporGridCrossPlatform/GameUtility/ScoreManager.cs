@@ -48,6 +48,7 @@ namespace VaporGridCrossPlatform
             rnd = new Random();
             ShowScore = true;
             ShowHighScore= true;
+            PlayerDeathMessage = "Pressing the blue button exits the current level.";
         }
 
         SoundEffect getSoundToPlay()
