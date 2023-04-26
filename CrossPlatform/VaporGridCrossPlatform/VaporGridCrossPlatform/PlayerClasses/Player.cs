@@ -107,10 +107,10 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
             switch (rhythmManager.RhythmState)
             {
                 case RhythmState.Quarter:
-                    if (!rhythmManager.songPlayer.hasHitQuarterBeat)
+                    if (!rhythmManager.HasHitQuarterBeat)
                     {
-                        rhythmManager.songPlayer.hasHitQuarterBeat = true;
-                        rhythmManager.songPlayer.hasHitSixteenthBeat = true;
+                        rhythmManager.HasHitQuarterBeat = true;
+                        rhythmManager.HasHitQuarterBeat = true;
                         camera.AdjustZoom(.05f);
                         updatePlayerGridPos();
                         increaseComboScore();
@@ -120,8 +120,8 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
                 case RhythmState.Sixteenth:
                     if (CanInputOnSixteenth())
                     {
-                        rhythmManager.songPlayer.hasHitSixteenthBeat = true;
-                        rhythmManager.songPlayer.hasHitQuarterBeat = true;
+                        rhythmManager.HasHitQuarterBeat = true;
+                        rhythmManager.HasHitQuarterBeat = true;
                         camera.AdjustZoom(.08f);
                         updatePlayerGridPos();
                         increaseComboScoreSixteenth();
@@ -272,7 +272,7 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
 
         public bool CanInputOnSixteenth()
         {
-            if (rhythmManager.RhythmState == RhythmState.Sixteenth && scoreManager.ComboScore > SixteenthBuffer && rhythmManager.songPlayer.hasHitQuarterBeat && !rhythmManager.songPlayer.hasHitSixteenthBeat)
+            if (rhythmManager.RhythmState == RhythmState.Sixteenth && scoreManager.ComboScore > SixteenthBuffer && rhythmManager.HasHitQuarterBeat && !rhythmManager.HasHitQuarterBeat)
             {
                 return true;
             }

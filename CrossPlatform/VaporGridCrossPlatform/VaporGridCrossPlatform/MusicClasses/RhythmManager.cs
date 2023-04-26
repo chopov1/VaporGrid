@@ -16,28 +16,25 @@ namespace VaporGridCrossPlatform
     public class RhythmManager : GameComponent, ISceneComponenet
     {
         public RhythmState RhythmState { get { return songPlayer.CurrentRhythmState; } }
+        public int Transpose { get { return songPlayer.Transpose; } }
+        public bool HasHitQuarterBeat { get { return songPlayer.hasHitQuarterBeat; } set { songPlayer.hasHitQuarterBeat = value; } }
+        public bool HasHitSixteenthBeat { get { return songPlayer.hasHitQuarterBeat; } set { songPlayer.hasHitQuarterBeat = value; } }
+        public int slowOrFastQuarter { get { return songPlayer.SlowOrFastQuarter(); } }
+        public int slowOrFastSixteenth { get { return songPlayer.SlowOrFastSixteenth(); } }
+        SongPlayer songPlayer;
 
         public double bpm;
         public float beat;
-
         public float inputTime;
-        public int Transpose { get { return songPlayer.Transpose; } }
-
         public SongState state;
-
         public int SongsComplete;
-
-        public SongPlayer songPlayer;
-
-        public int slowOrFastQuarter { get { return songPlayer.SlowOrFastQuarter(); } }
-        public int slowOrFastSixteenth { get { return songPlayer.SlowOrFastSixteenth(); } }
 
         public RhythmManager(Game game) : base(game)
         {
             game.Components.Add(this);
             bpm = 90;
             state = SongState.reset;
-            songPlayer = new SongPlayer();
+            //songPlayer = new SongPlayer();
         }
 
         public override void Initialize()
@@ -52,17 +49,17 @@ namespace VaporGridCrossPlatform
 
         public void StartMusic()
         {
-            songPlayer.StartSong();
+            //songPlayer.StartSong();
         }
 
         public void PauseMusic()
         {
-            songPlayer.StopSong();
+            //songPlayer.StopSong();
         }
 
         public void SetVolume(float volume)
         {
-            songPlayer.SetVolume(volume);
+            //songPlayer.SetVolume(volume);
             SoundEffect.MasterVolume = volume;
         }
 
@@ -71,20 +68,20 @@ namespace VaporGridCrossPlatform
             switch (state) 
             {
                 case SongState.reset:
-                    songPlayer.ResetMusic();
+                    //songPlayer.ResetMusic();
                     state = SongState.turnOn;
                     break;
                 case SongState.turnOn:
                     state = SongState.running;
-                    songPlayer.StartSong();
+                    //songPlayer.StartSong();
                     break;
                 case SongState.running:
                     //songPlayer.SongPlayerUpdate();
-                    if (songPlayer.HasFinishedSong())
+                    /*if (songPlayer.HasFinishedSong())
                     {
                         SongsComplete++;
                         state = SongState.paused;
-                    }
+                    }*/
                     break;
                 case SongState.paused:
                     break;
@@ -100,8 +97,8 @@ namespace VaporGridCrossPlatform
         public void UnLoad()
         {
             Enabled= false;
-            songPlayer.StopSong();
-            songPlayer.ResetMusic();
+            //songPlayer.StopSong();
+            //songPlayer.ResetMusic();
         }
 
     }

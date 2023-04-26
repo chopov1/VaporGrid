@@ -71,9 +71,9 @@ namespace VaporGridCrossPlatform
                         default:
                             break;
                     }
-                    if (!rhythmManager.songPlayer.hasHitQuarterBeat)
+                    if (!rhythmManager.HasHitQuarterBeat)
                     {
-                        rhythmManager.songPlayer.hasHitQuarterBeat = true;
+                        rhythmManager.HasHitQuarterBeat = true;
                         camera.AdjustZoom(.05f);
                         updatePlayerGridPos();
                     }
