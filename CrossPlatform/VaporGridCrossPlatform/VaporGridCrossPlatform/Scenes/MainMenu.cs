@@ -20,16 +20,24 @@ namespace VaporGridCrossPlatform.Scenes
             levelSelection = 0;
             Game.Components.Add(display);
             addComponentToScene(display);
-            attractTimer = new Timer(60000);
-            attractTimer.Elapsed += startAttractMode;
+            
         }
-
         bool attractTimerRunning;
         void startAttractTimer()
         {
+            attractTimer = new Timer(60000);
+            attractTimer.Elapsed += startAttractMode;
             attractTimer.AutoReset = false;
             attractTimer.Start();
             attractTimerRunning = true;
+        }
+
+        void stopAttractTimer()
+        {
+            attractTimer.Stop();
+            attractTimer.Elapsed -= startAttractMode;
+            attractTimer.Dispose();
+            attractTimerRunning = false;
         }
 
         void startAttractMode(object o, ElapsedEventArgs e)
@@ -50,8 +58,8 @@ namespace VaporGridCrossPlatform.Scenes
         {
             if (input.IsPressingAnyKey())
             {
-                attractTimer.Stop();
-                attractTimer.Start();
+                stopAttractTimer();
+                startAttractTimer();
             }
             if(!attractTimerRunning)
             {

@@ -76,7 +76,7 @@ namespace VaporGridCrossPlatform
             }
         }
 
-        public void closeScene()
+        public virtual void closeScene()
         {
             foreach(ISceneComponenet component in sceneComponents)
             {

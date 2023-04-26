@@ -10,24 +10,22 @@ namespace VaporGridCrossPlatform
 {
     public class RhythmTile
     {
-        protected RhythmManager rhythmManager;
-        public RhythmTile(RhythmManager rm)
+        public RhythmTile()
         {
-            rhythmManager = rm;
         }
 
-        protected bool isOnQuarter()
+        protected bool isOnQuarter(RhythmState state)
         {
-            if (rhythmManager.RhythmState == RhythmState.Quarter)
+            if (state == RhythmState.Quarter)
             {
                 return true;
             }
             return false;
         }
 
-        protected bool isOnSixteenth()
+        protected bool isOnSixteenth(RhythmState state)
         {
-            if (rhythmManager.RhythmState == RhythmState.Sixteenth)
+            if (state == RhythmState.Sixteenth)
             {
                 return true;
             }

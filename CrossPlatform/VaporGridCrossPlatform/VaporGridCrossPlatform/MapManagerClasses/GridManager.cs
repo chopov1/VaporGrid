@@ -101,10 +101,10 @@ namespace VaporGridCrossPlatform
                 for (int y = 0; y < GridHeight; y++)
                 {
                     mg = Grid[x, y];
-                    mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                    mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                 }
             }
-            Grid[(int)playerPos.X, (int)playerPos.Y].ResetTile(new WalkableTile(mg.Position, playerPos, tileTextures, rm));
+            Grid[(int)playerPos.X, (int)playerPos.Y].ResetTile(new WalkableTile(mg.Position, playerPos, tileTextures));
         }
 
         Vector2 currentPos;
@@ -194,11 +194,11 @@ namespace VaporGridCrossPlatform
             switch (typeNum)
             {
                 default:
-                    return new WalkableTile(pos, pos, tileTextures, rm);
+                    return new WalkableTile(pos, pos, tileTextures);
                 case 1:
-                    return new AutoTrapTile(pos, pos, tileTextures, rm);
+                    return new AutoTrapTile(pos, pos, tileTextures);
                 case 2:
-                    return new DoorTile(pos, pos, tileTextures, rm);
+                    return new DoorTile(pos, pos, tileTextures);
             }
         }
 
@@ -268,11 +268,11 @@ namespace VaporGridCrossPlatform
             switch (random.Next(9))
             {
                 default:
-                    return new WalkableTile(pos, pos, tileTextures, rm);
+                    return new WalkableTile(pos, pos, tileTextures);
                 case 1:
-                    return new AutoTrapTile(pos, pos, tileTextures, rm);
+                    return new AutoTrapTile(pos, pos, tileTextures);
                 case 2:
-                    return new DoorTile(pos,pos, tileTextures, rm);
+                    return new DoorTile(pos,pos, tileTextures);
             }
         }
 
@@ -286,17 +286,17 @@ namespace VaporGridCrossPlatform
                     mg = Grid[x, y];
                     if (playerPos.X == x && playerPos.Y == y)
                     {
-                        mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x,y), tileTextures, rm));
+                        mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x,y), tileTextures));
                         continue;
                     }
                     int num = random.Next(0, 20);
                     switch (num)
                     {
                         default:
-                                mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                                mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 6:
-                                mg.ResetTile(new DoorTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                                mg.ResetTile(new DoorTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 7:
                         case 8:
@@ -306,10 +306,10 @@ namespace VaporGridCrossPlatform
                         case 17:
                         case 16:
                         case 15:
-                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 9:
-                            mg.ResetTile(new AutoTrapTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new AutoTrapTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                     }
 
@@ -326,14 +326,14 @@ namespace VaporGridCrossPlatform
                     mg = Grid[x, y];
                     if (playerPos.X == x && playerPos.Y == y)
                     {
-                        mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                        mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                         continue;
                     }
                     int num = random.Next(0, 20);
                     switch (num)
                     {
                         default:
-                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 7:
                         case 8:
@@ -341,7 +341,7 @@ namespace VaporGridCrossPlatform
                         case 19:
                         case 20:
                         case 17:
-                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                     }
                 }
@@ -357,17 +357,17 @@ namespace VaporGridCrossPlatform
                     mg = Grid[x, y];
                     if (playerPos.X == x && playerPos.Y == y)
                     {
-                        mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                        mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                         continue;
                     }
                     int num = random.Next(0, 20);
                     switch (num)
                     {
                         default:
-                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 6:
-                            mg.ResetTile(new AutoTrapTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new AutoTrapTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 7:
                         case 8:
@@ -376,7 +376,7 @@ namespace VaporGridCrossPlatform
                         case 20:
                         case 17:
                         case 16:
-                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                     }
                 }
@@ -398,7 +398,7 @@ namespace VaporGridCrossPlatform
                     path = pathfinder.findPath(NodeGrid[x,y], NodeGrid[(int)playerPos.X, (int)playerPos.Y]);
                     if(path.Count <= 0)
                     {
-                        mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                        mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                     }
                 }
             }
@@ -447,19 +447,19 @@ namespace VaporGridCrossPlatform
                     switch (level[x,y])
                     {
                         default:
-                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 0:
-                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new WalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 1:
-                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new UnWalkableTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 2:
-                            mg.ResetTile(new DoorTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new DoorTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                         case 3:
-                            mg.ResetTile(new AutoTrapTile(mg.Position, new Vector2(x, y), tileTextures, rm));
+                            mg.ResetTile(new AutoTrapTile(mg.Position, new Vector2(x, y), tileTextures));
                             break;
                     }
                 }
@@ -477,7 +477,7 @@ namespace VaporGridCrossPlatform
                 for (int y = 0; y < gridHeight; y++)
                 {
                     
-                    t = new MonogameTile(Game, new WalkableTile(Vector2.Zero, new Vector2(x, y), tileTextures, rm), camera, rm);
+                    t = new MonogameTile(Game, new WalkableTile(Vector2.Zero, new Vector2(x, y), tileTextures), camera, rm);
                     
                     grid[x, y] = t;
                 }

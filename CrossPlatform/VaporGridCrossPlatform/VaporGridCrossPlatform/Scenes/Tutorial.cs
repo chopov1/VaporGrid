@@ -232,7 +232,8 @@ namespace VaporGridCrossPlatform.Scenes
 
         private void returnToMenu()
         {
-            resetTutorial();
+            rm.SetVolume(0);
+            //resetTutorial();
             //TODO: not sure why need to call Unload manually on arrowIndicators only. 
             arrowIndicators.UnLoad();
             sceneManager.ChangeScene(this, sceneManager.mainMenu);
@@ -240,6 +241,7 @@ namespace VaporGridCrossPlatform.Scenes
 
         public override void loadScene()
         {
+            rm.SetVolume(1.0f);
             player.ResetPlayer(new Vector2(0,0));
             base.loadScene();
             rm.state = SongState.reset;
@@ -249,6 +251,10 @@ namespace VaporGridCrossPlatform.Scenes
             resetTutorial();
         }
 
+        public override void closeScene()
+        {
+            base.closeScene();
+        }
 
     }
 }

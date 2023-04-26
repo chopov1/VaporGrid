@@ -39,13 +39,13 @@ namespace VaporGridCrossPlatform
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            tile.tileUpdate(gameTime);
+            tile.tileUpdate(gameTime, rm.RhythmState);
             updateTileTexture();
         }
 
         protected void updateTileTexture()
         {
-            spriteTexture = tile.getCurrentTexture();
+            spriteTexture = tile.getCurrentTexture(rm.RhythmState);
         }
 
     }

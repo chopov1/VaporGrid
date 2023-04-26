@@ -12,7 +12,7 @@ namespace VaporGridCrossPlatform.GridClasses
     {
         int beatsInactive;
         Random rnd;
-        public AutoTrapTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt, RhythmManager rm) : base(pos, tileGridPos, tt, rm)
+        public AutoTrapTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt) : base(pos, tileGridPos, tt)
         {
             
         }
@@ -29,37 +29,37 @@ namespace VaporGridCrossPlatform.GridClasses
 
         
 
-        public override void tileUpdate(GameTime gametime)
+        public override void tileUpdate(GameTime gametime, RhythmState state)
         {
-            base.tileUpdate(gametime);
+            base.tileUpdate(gametime, state);
             switch (State)
             {
                 case TrapState.activate:
-                    if (tickTile(2))
+                    if (tickTile(2, state))
                     {
                         State = TrapState.active;
                     }
                     break;
                 case TrapState.active:
-                    if (tickTile(beatsActive))
+                    if (tickTile(beatsActive, state))
                     {
                         State = TrapState.deactivate;
                     }
                     break;
                 case TrapState.deactivate:
-                    if (!isOnQuarter())
+                    if (!isOnQuarter(state))
                     {
                         State = TrapState.inactive;
                     }
                     break;
                 case TrapState.inactive:
-                    if (tickTile(beatsInactive))
+                    if (tickTile(beatsInactive, state))
                     {
                         State = TrapState.activate;
                     }
                     break;
             }
-            if (isOnQuarter())
+            if (isOnQuarter(state))
             {
                 hasTicked = false;
             }

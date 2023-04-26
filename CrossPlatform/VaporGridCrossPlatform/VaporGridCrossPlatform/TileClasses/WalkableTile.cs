@@ -9,7 +9,7 @@ namespace VaporGridCrossPlatform.GridClasses
 {
     public class WalkableTile : Tile
     {
-        public WalkableTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt, RhythmManager rm) : base(pos, tileGridPos, tt, rm)
+        public WalkableTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt) : base(pos, tileGridPos, tt)
         {
             IsWalkable = true;
         }

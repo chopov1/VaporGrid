@@ -14,7 +14,7 @@ namespace VaporGridCrossPlatform.GridClasses
         protected int beat;
         protected bool hasTicked;
 
-        public DynamicTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt, RhythmManager rm) : base(pos, tileGridPos, tt, rm)
+        public DynamicTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt) : base(pos, tileGridPos, tt)
         {
 
         }
@@ -27,13 +27,13 @@ namespace VaporGridCrossPlatform.GridClasses
             return false;
         }
 
-        protected bool tickTile(int changeThresh)
+        protected bool tickTile(int changeThresh, RhythmState state)
         {
-            if(isOnQuarter() && hasTicked)
+            if(isOnQuarter(state) && hasTicked)
             {
                 hasTicked = false;
             }
-            if (!isOnQuarter() && !hasTicked)
+            if (!isOnQuarter(state) && !hasTicked)
             {
                 hasTicked = true;
                 beat++;

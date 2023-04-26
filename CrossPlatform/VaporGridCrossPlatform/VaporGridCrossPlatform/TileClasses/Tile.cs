@@ -18,7 +18,7 @@ namespace VaporGridCrossPlatform
         public Texture2D OffBeatTexture;
 
         protected TileTextures tt;
-        public Tile(Vector2 pos, Vector2 tileGridPos, TileTextures tt, RhythmManager rm) : base(rm)
+        public Tile(Vector2 pos, Vector2 tileGridPos, TileTextures tt)
         {
             tilePos = pos;
             state = TileState.empty;
@@ -39,14 +39,14 @@ namespace VaporGridCrossPlatform
             prevTileState = state;
         }
 
-        public virtual void tileUpdate(GameTime gametime)
+        public virtual void tileUpdate(GameTime gametime, RhythmState state)
         {
           
         }
 
-        public virtual Texture2D getCurrentTexture()
+        public virtual Texture2D getCurrentTexture(RhythmState state)
         {
-            if (rhythmManager.RhythmState == RhythmState.Quarter)
+            if (state == RhythmState.Quarter)
             {
                 return OnBeatTexture;
             }

@@ -22,7 +22,7 @@ namespace VaporGridCrossPlatform
 
         TileAnimation openAnim;
         int beatsInactive;
-        public DoorTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt, RhythmManager rm) : base(pos, tileGridPos, tt, rm)
+        public DoorTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt) : base(pos, tileGridPos, tt)
         {
             IsWalkable = true;
             openstate = DoorState.open;
@@ -40,21 +40,21 @@ namespace VaporGridCrossPlatform
             brokenOnB= tt.unWalkableOnB;
             openAnim = new TileAnimation(tt.doorOpenAnim, .1f, false);
         }
-        public override void tileUpdate(GameTime gametime)
+        public override void tileUpdate(GameTime gametime, RhythmState state)
         {
-            base.tileUpdate(gametime);
+            base.tileUpdate(gametime, state);
             openAnim.Update(gametime);
             changeWalkState();
             switch (openstate)
             {
                 case DoorState.closed:
-                    if (tickTile(beatsActive))
+                    if (tickTile(beatsActive, state))
                     {
                         openstate = DoorState.opening;
                     }
                     break;
                 case DoorState.cooldown:
-                    if (tickTile(beatsInactive))
+                    if (tickTile(beatsInactive, state))
                     {
                         openstate = DoorState.open;
                     }
@@ -113,7 +113,7 @@ namespace VaporGridCrossPlatform
             prevIsOccupied = isOccupied;
         }
 
-        public override Texture2D getCurrentTexture()
+        public override Texture2D getCurrentTexture(RhythmState state)
         {
             switch (openstate)
             {
@@ -122,7 +122,7 @@ namespace VaporGridCrossPlatform
                     {
                         openAnim.Reset();
                     }
-                    return getClosedTexture();
+                    return getClosedTexture(state);
                 case DoorState.opening:
                     if (!openAnim.hasFinished)
                     {
@@ -135,14 +135,14 @@ namespace VaporGridCrossPlatform
                     else
                     {
                         openstate = DoorState.cooldown;
-                        return getOpenTexture();
+                        return getOpenTexture(state);
                     }
                 case DoorState.open:
                     if (openAnim.hasFinished)
                     {
                         openAnim.Reset();
                     }
-                    return getOpenTexture();
+                    return getOpenTexture(state);
                 case DoorState.closing:
                     if (!openAnim.hasFinished)
                     {
@@ -155,20 +155,20 @@ namespace VaporGridCrossPlatform
                     else
                     {
                         openstate = DoorState.closed;
-                        return getClosedTexture();
+                        return getClosedTexture(state);
                     }
                 case DoorState.cooldown: 
-                    return getCooldownTexture();
-                default: return base.getCurrentTexture();
+                    return getCooldownTexture(state);
+                default: return base.getCurrentTexture(state);
             }
             
         }
 
         
 
-        private Texture2D getClosedTexture()
+        private Texture2D getClosedTexture(RhythmState state)
         {
-            if (isOnQuarter())
+            if (isOnQuarter(state))
             {
                 return brokenOnB;
             }
@@ -178,9 +178,9 @@ namespace VaporGridCrossPlatform
             }
         }
 
-        private Texture2D getCooldownTexture()
+        private Texture2D getCooldownTexture(RhythmState state)
         {
-            if (isOnQuarter())
+            if (isOnQuarter(state))
             {
                 return cooldownTexture;
             }
@@ -190,9 +190,9 @@ namespace VaporGridCrossPlatform
             }
         }
 
-        private Texture2D getOpenTexture()
+        private Texture2D getOpenTexture(RhythmState state)
         {
-            if (isOnQuarter())
+            if (isOnQuarter(state))
             {
                 return OnBeatTexture;
             }

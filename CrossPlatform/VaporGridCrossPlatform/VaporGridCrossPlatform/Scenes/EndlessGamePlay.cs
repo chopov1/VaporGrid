@@ -134,7 +134,6 @@ namespace VaporGridCrossPlatform
         {
             completedTimer = new System.Timers.Timer(time);
             completedTimer.AutoReset = false;
-            completedTimer.Elapsed += onCompletedTimerEnd;
         }
 
         private void onCompletedTimerEnd(Object source, ElapsedEventArgs e)
@@ -155,12 +154,14 @@ namespace VaporGridCrossPlatform
 
         private void startTimer()
         {
+            completedTimer.Elapsed += onCompletedTimerEnd;
             completedTimer.Start();
         }
 
         private void stopTimer()
         {
             completedTimer.Stop();
+            completedTimer.Elapsed -= onCompletedTimerEnd;
             completedTimer.Dispose();
         }
 
@@ -292,6 +293,11 @@ namespace VaporGridCrossPlatform
                 case PlayerState.Alive:
                     break;
             }
+        }
+
+        public override void closeScene()
+        {
+            base.closeScene();
         }
     }
 }

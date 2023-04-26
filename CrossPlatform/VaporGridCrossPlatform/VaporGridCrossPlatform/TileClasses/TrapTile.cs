@@ -19,7 +19,7 @@ namespace VaporGridCrossPlatform.GridClasses
         TileAnimation activeAnim;
         TileAnimation activatingAnim;
 
-        public TrapTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt, RhythmManager rm) : base(pos, tileGridPos, tt, rm)
+        public TrapTile(Vector2 pos, Vector2 tileGridPos, TileTextures tt) : base(pos, tileGridPos, tt)
         {
             setupTrapTile();
         }
@@ -41,7 +41,7 @@ namespace VaporGridCrossPlatform.GridClasses
             activatingAnim.looping = false;
             activeAnim = new TileAnimation(tt.trapActiveAnim, .1f, true);
         }
-        public override Texture2D getCurrentTexture()
+        public override Texture2D getCurrentTexture(RhythmState state)
         {
             switch (State)
             {
@@ -83,15 +83,15 @@ namespace VaporGridCrossPlatform.GridClasses
             return inactiveTexture;
         }
 
-        public override void tileUpdate(GameTime gametime)
+        public override void tileUpdate(GameTime gametime, RhythmState state)
         {
             activatingAnim.Update(gametime);
             activeAnim.Update(gametime);
-            base.tileUpdate(gametime);
+            base.tileUpdate(gametime, state);
             switch(State)
             {
                 case TrapState.activate:
-                    if (!isOnQuarter() && !hasTicked)
+                    if (!isOnQuarter(state) && !hasTicked)
                     {
                         hasTicked = true;
                         beat++;
@@ -103,7 +103,7 @@ namespace VaporGridCrossPlatform.GridClasses
                     }
                     break;
                 case TrapState.active:
-                    if (!isOnQuarter() && !hasTicked)
+                    if (!isOnQuarter(state) && !hasTicked)
                     {
                         hasTicked = true;
                         beat++;
@@ -115,7 +115,7 @@ namespace VaporGridCrossPlatform.GridClasses
                     }
                     break;
                 case TrapState.deactivate:
-                    if (!isOnQuarter())
+                    if (!isOnQuarter(state))
                     {
                         State = TrapState.inactive;
                     }
@@ -123,7 +123,7 @@ namespace VaporGridCrossPlatform.GridClasses
                 case TrapState.inactive:
                     break;
             }
-            if (isOnQuarter())
+            if (isOnQuarter(state))
             {
                 hasTicked = false;
             }
