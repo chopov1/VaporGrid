@@ -18,7 +18,7 @@ namespace VaporGridCrossPlatform
         public RhythmState RhythmState { get { return songPlayer.CurrentRhythmState; } }
         public int Transpose { get { return songPlayer.Transpose; } }
         public bool HasHitQuarterBeat { get { return songPlayer.hasHitQuarterBeat; } set { songPlayer.hasHitQuarterBeat = value; } }
-        public bool HasHitSixteenthBeat { get { return songPlayer.hasHitQuarterBeat; } set { songPlayer.hasHitQuarterBeat = value; } }
+        public bool HasHitSixteenthBeat { get { return songPlayer.hasHitSixteenthBeat; } set { songPlayer.hasHitSixteenthBeat= value; } }
         public int slowOrFastQuarter { get { return songPlayer.SlowOrFastQuarter(); } }
         public int slowOrFastSixteenth { get { return songPlayer.SlowOrFastSixteenth(); } }
         SongPlayer songPlayer;
