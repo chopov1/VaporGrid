@@ -123,6 +123,7 @@ namespace VaporGridCrossPlatform.Scenes
         public override void loadScene()
         {
             base.loadScene();
+            rm.SetVolume(1);
             ResetGamePlay();
             rm.state = SongState.reset;
             scoreManager.ShowScore = true;

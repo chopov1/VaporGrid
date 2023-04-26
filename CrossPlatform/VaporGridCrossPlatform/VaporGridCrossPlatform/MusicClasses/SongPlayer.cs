@@ -75,6 +75,11 @@ namespace VaporGridCrossPlatform
             SetupMusic();
         }
 
+        public void SetVolume(float volume)
+        {
+            master.Volume = volume;
+        }
+
         #region MusicSetup
 
         private string getSongToPlay()

@@ -137,7 +137,7 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
             }
         }
 
-        private void updateInputAnalytics()
+        protected virtual void updateInputAnalytics()
         {
             if (scoreManager.ComboScore > SixteenthBuffer)
             {

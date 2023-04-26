@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Graphics;
 using System.Diagnostics;
 using VaporGridCrossPlatform.GameUtility;
+using Microsoft.Xna.Framework.Audio;
 
 namespace VaporGridCrossPlatform
 {
@@ -59,6 +60,11 @@ namespace VaporGridCrossPlatform
             songPlayer.StopSong();
         }
 
+        public void SetVolume(float volume)
+        {
+            songPlayer.SetVolume(volume);
+            SoundEffect.MasterVolume = volume;
+        }
 
         private void checkSongState()
         {

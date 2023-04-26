@@ -34,9 +34,16 @@ namespace VaporGridCrossPlatform.Scenes
 
         void startAttractMode(object o, ElapsedEventArgs e)
         {
+            
             attractTimerRunning = false;
             scoreManager.WriteEnabled = false;
             sceneManager.ChangeScene(this, sceneManager.attractScene);
+        }
+
+        public override void loadScene()
+        {
+            rm.SetVolume(0);
+            base.loadScene();
         }
 
         protected override void SceneUpdate()
@@ -84,8 +91,6 @@ namespace VaporGridCrossPlatform.Scenes
                 }
             }
         }
-
-
 
     }
 }

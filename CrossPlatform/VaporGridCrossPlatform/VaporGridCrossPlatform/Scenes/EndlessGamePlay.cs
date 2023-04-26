@@ -178,11 +178,17 @@ namespace VaporGridCrossPlatform
         public override void loadScene()
         {
             base.loadScene();
+            VolumeSet();
             ResetGamePlay();
             rm.state = SongState.reset;
             scoreManager.ShowScore = true;
             scoreManager.ShowHighScore = false;
             scoreManager.WriteEnabled = true;
+        }
+
+        protected virtual void VolumeSet()
+        {
+            rm.SetVolume(1);
         }
 
         protected void setDifficulty()

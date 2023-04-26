@@ -18,10 +18,18 @@ namespace VaporGridCrossPlatform
 
         protected override void updateMovement()
         {
+            /*int moveornot = rnd.Next(0,4);
+            switch (moveornot)
+            {
+                case 0:
+                    break;
+                default:
+                    break;
+            }*/
             switch (rhythmManager.RhythmState)
             {
                 case RhythmState.Quarter:
-                    int choice = rnd.Next(0,7);
+                    int choice = rnd.Next(0,4);
                     switch (choice)
                     {
                         case 0:
@@ -30,7 +38,6 @@ namespace VaporGridCrossPlatform
                                 if (gridManager.Grid[(int)gridPos.X + 1, (int)gridPos.Y].IsWalkable)
                                 {
                                     dirToMove = new Vector2(1, 0);
-                                    return;
                                 }
                             }
                             break; 
@@ -40,7 +47,6 @@ namespace VaporGridCrossPlatform
                                 if (GridManager.Grid[(int)gridPos.X - 1, (int)gridPos.Y].IsWalkable)
                                 {
                                     dirToMove = new Vector2(-1, 0);
-                                    return;
                                 }
                             }
                             break; 
@@ -50,7 +56,6 @@ namespace VaporGridCrossPlatform
                                 if (GridManager.Grid[(int)gridPos.X, (int)gridPos.Y + 1].IsWalkable)
                                 {
                                     dirToMove = new Vector2(0, 1);
-                                    return;
                                 }
                             }
                             break;
@@ -60,21 +65,32 @@ namespace VaporGridCrossPlatform
                                 if (GridManager.Grid[(int)gridPos.X, (int)gridPos.Y - 1].IsWalkable)
                                 {
                                     dirToMove = new Vector2(0, -1);
-                                    return;
                                 }
                             }
                             break;
                         default:
                             break;
                     }
-                    camera.AdjustZoom(.05f);
-                    updatePlayerGridPos();
+                    if (!rhythmManager.songPlayer.hasHitQuarterBeat)
+                    {
+                        rhythmManager.songPlayer.hasHitQuarterBeat = true;
+                        camera.AdjustZoom(.05f);
+                        updatePlayerGridPos();
+                    }
+                   
                     break;
                 case RhythmState.Sixteenth:
                     break;
                 case RhythmState.Offbeat:
                     break;
             }
+
+
+        }
+
+        protected override void updateInputAnalytics()
+        {
+            
         }
     }
 }

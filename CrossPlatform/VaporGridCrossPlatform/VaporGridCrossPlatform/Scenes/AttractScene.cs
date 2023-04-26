@@ -24,13 +24,18 @@ namespace VaporGridCrossPlatform.Scenes
             base.SceneUpdate();
             if (inputHandler.IsPressingAnyKey())
             {
-                ResetGamePlay();
-                arrowIndicators.UnLoad();
-                scoreManager.WriteEnabled = true;
-                sceneManager.ChangeScene(this, sceneManager.mainMenu);
+                exitAttractMode();
             }
         }
-        
+
+        void exitAttractMode()
+        {
+            ResetGamePlay();
+            arrowIndicators.UnLoad();
+            scoreManager.WriteEnabled = true;
+            sceneManager.ChangeScene(this, sceneManager.mainMenu);
+        }
+                
         protected override void setupPlayer()
         {
             player = new NonPlayer(Game, gridManager, rm, 1, camera, scoreManager);
@@ -43,13 +48,16 @@ namespace VaporGridCrossPlatform.Scenes
             switch (player.State)
             {
                 case PlayerState.Dead:
-                    ResetGamePlay();
-                    arrowIndicators.UnLoad();
-                    sceneManager.ChangeScene(this, sceneManager.mainMenu);
+                    exitAttractMode();
                     break;
                 case PlayerState.Alive:
                     break;
             }
+        }
+
+        protected override void VolumeSet()
+        {
+            rm.SetVolume(0);
         }
     }
 }
