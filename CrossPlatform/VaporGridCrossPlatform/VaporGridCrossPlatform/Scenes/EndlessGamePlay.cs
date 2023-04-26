@@ -44,6 +44,13 @@ namespace VaporGridCrossPlatform
             base.SetupScene();
         }
 
+        protected virtual void setupPlayer()
+        {
+
+            player = new Player(Game, gridManager, rm, 1, camera, scoreManager);
+            Game.Components.Add(player);
+        }
+
         protected virtual void setupGame()
         {
             camera = new Camera(Game);
@@ -52,9 +59,7 @@ namespace VaporGridCrossPlatform
             gridManager = new GridManager(Game, camera, rm);
 
             Game.Components.Add(gridManager);
-
-            player = new Player(Game, gridManager, rm, 1, camera, scoreManager);
-            Game.Components.Add(player);
+            setupPlayer();
             enemySpawner = new EnemySpawner(Game, gridManager, rm, camera, player, 8, 32);
             Game.Components.Add(enemySpawner);
             enemySpawners.Add(enemySpawner);
@@ -84,7 +89,6 @@ namespace VaporGridCrossPlatform
 
             addCompsToList();
         }
-
         protected virtual void addCompsToList()
         {
             addComponentToScene(camera);

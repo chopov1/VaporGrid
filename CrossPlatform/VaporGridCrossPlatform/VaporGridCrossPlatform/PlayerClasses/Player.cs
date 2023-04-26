@@ -76,7 +76,7 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
         }
 
         bool inputToggle;
-        private void updateMovement()
+        protected virtual void updateMovement()
         {
             switch (Controller.State)
             {
@@ -100,7 +100,7 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
             }
         }
 
-        private void checkInputAccuracy()
+        protected void checkInputAccuracy()
         {
             //after input, we check if they are on beat
             updateInputAnalytics();
@@ -188,7 +188,7 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
         }
 
         bool shuffle;
-        private void updatePlayerGridPos()
+        protected void updatePlayerGridPos()
         {
             switch (dirToMove)
             {

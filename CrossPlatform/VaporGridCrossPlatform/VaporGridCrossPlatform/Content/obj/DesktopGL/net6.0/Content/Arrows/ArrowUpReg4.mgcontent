@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/Arrows/ArrowUpReg4.png</SourceFile>
-  <SourceTime>2023-02-14T11:39:19.9270444-06:00</SourceTime>
+  <SourceTime>2023-04-24T19:37:26.9702737-05:00</SourceTime>
   <DestFile>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/bin/DesktopGL/Content/Arrows/ArrowUpReg4.xnb</DestFile>
-  <DestTime>2023-02-14T12:01:30.3156172-06:00</DestTime>
+  <DestTime>2023-04-25T22:59:35.3061928-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

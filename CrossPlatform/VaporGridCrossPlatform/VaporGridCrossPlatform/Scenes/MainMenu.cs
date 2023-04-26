@@ -2,11 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using VaporGridCrossPlatform.GameUtility;
 using VaporGridCrossPlatform.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Timers;
 
 namespace VaporGridCrossPlatform.Scenes
 {
@@ -14,6 +10,8 @@ namespace VaporGridCrossPlatform.Scenes
     {
         MenuController input;
         MainMenuUI display;
+        Timer attractTimer;
+
         int levelSelection { get { return display.LevelSelection; } set { sceneManager.LevelSelection = display.LevelSelection = value; } }
         public MainMenu(Game game, SceneManager manager, RhythmManager rm, ScoreManager sm) : base(game, manager, rm, sm)
         {
@@ -22,11 +20,36 @@ namespace VaporGridCrossPlatform.Scenes
             levelSelection = 0;
             Game.Components.Add(display);
             addComponentToScene(display);
-            
+            attractTimer = new Timer(60000);
+            attractTimer.Elapsed += startAttractMode;
+        }
+
+        bool attractTimerRunning;
+        void startAttractTimer()
+        {
+            attractTimer.AutoReset = false;
+            attractTimer.Start();
+            attractTimerRunning = true;
+        }
+
+        void startAttractMode(object o, ElapsedEventArgs e)
+        {
+            attractTimerRunning = false;
+            scoreManager.WriteEnabled = false;
+            sceneManager.ChangeScene(this, sceneManager.attractScene);
         }
 
         protected override void SceneUpdate()
         {
+            if (input.IsPressingAnyKey())
+            {
+                attractTimer.Stop();
+                attractTimer.Start();
+            }
+            if(!attractTimerRunning)
+            {
+                startAttractTimer();
+            }
             input.Update();
             base.SceneUpdate();
             if (input.PressedContinue)

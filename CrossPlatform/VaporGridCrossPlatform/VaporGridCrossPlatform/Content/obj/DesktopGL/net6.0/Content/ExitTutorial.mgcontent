@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/ExitTutorial.png</SourceFile>
-  <SourceTime>2023-01-09T21:38:17.7248414-06:00</SourceTime>
+  <SourceTime>2023-04-24T19:37:26.9757797-05:00</SourceTime>
   <DestFile>D:/All Projects D Drive/MonoGame/VaporGrid/CrossPlatform/VaporGridCrossPlatform/VaporGridCrossPlatform/Content/bin/DesktopGL/Content/ExitTutorial.xnb</DestFile>
-  <DestTime>2023-02-01T14:56:27.1963716-06:00</DestTime>
+  <DestTime>2023-04-25T22:59:35.3342099-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

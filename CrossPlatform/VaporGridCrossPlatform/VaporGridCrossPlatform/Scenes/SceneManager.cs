@@ -18,6 +18,7 @@ namespace VaporGridCrossPlatform
         public Scene gameOver;
         public LevelEnd levelEndScreen;
         public Scene tutorial;
+        public AttractScene attractScene;
 
         ScoreManager sm;
         RhythmManager rm;
@@ -43,12 +44,14 @@ namespace VaporGridCrossPlatform
             gameOver = new GameOver(game, this, rm, sm);
             levelEndScreen = new LevelEnd(game, this, rm, sm);
             tutorial = new Tutorial(game,this , rm, sm);
+            attractScene = new AttractScene(game, this, rm, sm);
             setupLevels();
             mainMenu.State = SceneState.loading;
             Game.Components.Add(mainMenu);
             Game.Components.Add(gameOver);
             Game.Components.Add(levelEndScreen);
             Game.Components.Add(tutorial);
+            Game.Components.Add(attractScene);
             
         }
 
