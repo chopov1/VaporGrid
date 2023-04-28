@@ -22,28 +22,27 @@ namespace VaporGridCrossPlatform.Scenes
             addComponentToScene(display);
             
         }
-        bool attractTimerRunning;
         void startAttractTimer()
         {
             attractTimer = new Timer(60000);
             attractTimer.Elapsed += startAttractMode;
             attractTimer.AutoReset = false;
             attractTimer.Start();
-            attractTimerRunning = true;
         }
 
         void stopAttractTimer()
         {
+            if(attractTimer == null)
+            {
+                return;
+            }
             attractTimer.Stop();
             attractTimer.Elapsed -= startAttractMode;
             attractTimer.Dispose();
-            attractTimerRunning = false;
         }
 
         void startAttractMode(object o, ElapsedEventArgs e)
         {
-            
-            attractTimerRunning = false;
             scoreManager.WriteEnabled = false;
             sceneManager.ChangeScene(this, sceneManager.attractScene);
         }
@@ -52,6 +51,7 @@ namespace VaporGridCrossPlatform.Scenes
         {
             rm.SetVolume(0);
             base.loadScene();
+            startAttractTimer();
         }
 
         protected override void SceneUpdate()
@@ -59,10 +59,6 @@ namespace VaporGridCrossPlatform.Scenes
             if (input.IsPressingAnyKey())
             {
                 stopAttractTimer();
-                startAttractTimer();
-            }
-            if(!attractTimerRunning)
-            {
                 startAttractTimer();
             }
             input.Update();
@@ -98,6 +94,12 @@ namespace VaporGridCrossPlatform.Scenes
                     levelSelection--;
                 }
             }
+        }
+
+        public override void closeScene()
+        {
+            stopAttractTimer();
+            base.closeScene();
         }
 
     }

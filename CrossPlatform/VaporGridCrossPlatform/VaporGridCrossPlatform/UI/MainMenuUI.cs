@@ -23,7 +23,7 @@ namespace VaporGridCrossPlatform.UI
         protected override void drawUI()
         {
            
-            DrawCustomStringBacked(TitleText, TitleTextBack, "Welcome To VaporGrid!", 120, pink, purple);
+            DrawCustomStringBacked(TitleText, TitleTextBack, "VaporGrid", 120, pink, purple);
             DrawCustomStringBacked(SubText,SubTextBack ,"Game Mode:", 380, yellow, orange);
             drawGameModeOptions(420);
             DrawCustomStringBacked(SubText,SubTextBack, "Press Yellow button to play", 480, yellow, orange);

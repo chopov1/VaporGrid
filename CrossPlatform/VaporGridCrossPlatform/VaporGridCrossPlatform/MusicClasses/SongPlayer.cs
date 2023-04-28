@@ -97,12 +97,27 @@ namespace VaporGridCrossPlatform
             master = Xaudio.CreateMasteringVoice();
             waveFmt = new WaveFormat();
             songSource = Xaudio.CreateSourceVoice(waveFmt);
-            songBuffer = new XAudio2Buffer(audioData.Length);
+            songBuffer = new XAudio2Buffer(audioData.Length * 2);
+            songBuffer.AudioBytes = audioData.Length;
             setBufferPtr();
             songSource.SubmitSourceBuffer(songBuffer);
             curState = songSource.GetState();
             setBeatAndBuffer();
             offset = quarterIntervalInSamples - Math.Truncate(quarterIntervalInSamples);
+        }
+
+        public void ResetMusic()
+        {
+            songSource.FlushSourceBuffers();
+            string songname = getSongToPlay();
+            audioData = getFileData(songname);
+            bpm = findBpm(songname);
+            Transpose = findTranspose(songname);
+            setBufferPtr();
+            songBuffer.AudioBytes = audioData.Length;
+            songSource.SubmitSourceBuffer(songBuffer);
+            curState = songSource.GetState();
+            setBeatAndBuffer();
         }
 
         private int findBpm(string filename)
@@ -137,7 +152,6 @@ namespace VaporGridCrossPlatform
 
         private void setBufferPtr()
         {
-
             unsafe
             {
                 fixed (byte* FirstResult = &audioData[0])
@@ -148,19 +162,6 @@ namespace VaporGridCrossPlatform
         }
 
         
-        public void ResetMusic()
-        {
-            songSource.FlushSourceBuffers();
-            string songname = getSongToPlay();
-            audioData = getFileData(songname);
-            bpm = findBpm(songname);
-            Transpose = findTranspose(songname);
-            songBuffer = new XAudio2Buffer(audioData.Length);
-            setBufferPtr();
-            songSource.SubmitSourceBuffer(songBuffer);
-            curState = songSource.GetState();
-            setBeatAndBuffer();
-        }
 
         
 
