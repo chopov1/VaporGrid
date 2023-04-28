@@ -137,6 +137,7 @@ namespace VaporGridCrossPlatform
 
         private void setBufferPtr()
         {
+
             unsafe
             {
                 fixed (byte* FirstResult = &audioData[0])

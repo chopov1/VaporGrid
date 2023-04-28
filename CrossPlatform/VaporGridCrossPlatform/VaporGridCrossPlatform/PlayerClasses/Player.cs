@@ -21,8 +21,6 @@ namespace VaporGridCrossPlatform
 
         public Vector2 dirToMove;
 
-        RhythmManager rhythmManager;
-
         public PlayerState State;
 
         ScoreManager scoreManager;
@@ -272,7 +270,7 @@ public Player(Game game, GridManager gm, RhythmManager rhythmManager, int player
 
         public bool CanInputOnSixteenth()
         {
-            if (rhythmManager.RhythmState == RhythmState.Sixteenth && scoreManager.ComboScore > SixteenthBuffer && rhythmManager.HasHitQuarterBeat && !rhythmManager.HasHitQuarterBeat)
+            if (rhythmManager.RhythmState == RhythmState.Sixteenth && scoreManager.ComboScore > SixteenthBuffer && rhythmManager.HasHitQuarterBeat && !rhythmManager.HasHitSixteenthBeat)
             {
                 return true;
             }

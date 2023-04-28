@@ -34,7 +34,7 @@ namespace VaporGridCrossPlatform
             game.Components.Add(this);
             bpm = 90;
             state = SongState.reset;
-            //songPlayer = new SongPlayer();
+            songPlayer = new SongPlayer();
         }
 
         public override void Initialize()
@@ -49,17 +49,17 @@ namespace VaporGridCrossPlatform
 
         public void StartMusic()
         {
-            //songPlayer.StartSong();
+            songPlayer.StartSong();
         }
 
         public void PauseMusic()
         {
-            //songPlayer.StopSong();
+            songPlayer.StopSong();
         }
 
         public void SetVolume(float volume)
         {
-            //songPlayer.SetVolume(volume);
+            songPlayer.SetVolume(volume);
             SoundEffect.MasterVolume = volume;
         }
 
@@ -68,20 +68,20 @@ namespace VaporGridCrossPlatform
             switch (state) 
             {
                 case SongState.reset:
-                    //songPlayer.ResetMusic();
+                    songPlayer.ResetMusic();
                     state = SongState.turnOn;
                     break;
                 case SongState.turnOn:
                     state = SongState.running;
-                    //songPlayer.StartSong();
+                    songPlayer.StartSong();
                     break;
                 case SongState.running:
-                    //songPlayer.SongPlayerUpdate();
-                    /*if (songPlayer.HasFinishedSong())
+                    songPlayer.SongPlayerUpdate();
+                    if (songPlayer.HasFinishedSong())
                     {
                         SongsComplete++;
                         state = SongState.paused;
-                    }*/
+                    }
                     break;
                 case SongState.paused:
                     break;
@@ -97,8 +97,8 @@ namespace VaporGridCrossPlatform
         public void UnLoad()
         {
             Enabled= false;
-            //songPlayer.StopSong();
-            //songPlayer.ResetMusic();
+            songPlayer.StopSong();
+            songPlayer.ResetMusic();
         }
 
     }
