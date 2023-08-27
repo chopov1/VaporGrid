@@ -72,7 +72,7 @@ namespace VaporGridCrossPlatform.Scenes
 
         private void updateLevelSelection()
         {
-            if (input.PressedRight)
+            if (input.PressedDown)
             {
                 if(levelSelection + 1 > sceneManager.NumberOfLevels)
                 {
@@ -83,7 +83,7 @@ namespace VaporGridCrossPlatform.Scenes
                     levelSelection++;
                 }
             }
-            if(input.PressedLeft)
+            if(input.PressedUp)
             {
                 if(levelSelection - 1 < 0)
                 {

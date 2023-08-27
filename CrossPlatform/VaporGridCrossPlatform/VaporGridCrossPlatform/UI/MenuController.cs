@@ -35,6 +35,27 @@ namespace VaporGridCrossPlatform
                     return IsDirectionDown("Left", 0);
                 }
                 return PressedKey(Keys.Left); } }
-
+        public bool PressedUp
+        {
+            get
+            {
+                if (isUsingGamepad())
+                {
+                    return IsDirectionDown("Up", 0);
+                }
+                return PressedKey(Keys.Up);
+            }
+        }
+        public bool PressedDown
+        {
+            get
+            {
+                if (isUsingGamepad())
+                {
+                    return IsDirectionDown("Down", 0);
+                }
+                return PressedKey(Keys.Down);
+            }
+        }
     }
 }

@@ -29,7 +29,8 @@ namespace VaporGridCrossPlatform.UI
         protected Color pink;
         protected Color purple;
         protected Color blue;
-
+        protected Color grey;
+        protected Color lightgrey;
         public MenuUI(Game game) : base(game)
         {
             yellow = new Color(255, 211, 25);
@@ -38,6 +39,8 @@ namespace VaporGridCrossPlatform.UI
             pink = new Color(242, 34, 255);
             purple = new Color(140, 30, 255);
             blue = new Color(89, 203, 232);
+            grey = new Color(80, 80, 80);
+            lightgrey = new Color(180, 180, 180);
         }
 
         protected override void LoadContent()

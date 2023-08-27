@@ -29,7 +29,7 @@ namespace VaporGridCrossPlatform.UI
             instructions[2] = "Perform a double time move to continue";
             instructions[3] = "End the game to exit the tutorial";
 
-            subtext[0, 0] = "1. Move the joystick in the direction shown on the tile you wish to move to";
+            subtext[0, 0] = "1. Press the ARROW shown on the tile you wish to move to";
             subtext[0, 1] = "2. You must input ON BEAT or your character will not move";
             subtext[0, 2] = "";
           
@@ -57,7 +57,7 @@ namespace VaporGridCrossPlatform.UI
             DrawCustomString(SmallSolid, subtext[Stage, 1], (int)(460 * scale), Color.AntiqueWhite);
             DrawCustomString(SmallSolid, subtext[Stage, 2], (int)(525 * scale), Color.AntiqueWhite);
             DrawCustomString(HeaderText, instructions[Stage], (int)(590 * scale), orange);
-            DrawCustomString(SmallSolid, "press blue button to Exit tutorial", (int)(620 *scale), blue);
+            DrawCustomString(SmallSolid, "press BACKSPACE to Exit tutorial", (int)(620 *scale), blue);
         }
     }
 }

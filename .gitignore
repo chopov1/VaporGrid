@@ -63,3 +63,6 @@ monodroid*.msi
 *.VC.opendb
 
 artifacts/
+*.vsidx
+*.cache
+*.cache

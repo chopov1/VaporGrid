@@ -26,13 +26,13 @@ namespace VaporGridCrossPlatform.UI
             DrawCustomStringBacked(TitleText, TitleTextBack, "VaporGrid", 120, pink, purple);
             DrawCustomStringBacked(SubText,SubTextBack ,"Game Mode:", 380, yellow, orange);
             drawGameModeOptions(420);
-            DrawCustomStringBacked(SubText,SubTextBack, "Press Yellow button to play", 480, yellow, orange);
-            DrawCustomStringBacked(SubText, SubTextBack, "Use Joystick to change game mode", 520, yellow, orange);
+            DrawCustomStringBacked(SubText,SubTextBack, "Press SPACE to play", 580, yellow, orange);
+            DrawCustomStringBacked(SubText, SubTextBack, "Use ARROW KEYS to change game mode", 620, yellow, orange);
             //DrawCustomStringBacked(SubText, SubTextBack, "(Use only the right joysticks and buttons)", 280, yellow, orange);
             //DrawCustomStringBacked(SubText, SubTextBack, "Press T to play tutorial", 300, yellow, orange);
-            DrawCustomString(HeaderText, "Previous Score: " + sm.prevScore, 600, red);
-            DrawCustomString(HeaderText, "High Score: " + sm.HighScore, 650, red);
-            DrawCustomString(HeaderText, "Highest Songs Completed: " + sm.HighestSongsCompleted, 700, red);
+            DrawCustomString(HeaderText, "Previous Score: " + sm.prevScore, 700, red);
+            DrawCustomString(HeaderText, "High Score: " + sm.HighScore, 750, red);
+            DrawCustomString(HeaderText, "Highest Songs Completed: " + sm.HighestSongsCompleted, 800, red);
             spriteBatch.Draw(qrCode, new Vector2(100,920), Color.AntiqueWhite);
             spriteBatch.DrawString(BasicFont, "Leave Feedback\nGet In Touch", new Vector2(100, 880), Color.AntiqueWhite);
         }
@@ -48,9 +48,27 @@ namespace VaporGridCrossPlatform.UI
             {
                 case 0:
                     DrawCustomStringBacked(SubText, SubTextBack, "Endless", y, red, orange);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Tutorial", y+40, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + 1 + ">", y + 80, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + 2 + ">", y + 120, lightgrey, grey);
                     break;
                 case 1:
-                    DrawCustomStringBacked(SubText, SubTextBack, "Tutorial", y, blue, orange);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Endless", y, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Tutorial", y+40, red, orange);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + 1 + ">", y + 80, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + 2 + ">", y + 120, lightgrey, grey);
+                    break;
+                case 2:
+                    DrawCustomStringBacked(SubText, SubTextBack, "Endless", y, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Tutorial", y + 40, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + 1 + ">", y+80, red, orange);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + 2 + ">", y+120, lightgrey, grey);
+                    break;
+                case 3:
+                    DrawCustomStringBacked(SubText, SubTextBack, "Endless", y, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Tutorial", y + 40, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + 1 + ">", y+80, lightgrey, grey);
+                    DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + 2 + ">", y+120, red, orange);
                     break;
                 default:
                     DrawCustomStringBacked(SubText, SubTextBack, "Puzzle <" + (LevelSelection - 1) + ">", y, yellow, orange);

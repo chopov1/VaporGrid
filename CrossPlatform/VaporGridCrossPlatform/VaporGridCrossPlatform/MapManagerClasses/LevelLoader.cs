@@ -74,8 +74,21 @@ namespace VaporGridCrossPlatform.MapManagerClasses
         {
             int[,] collectables = new int[15, 3];
             int[,] tutorial = new int[15, 3];
-            tutorial[7, 1] = 1;
+            tutorial[9, 0] = 1;
             tutorial[9, 1] = 1;
+            //making a 1x1 hall to teach player. should probobly make tutorial into a .txt file
+            tutorial[0, 1] = 1;
+            tutorial[0, 2] = 1;
+            tutorial[1, 1] = 1;
+            tutorial[1, 2] = 1;
+            tutorial[2, 1] = 1;
+            tutorial[2, 2] = 1;
+            tutorial[3, 1] = 1;
+            tutorial[3, 2] = 1;
+            tutorial[4, 1] = 1;
+            tutorial[4, 2] = 1;
+            tutorial[5, 1] = 1;
+            tutorial[5, 2] = 1;
             LevelData data = new LevelData(tutorial, collectables);
             return data;
         }
